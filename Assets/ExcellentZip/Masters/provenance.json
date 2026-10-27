@@ -1,0 +1,15 @@
+{
+  "tool": "AI image generation with deterministic composition in scripts/generate_icons.py",
+  "transparent_background": true,
+  "reference": "ExcellentZip seven icon families",
+  "sources": [
+    "pair-1.png",
+    "pair-2.png",
+    "pair-3.png",
+    "pair-4.png",
+    "pair-5.png",
+    "pair-6.png",
+    "pair-7.png"
+  ],
+  "referenceFile": "approved-reference.png"
+}

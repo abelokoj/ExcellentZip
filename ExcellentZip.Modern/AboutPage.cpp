@@ -1,0 +1,102 @@
+#include "pch.h"
+#include "AboutPage.h"
+#if __has_include("AboutPage.g.cpp")
+#include "AboutPage.g.cpp"
+#endif
+
+#include "ExcellentZip.Modern.h"
+
+#include <winrt/Windows.UI.Xaml.Documents.h>
+
+#include <Mile.Project.Version.h>
+
+namespace winrt::ExcellentZip::Modern::implementation
+{
+    AboutPage::AboutPage(
+        _In_opt_ HWND WindowHandle,
+        _In_opt_ LPCWSTR ExtendedMessage) :
+        m_WindowHandle(WindowHandle),
+        m_ExtendedMessage(ExtendedMessage)
+    {
+
+    }
+
+    void AboutPage::InitializeComponent()
+    {
+        AboutPageT::InitializeComponent();
+
+        winrt::hstring WindowTitle = winrt::hstring(
+            ::K7ModernGetLegacyStringResource(2900));
+        if (WindowTitle.empty())
+        {
+            WindowTitle = L"About ExcellentZip";
+        }
+        ::SetWindowTextW(this->m_WindowHandle, WindowTitle.c_str());
+
+        std::wstring Version = std::wstring(
+            L"ExcellentZip " MILE_PROJECT_MACRO_TO_STRING(EXCELLENTZIP_DISPLAY_VERSION));
+        Version.append(
+            L" (" MILE_PROJECT_DOT_VERSION_STRING L")");
+#if defined(_M_AMD64)
+        Version.append(L" (x64)");
+#elif defined(_M_ARM64)
+        Version.append(L" (arm64)");
+#endif
+
+        std::wstring Content = std::wstring(
+            ::K7ModernGetLegacyStringResource(2901));
+        if (Content.empty())
+        {
+            Content = L"ExcellentZip is free software. See the included license notices.";
+        }
+        if (!this->m_ExtendedMessage.empty())
+        {
+            Content.append(L"\r\n\r\n");
+            Content.append(this->m_ExtendedMessage);
+        }
+
+        this->GridTitleTextBlock().Text(WindowTitle);
+        this->Version().Text(Version);
+        this->Content().Text(Content);
+    }
+
+    void AboutPage::ExcellentZipWebsiteButtonClick(
+        winrt::IInspectable const& sender,
+        winrt::RoutedEventArgs const& e)
+    {
+        UNREFERENCED_PARAMETER(sender);
+        UNREFERENCED_PARAMETER(e);
+
+        SHELLEXECUTEINFOW ExecInfo = {};
+        ExecInfo.cbSize = sizeof(SHELLEXECUTEINFOW);
+        ExecInfo.lpVerb = L"open";
+        ExecInfo.lpFile = L"https://github.com/abelokoj/ExcellentZip";
+        ExecInfo.nShow = SW_SHOWNORMAL;
+        ::ShellExecuteExW(&ExecInfo);
+    }
+
+    void AboutPage::GitHubButtonClick(
+        winrt::IInspectable const& sender,
+        winrt::RoutedEventArgs const& e)
+    {
+        UNREFERENCED_PARAMETER(sender);
+        UNREFERENCED_PARAMETER(e);
+
+        SHELLEXECUTEINFOW ExecInfo = {};
+        ExecInfo.cbSize = sizeof(SHELLEXECUTEINFOW);
+        ExecInfo.lpVerb = L"open";
+        ExecInfo.lpFile = L"https://github.com/abelokoj/ExcellentZip";
+        ExecInfo.nShow = SW_SHOWNORMAL;
+        ::ShellExecuteExW(&ExecInfo);
+    }
+
+    void AboutPage::CancelButtonClick(
+        winrt::IInspectable const& sender,
+        winrt::RoutedEventArgs const& e)
+    {
+        UNREFERENCED_PARAMETER(sender);
+        UNREFERENCED_PARAMETER(e);
+
+        ::PostMessageW(this->m_WindowHandle, WM_CLOSE, 0, 0);
+    }
+}

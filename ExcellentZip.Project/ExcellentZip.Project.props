@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  PROJECT:    ExcellentZip
+  FILE:       ExcellentZip.Project.props
+  PURPOSE:    MSBuild Properties for ExcellentZip Common Properties
+
+  LICENSE:    The MIT License
+
+  MAINTAINER: MouriNaruto (Kenji.Mouri@outlook.com)
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildThisFileDirectory)ExcellentZip.Project.Version.props" />
+  <PropertyGroup>
+    <ExcellentZipBuildPreviewRelease Condition="'$(ExcellentZipBuildPreviewRelease)' == ''">false</ExcellentZipBuildPreviewRelease>
+    <ExcellentZipBuildWithSanitizers Condition="'$(ExcellentZipBuildWithSanitizers)' == ''">false</ExcellentZipBuildWithSanitizers>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ExcellentZipBuildNumberDate Condition="'$(ExcellentZipBuildNumberDate)' == ''">$([System.DateTime]::Today.ToString('yyyy-MM-dd'))</ExcellentZipBuildNumberDate>
+    <ExcellentZipProjectCreationDate>2021-08-31</ExcellentZipProjectCreationDate>
+    <MileProjectVersion>$(ExcellentZipWindowsVersion)</MileProjectVersion>
+    <MileProjectVersionTag Condition="'$(ExcellentZipBuildPreviewRelease)' == 'false'">, version $(ExcellentZipDisplayVersion)</MileProjectVersionTag>
+    <MileProjectVersionTag Condition="'$(MileProjectVersionTag)' == ''">Preview, version $(ExcellentZipDisplayVersion)</MileProjectVersionTag>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <PreprocessorDefinitions>EXCELLENTZIP_DISPLAY_VERSION=$(ExcellentZipDisplayVersion);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+</Project>

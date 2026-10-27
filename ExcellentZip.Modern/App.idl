@@ -1,0 +1,9 @@
+﻿namespace ExcellentZip.Modern
+{
+    [default_interface]
+    runtimeclass App :
+        Windows.UI.Xaml.Application,
+        Windows.Foundation.IClosable
+    {
+    }
+}

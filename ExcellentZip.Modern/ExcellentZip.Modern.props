@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+  PROJECT:    ExcellentZip
+  FILE:       ExcellentZip.Modern.props
+  PURPOSE:    MSBuild Properties for ExcellentZip.Modern
+
+  LICENSE:    The MIT License
+
+  MAINTAINER: MouriNaruto (Kenji.Mouri@outlook.com)
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <IncludePath>$(MSBuildThisFileDirectory);$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <Target Name="ExcellentZipModernBuildSource" BeforeTargets="BeforeClCompile">
+    <ItemGroup>
+      <ClCompile Include="$(MSBuildThisFileDirectory)ExcellentZip.Modern.Wrapper.cpp" />
+    </ItemGroup>
+  </Target>
+  <ItemGroup>
+    <ProjectReference Include="$(MSBuildThisFileDirectory)ExcellentZip.Modern.vcxproj">
+      <Project>{1AB11057-1F48-44D2-A913-C945BFC1AA93}</Project>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

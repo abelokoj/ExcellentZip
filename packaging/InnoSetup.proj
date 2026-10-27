@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.Build.NoTargets/3.7.56">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- Verify the compiler signature when upgrading this pinned tool. -->
+    <PackageReference Include="Tools.InnoSetup" Version="6.4.2" PrivateAssets="all" />
+  </ItemGroup>
+</Project>

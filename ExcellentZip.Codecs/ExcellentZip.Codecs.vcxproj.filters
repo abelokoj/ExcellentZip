@@ -1,0 +1,504 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="ExcellentZip.Codecs.cpp" />
+    <ClCompile Include="BLAKE3\blake3.c">
+      <Filter>BLAKE3</Filter>
+    </ClCompile>
+    <None Include="BLAKE3\blake3_avx2_x86-64_windows_msvc.asm">
+      <Filter>BLAKE3</Filter>
+    </None>
+    <None Include="BLAKE3\blake3_avx512_x86-64_windows_msvc.asm">
+      <Filter>BLAKE3</Filter>
+    </None>
+    <ClCompile Include="BLAKE3\blake3_dispatch.c">
+      <Filter>BLAKE3</Filter>
+    </ClCompile>
+    <None Include="BLAKE3\blake3_neon.c">
+      <Filter>BLAKE3</Filter>
+    </None>
+    <ClCompile Include="BLAKE3\blake3_portable.c">
+      <Filter>BLAKE3</Filter>
+    </ClCompile>
+    <None Include="BLAKE3\blake3_sse2_x86-64_windows_msvc.asm">
+      <Filter>BLAKE3</Filter>
+    </None>
+    <None Include="BLAKE3\blake3_sse41_x86-64_windows_msvc.asm">
+      <Filter>BLAKE3</Filter>
+    </None>
+    <None Include="GmSSL\sm3_arm64.c">
+      <Filter>GmSSL</Filter>
+    </None>
+    <None Include="GmSSL\sm3_sse.c">
+      <Filter>GmSSL</Filter>
+    </None>
+    <ClCompile Include="RHash\blake2b.c">
+      <Filter>RHash</Filter>
+    </ClCompile>
+    <ClCompile Include="RHash\byte_order.c">
+      <Filter>RHash</Filter>
+    </ClCompile>
+    <ClCompile Include="RHash\edonr.c">
+      <Filter>RHash</Filter>
+    </ClCompile>
+    <ClCompile Include="RHash\gost12.c">
+      <Filter>RHash</Filter>
+    </ClCompile>
+    <ClCompile Include="RHash\gost94.c">
+      <Filter>RHash</Filter>
+    </ClCompile>
+    <ClCompile Include="RHash\has160.c">
+      <Filter>RHash</Filter>
+    </ClCompile>
+    <ClCompile Include="RHash\hex.c">
+      <Filter>RHash</Filter>
+    </ClCompile>
+    <ClCompile Include="RHash\ripemd-160.c">
+      <Filter>RHash</Filter>
+    </ClCompile>
+    <ClCompile Include="RHash\snefru.c">
+      <Filter>RHash</Filter>
+    </ClCompile>
+    <ClCompile Include="RHash\tiger.c">
+      <Filter>RHash</Filter>
+    </ClCompile>
+    <ClCompile Include="RHash\tiger_sbox.c">
+      <Filter>RHash</Filter>
+    </ClCompile>
+    <ClCompile Include="RHash\tth.c">
+      <Filter>RHash</Filter>
+    </ClCompile>
+    <ClCompile Include="RHash\rhash_util.c">
+      <Filter>RHash</Filter>
+    </ClCompile>
+    <ClCompile Include="RHash\whirlpool.c">
+      <Filter>RHash</Filter>
+    </ClCompile>
+    <ClCompile Include="RHash\whirlpool_sbox.c">
+      <Filter>RHash</Filter>
+    </ClCompile>
+    <ClCompile Include="xxHash\xxhash.c">
+      <Filter>xxHash</Filter>
+    </ClCompile>
+    <ClCompile Include="LZ4\lz4.c">
+      <Filter>LZ4</Filter>
+    </ClCompile>
+    <ClCompile Include="LZ4\lz4frame.c">
+      <Filter>LZ4</Filter>
+    </ClCompile>
+    <ClCompile Include="LZ4\lz4hc.c">
+      <Filter>LZ4</Filter>
+    </ClCompile>
+    <ClCompile Include="Zstandard\common\debug.c">
+      <Filter>Zstandard\common</Filter>
+    </ClCompile>
+    <ClCompile Include="Zstandard\common\entropy_common.c">
+      <Filter>Zstandard\common</Filter>
+    </ClCompile>
+    <ClCompile Include="Zstandard\common\error_private.c">
+      <Filter>Zstandard\common</Filter>
+    </ClCompile>
+    <ClCompile Include="Zstandard\common\fse_decompress.c">
+      <Filter>Zstandard\common</Filter>
+    </ClCompile>
+    <ClCompile Include="Zstandard\common\pool.c">
+      <Filter>Zstandard\common</Filter>
+    </ClCompile>
+    <ClCompile Include="Zstandard\common\threading.c">
+      <Filter>Zstandard\common</Filter>
+    </ClCompile>
+    <ClCompile Include="Zstandard\common\zstd_common.c">
+      <Filter>Zstandard\common</Filter>
+    </ClCompile>
+    <ClCompile Include="Zstandard\compress\fse_compress.c">
+      <Filter>Zstandard\compress</Filter>
+    </ClCompile>
+    <ClCompile Include="Zstandard\compress\hist.c">
+      <Filter>Zstandard\compress</Filter>
+    </ClCompile>
+    <ClCompile Include="Zstandard\compress\huf_compress.c">
+      <Filter>Zstandard\compress</Filter>
+    </ClCompile>
+    <ClCompile Include="Zstandard\compress\zstdmt_compress.c">
+      <Filter>Zstandard\compress</Filter>
+    </ClCompile>
+    <ClCompile Include="Zstandard\compress\zstd_compress.c">
+      <Filter>Zstandard\compress</Filter>
+    </ClCompile>
+    <ClCompile Include="Zstandard\compress\zstd_compress_literals.c">
+      <Filter>Zstandard\compress</Filter>
+    </ClCompile>
+    <ClCompile Include="Zstandard\compress\zstd_compress_sequences.c">
+      <Filter>Zstandard\compress</Filter>
+    </ClCompile>
+    <ClCompile Include="Zstandard\compress\zstd_compress_superblock.c">
+      <Filter>Zstandard\compress</Filter>
+    </ClCompile>
+    <ClCompile Include="Zstandard\compress\zstd_double_fast.c">
+      <Filter>Zstandard\compress</Filter>
+    </ClCompile>
+    <ClCompile Include="Zstandard\compress\zstd_fast.c">
+      <Filter>Zstandard\compress</Filter>
+    </ClCompile>
+    <ClCompile Include="Zstandard\compress\zstd_lazy.c">
+      <Filter>Zstandard\compress</Filter>
+    </ClCompile>
+    <ClCompile Include="Zstandard\compress\zstd_ldm.c">
+      <Filter>Zstandard\compress</Filter>
+    </ClCompile>
+    <ClCompile Include="Zstandard\compress\zstd_opt.c">
+      <Filter>Zstandard\compress</Filter>
+    </ClCompile>
+    <ClCompile Include="ExcellentZip.Codecs.Hash.Blake3.cpp" />
+    <ClCompile Include="ExcellentZip.Codecs.Hash.Sm3.cpp" />
+    <ClCompile Include="ExcellentZip.Codecs.Hash.Aich.cpp" />
+    <ClCompile Include="ExcellentZip.Codecs.Hash.Blake2b.cpp" />
+    <ClCompile Include="ExcellentZip.Codecs.Hash.Ed2k.cpp" />
+    <ClCompile Include="ExcellentZip.Codecs.Hash.EdonR224.cpp" />
+    <ClCompile Include="ExcellentZip.Codecs.Hash.EdonR256.cpp" />
+    <ClCompile Include="ExcellentZip.Codecs.Hash.EdonR384.cpp" />
+    <ClCompile Include="ExcellentZip.Codecs.Hash.EdonR512.cpp" />
+    <ClCompile Include="ExcellentZip.Codecs.Hash.Gost94.cpp" />
+    <ClCompile Include="ExcellentZip.Codecs.Hash.Gost94CryptoPro.cpp" />
+    <ClCompile Include="ExcellentZip.Codecs.Hash.Gost12256.cpp" />
+    <ClCompile Include="ExcellentZip.Codecs.Hash.Gost12512.cpp" />
+    <ClCompile Include="ExcellentZip.Codecs.Hash.Has160.cpp" />
+    <ClCompile Include="ExcellentZip.Codecs.Hash.Ripemd160.cpp" />
+    <ClCompile Include="ExcellentZip.Codecs.Hash.Sha224.cpp" />
+    <ClCompile Include="ExcellentZip.Codecs.Hash.Snefru128.cpp" />
+    <ClCompile Include="ExcellentZip.Codecs.Hash.Snefru256.cpp" />
+    <ClCompile Include="ExcellentZip.Codecs.Hash.Tiger.cpp" />
+    <ClCompile Include="ExcellentZip.Codecs.Hash.Tiger2.cpp" />
+    <ClCompile Include="ExcellentZip.Codecs.Hash.Torrent.cpp" />
+    <ClCompile Include="ExcellentZip.Codecs.Hash.Tth.cpp" />
+    <ClCompile Include="ExcellentZip.Codecs.Hash.Whirlpool.cpp" />
+    <ClCompile Include="ExcellentZip.Codecs.Hash.Xxh32.cpp" />
+    <ClCompile Include="ExcellentZip.Codecs.Hash.Xxh64.cpp" />
+    <ClCompile Include="ExcellentZip.Codecs.Hash.Xxh364.cpp" />
+    <ClCompile Include="ExcellentZip.Codecs.Hash.Xxh3128.cpp" />
+    <ClCompile Include="ExcellentZip.Codecs.SevenZipWrapper.cpp" />
+    <ClCompile Include="ExcellentZip.Codecs.Hash.BCryptProvider.cpp" />
+    <ClCompile Include="ExcellentZip.Codecs.Archive.Ufs.cpp" />
+    <ClCompile Include="ExcellentZip.Codecs.Archive.DotNetSingleFile.cpp" />
+    <ClCompile Include="ExcellentZip.Codecs.Archive.ElectronAsar.cpp" />
+    <ClCompile Include="ExcellentZip.Codecs.Archive.Romfs.cpp" />
+    <ClCompile Include="ExcellentZip.Codecs.Archive.Zealfs.cpp" />
+    <ClCompile Include="ExcellentZip.Codecs.Archive.WebAssembly.cpp" />
+    <ClCompile Include="ExcellentZip.Codecs.Archive.Littlefs.cpp" />
+    <ClCompile Include="Zstandard\compress\zstd_preSplit.c">
+      <Filter>Zstandard\compress</Filter>
+    </ClCompile>
+    <ClCompile Include="Zstandard\decompress\zstd_decompress.c">
+      <Filter>Zstandard\decompress</Filter>
+    </ClCompile>
+    <ClCompile Include="Zstandard\decompress\zstd_decompress_block.c">
+      <Filter>Zstandard\decompress</Filter>
+    </ClCompile>
+    <ClCompile Include="Zstandard\decompress\huf_decompress.c">
+      <Filter>Zstandard\decompress</Filter>
+    </ClCompile>
+    <ClCompile Include="Zstandard\decompress\zstd_ddict.c">
+      <Filter>Zstandard\decompress</Filter>
+    </ClCompile>
+    <ClCompile Include="Zstandard\legacy\zstd_v03.c">
+      <Filter>Zstandard\legacy</Filter>
+    </ClCompile>
+    <ClCompile Include="Zstandard\legacy\zstd_v04.c">
+      <Filter>Zstandard\legacy</Filter>
+    </ClCompile>
+    <ClCompile Include="Zstandard\legacy\zstd_v05.c">
+      <Filter>Zstandard\legacy</Filter>
+    </ClCompile>
+    <ClCompile Include="Zstandard\legacy\zstd_v06.c">
+      <Filter>Zstandard\legacy</Filter>
+    </ClCompile>
+    <ClCompile Include="Zstandard\legacy\zstd_v07.c">
+      <Filter>Zstandard\legacy</Filter>
+    </ClCompile>
+    <ClCompile Include="Zstandard\legacy\zstd_v01.c">
+      <Filter>Zstandard\legacy</Filter>
+    </ClCompile>
+    <ClCompile Include="Zstandard\legacy\zstd_v02.c">
+      <Filter>Zstandard\legacy</Filter>
+    </ClCompile>
+    <ClCompile Include="Mile.Helpers.Portable.Base.Unstaged.cpp">
+      <Filter>Mile.Portable.Helpers.Unstaged</Filter>
+    </ClCompile>
+    <ClCompile Include="LittleFS\lfs.c">
+      <Filter>LittleFS</Filter>
+    </ClCompile>
+    <ClCompile Include="LittleFS\lfs_util.c">
+      <Filter>LittleFS</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ExcellentZip.Codecs.def" />
+    <None Include="ExcellentZip.Codecs.props" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="BLAKE3">
+      <UniqueIdentifier>{8780e049-c08c-40bf-a1ef-6ac34ab857a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GmSSL">
+      <UniqueIdentifier>{650c97a1-a641-4c99-8209-76a265fbfc24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RHash">
+      <UniqueIdentifier>{c13ab0bc-bcc5-44ec-8b4b-8f3ee60c2ec1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="xxHash">
+      <UniqueIdentifier>{4a2fdc00-56e0-4024-b1e4-65edd9491b7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LZ4">
+      <UniqueIdentifier>{a09b9f72-7fa1-4190-a850-c3ff3c812272}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Zstandard">
+      <UniqueIdentifier>{8d863b60-943f-4fda-8869-fa161291bb01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Zstandard\common">
+      <UniqueIdentifier>{4b9b3550-9d14-47ac-8cd9-a96615b9ddda}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Zstandard\compress">
+      <UniqueIdentifier>{a75fe35b-0362-43ad-b9f2-29e3b7c0466a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FreeBSD">
+      <UniqueIdentifier>{70c4b67c-1fa7-4430-a788-11ad86f1ac56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Zstandard\decompress">
+      <UniqueIdentifier>{50d76346-416e-4ceb-90d4-9a78fcd52386}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Zstandard\legacy">
+      <UniqueIdentifier>{b18e7303-5e49-475c-aefe-4b289407e2fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mile.Portable.Helpers.Unstaged">
+      <UniqueIdentifier>{2ede4493-6888-4402-aa9d-823628b6bd21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LittleFS">
+      <UniqueIdentifier>{f72fbfc5-1b3e-43d1-9a15-d52e8b570b3f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BLAKE3\blake3.h">
+      <Filter>BLAKE3</Filter>
+    </ClInclude>
+    <ClInclude Include="BLAKE3\blake3_impl.h">
+      <Filter>BLAKE3</Filter>
+    </ClInclude>
+    <ClInclude Include="GmSSL\endian.h">
+      <Filter>GmSSL</Filter>
+    </ClInclude>
+    <ClInclude Include="GmSSL\sm3.h">
+      <Filter>GmSSL</Filter>
+    </ClInclude>
+    <ClInclude Include="RHash\blake2b.h">
+      <Filter>RHash</Filter>
+    </ClInclude>
+    <ClInclude Include="RHash\byte_order.h">
+      <Filter>RHash</Filter>
+    </ClInclude>
+    <ClInclude Include="RHash\edonr.h">
+      <Filter>RHash</Filter>
+    </ClInclude>
+    <ClInclude Include="RHash\gost12.h">
+      <Filter>RHash</Filter>
+    </ClInclude>
+    <ClInclude Include="RHash\gost94.h">
+      <Filter>RHash</Filter>
+    </ClInclude>
+    <ClInclude Include="RHash\has160.h">
+      <Filter>RHash</Filter>
+    </ClInclude>
+    <ClInclude Include="RHash\hex.h">
+      <Filter>RHash</Filter>
+    </ClInclude>
+    <ClInclude Include="RHash\ripemd-160.h">
+      <Filter>RHash</Filter>
+    </ClInclude>
+    <ClInclude Include="RHash\snefru.h">
+      <Filter>RHash</Filter>
+    </ClInclude>
+    <ClInclude Include="RHash\tiger.h">
+      <Filter>RHash</Filter>
+    </ClInclude>
+    <ClInclude Include="RHash\tth.h">
+      <Filter>RHash</Filter>
+    </ClInclude>
+    <ClInclude Include="RHash\ustd.h">
+      <Filter>RHash</Filter>
+    </ClInclude>
+    <ClInclude Include="RHash\util.h">
+      <Filter>RHash</Filter>
+    </ClInclude>
+    <ClInclude Include="RHash\whirlpool.h">
+      <Filter>RHash</Filter>
+    </ClInclude>
+    <ClInclude Include="xxHash\xxhash.h">
+      <Filter>xxHash</Filter>
+    </ClInclude>
+    <ClInclude Include="LZ4\lz4.h">
+      <Filter>LZ4</Filter>
+    </ClInclude>
+    <ClInclude Include="LZ4\lz4frame.h">
+      <Filter>LZ4</Filter>
+    </ClInclude>
+    <ClInclude Include="LZ4\lz4frame_static.h">
+      <Filter>LZ4</Filter>
+    </ClInclude>
+    <ClInclude Include="LZ4\lz4hc.h">
+      <Filter>LZ4</Filter>
+    </ClInclude>
+    <ClInclude Include="Zstandard\zstd.h">
+      <Filter>Zstandard</Filter>
+    </ClInclude>
+    <ClInclude Include="Zstandard\zstd_errors.h">
+      <Filter>Zstandard</Filter>
+    </ClInclude>
+    <ClInclude Include="Zstandard\common\allocations.h">
+      <Filter>Zstandard\common</Filter>
+    </ClInclude>
+    <ClInclude Include="Zstandard\common\bits.h">
+      <Filter>Zstandard\common</Filter>
+    </ClInclude>
+    <ClInclude Include="Zstandard\common\bitstream.h">
+      <Filter>Zstandard\common</Filter>
+    </ClInclude>
+    <ClInclude Include="Zstandard\common\compiler.h">
+      <Filter>Zstandard\common</Filter>
+    </ClInclude>
+    <ClInclude Include="Zstandard\common\cpu.h">
+      <Filter>Zstandard\common</Filter>
+    </ClInclude>
+    <ClInclude Include="Zstandard\common\debug.h">
+      <Filter>Zstandard\common</Filter>
+    </ClInclude>
+    <ClInclude Include="Zstandard\common\error_private.h">
+      <Filter>Zstandard\common</Filter>
+    </ClInclude>
+    <ClInclude Include="Zstandard\common\fse.h">
+      <Filter>Zstandard\common</Filter>
+    </ClInclude>
+    <ClInclude Include="Zstandard\common\huf.h">
+      <Filter>Zstandard\common</Filter>
+    </ClInclude>
+    <ClInclude Include="Zstandard\common\mem.h">
+      <Filter>Zstandard\common</Filter>
+    </ClInclude>
+    <ClInclude Include="Zstandard\common\pool.h">
+      <Filter>Zstandard\common</Filter>
+    </ClInclude>
+    <ClInclude Include="Zstandard\common\portability_macros.h">
+      <Filter>Zstandard\common</Filter>
+    </ClInclude>
+    <ClInclude Include="Zstandard\common\threading.h">
+      <Filter>Zstandard\common</Filter>
+    </ClInclude>
+    <ClInclude Include="Zstandard\common\zstd_deps.h">
+      <Filter>Zstandard\common</Filter>
+    </ClInclude>
+    <ClInclude Include="Zstandard\common\zstd_internal.h">
+      <Filter>Zstandard\common</Filter>
+    </ClInclude>
+    <ClInclude Include="Zstandard\common\zstd_trace.h">
+      <Filter>Zstandard\common</Filter>
+    </ClInclude>
+    <ClInclude Include="Zstandard\compress\clevels.h">
+      <Filter>Zstandard\compress</Filter>
+    </ClInclude>
+    <ClInclude Include="Zstandard\compress\hist.h">
+      <Filter>Zstandard\compress</Filter>
+    </ClInclude>
+    <ClInclude Include="Zstandard\compress\zstdmt_compress.h">
+      <Filter>Zstandard\compress</Filter>
+    </ClInclude>
+    <ClInclude Include="Zstandard\compress\zstd_compress_internal.h">
+      <Filter>Zstandard\compress</Filter>
+    </ClInclude>
+    <ClInclude Include="Zstandard\compress\zstd_compress_literals.h">
+      <Filter>Zstandard\compress</Filter>
+    </ClInclude>
+    <ClInclude Include="Zstandard\compress\zstd_compress_sequences.h">
+      <Filter>Zstandard\compress</Filter>
+    </ClInclude>
+    <ClInclude Include="Zstandard\compress\zstd_compress_superblock.h">
+      <Filter>Zstandard\compress</Filter>
+    </ClInclude>
+    <ClInclude Include="Zstandard\compress\zstd_cwksp.h">
+      <Filter>Zstandard\compress</Filter>
+    </ClInclude>
+    <ClInclude Include="Zstandard\compress\zstd_double_fast.h">
+      <Filter>Zstandard\compress</Filter>
+    </ClInclude>
+    <ClInclude Include="Zstandard\compress\zstd_fast.h">
+      <Filter>Zstandard\compress</Filter>
+    </ClInclude>
+    <ClInclude Include="Zstandard\compress\zstd_lazy.h">
+      <Filter>Zstandard\compress</Filter>
+    </ClInclude>
+    <ClInclude Include="Zstandard\compress\zstd_ldm.h">
+      <Filter>Zstandard\compress</Filter>
+    </ClInclude>
+    <ClInclude Include="Zstandard\compress\zstd_ldm_geartab.h">
+      <Filter>Zstandard\compress</Filter>
+    </ClInclude>
+    <ClInclude Include="Zstandard\compress\zstd_opt.h">
+      <Filter>Zstandard\compress</Filter>
+    </ClInclude>
+    <ClInclude Include="ExcellentZip.Codecs.h" />
+    <ClInclude Include="ExcellentZip.Codecs.SevenZipWrapper.h" />
+    <ClInclude Include="FreeBSD\dir.h">
+      <Filter>FreeBSD</Filter>
+    </ClInclude>
+    <ClInclude Include="FreeBSD\fs.h">
+      <Filter>FreeBSD</Filter>
+    </ClInclude>
+    <ClInclude Include="FreeBSD\dinode.h">
+      <Filter>FreeBSD</Filter>
+    </ClInclude>
+    <ClInclude Include="Zstandard\compress\zstd_preSplit.h">
+      <Filter>Zstandard\compress</Filter>
+    </ClInclude>
+    <ClInclude Include="Zstandard\decompress\zstd_decompress_block.h">
+      <Filter>Zstandard\decompress</Filter>
+    </ClInclude>
+    <ClInclude Include="Zstandard\decompress\zstd_decompress_internal.h">
+      <Filter>Zstandard\decompress</Filter>
+    </ClInclude>
+    <ClInclude Include="Zstandard\decompress\zstd_ddict.h">
+      <Filter>Zstandard\decompress</Filter>
+    </ClInclude>
+    <ClInclude Include="Zstandard\legacy\zstd_v03.h">
+      <Filter>Zstandard\legacy</Filter>
+    </ClInclude>
+    <ClInclude Include="Zstandard\legacy\zstd_v04.h">
+      <Filter>Zstandard\legacy</Filter>
+    </ClInclude>
+    <ClInclude Include="Zstandard\legacy\zstd_v05.h">
+      <Filter>Zstandard\legacy</Filter>
+    </ClInclude>
+    <ClInclude Include="Zstandard\legacy\zstd_v06.h">
+      <Filter>Zstandard\legacy</Filter>
+    </ClInclude>
+    <ClInclude Include="Zstandard\legacy\zstd_v07.h">
+      <Filter>Zstandard\legacy</Filter>
+    </ClInclude>
+    <ClInclude Include="Zstandard\legacy\zstd_legacy.h">
+      <Filter>Zstandard\legacy</Filter>
+    </ClInclude>
+    <ClInclude Include="Zstandard\legacy\zstd_v01.h">
+      <Filter>Zstandard\legacy</Filter>
+    </ClInclude>
+    <ClInclude Include="Zstandard\legacy\zstd_v02.h">
+      <Filter>Zstandard\legacy</Filter>
+    </ClInclude>
+    <ClInclude Include="Mile.Helpers.Portable.Base.Unstaged.h">
+      <Filter>Mile.Portable.Helpers.Unstaged</Filter>
+    </ClInclude>
+    <ClInclude Include="ExcellentZip.Codecs.Specification.Fat.h" />
+    <ClInclude Include="LittleFS\lfs.h">
+      <Filter>LittleFS</Filter>
+    </ClInclude>
+    <ClInclude Include="LittleFS\lfs_util.h">
+      <Filter>LittleFS</Filter>
+    </ClInclude>
+    <ClInclude Include="ExcellentZip.Codecs.Specification.Zealfs.h" />
+  </ItemGroup>
+</Project>

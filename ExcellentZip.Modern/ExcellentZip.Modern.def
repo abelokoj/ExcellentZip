@@ -1,0 +1,16 @@
+﻿LIBRARY
+
+EXPORTS
+
+K7ModernGetLegacyStringResource
+K7ModernAvailable
+K7ModernInitialize
+K7ModernUninitialize
+K7ModernShowAboutDialog
+K7ModernShowInformationDialog
+K7ModernUpdateProgressWindowStatus
+K7ModernSetProgressWindowPausedMode
+K7ModernShowProgressWindow
+K7ModernShowCopyLocationDialog
+K7ModernGetCopyLocationDialogPath
+K7ModernCreateMainWindowToolBarPage

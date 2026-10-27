@@ -1,0 +1,8 @@
+﻿namespace ExcellentZip.Modern
+{
+    [default_interface]
+    runtimeclass StatusBarTemplate : Windows.UI.Xaml.ResourceDictionary
+    {
+        StatusBarTemplate();
+    }
+}
