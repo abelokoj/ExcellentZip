@@ -14,4 +14,6 @@ Recorded 2026-10-27T00:52:39-04:00. Release publication confirmed 2026-10-27T01:
 - Packages the complete built app and all 448 icons, omitting compiler symbols, build metadata, and private folders from both downloads.
 - Reduces package artwork to Windows image-size limits. Private development notes are excluded from source and release packages.
 
+Validation update 2026-10-27T01:25:42-04:00 (recording time): the [GitHub Actions Windows x64 build](https://github.com/abelokoj/ExcellentZip/actions/runs/40453541255) completed successfully and uploaded the installer, portable ZIP, checksums, and manifest as build artifacts.
+
 Validation updated 2026-10-27T01:06:58-04:00 (recording time): the full Windows x64 package build, six asset checks, five packaging checks, and ZIP/encrypted-7Z creation, integrity, and extraction checks passed. Native icon checks, portable extraction checks, and a per-user test install/uninstall with association tasks disabled also passed. Portable GUI startup was checked without exercising its controls. Live Windows Explorer testing remains pending. Builds are unsigned.
