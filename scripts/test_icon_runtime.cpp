@@ -16,7 +16,7 @@ int wmain()
         for (const auto* Extension : kExtensions)
         {
             auto Path = IconPath(Pack, Extension);
-            assert(Path.find(std::wstring(L"IconPacks\\") + kPackFolders[Pack - 1]) != std::wstring::npos);
+            assert(Path.find(std::wstring(kPackFolders[Pack - 1]) + L"\\") != std::wstring::npos);
             assert(Path.ends_with(std::wstring(L"\\") + Extension + L".ico"));
         }
     }

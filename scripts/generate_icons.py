@@ -17,7 +17,7 @@ import cairosvg
 from PIL import Image, ImageChops, ImageDraw, ImageFilter, ImageFont
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / 'Assets/ExcellentZip'
+OUT = ROOT / 'icons'
 MASTERS = OUT / 'Masters'
 SIZES = (16, 20, 24, 32, 40, 48, 64, 96, 128, 256)
 PACKS = (
@@ -237,7 +237,7 @@ def package_images() -> None:
 
 def main() -> None:
     extract_masters()
-    manifest_file = next(ROOT.glob('*Package/Package.appxmanifest'))
+    manifest_file = ROOT / 'Package/Package.appxmanifest'
     extensions = sorted({node.text.removeprefix('.') for node in ET.parse(manifest_file).iter()
                          if node.tag.endswith('}FileType') and node.text and node.text.startswith('.')})
     colors = extension_colors(extensions)
@@ -278,8 +278,10 @@ def main() -> None:
     header += 'inline constexpr int kDefaultPack = 4;\ninline constexpr int kPackCount = 7;\n'
     for name,values in [('kPackNames',[n for _,n in PACKS]),('kPackFolders',[f for f,_ in PACKS]),('kExtensions',extensions)]:
         header += f'inline constexpr const wchar_t* {name}[] = {{\n'+''.join(f'    L"{value}",\n' for value in values)+'};\n'
-    (next(ROOT.glob('*.UI.Modern'))/'ExcellentZip.IconCatalog.h').write_text(header+'}\n',encoding='utf-8')
+    ((ROOT/'UI_Modern')/'ExcellentZip.IconCatalog.h').write_text(header+'}\n',encoding='utf-8')
     preview()
+    from generate_icon_download import generate
+    generate()
 
 
 def preview() -> None:

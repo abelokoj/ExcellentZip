@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ExcellentZipMajorVersion>2026</ExcellentZipMajorVersion>
+    <ExcellentZipMinorVersion>10</ExcellentZipMinorVersion>
+    <ExcellentZipBuildNumberDate>2026-10-27</ExcellentZipBuildNumberDate>
+    <ExcellentZipDisplayVersion>2026-10-27.1</ExcellentZipDisplayVersion>
+    <ExcellentZipWindowsVersion>2026.10.27.1</ExcellentZipWindowsVersion>
+  </PropertyGroup>
+</Project>

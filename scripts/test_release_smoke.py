@@ -1,11 +1,19 @@
 """Exercise the built archive engine without installation or file-association changes."""
 import argparse
+import json
 from pathlib import Path
 import subprocess
 import tempfile
 
 
 def smoke(payload, version):
+    root = Path(__file__).resolve().parents[1]
+    catalog = json.loads((root / 'icons/manifest.json').read_text(encoding='utf-8'))
+    expected = {Path('icons/4-monogram-ez') / f'{stem}.ico'
+                for stem in ['app', 'archive', *catalog['extensions']]}
+    actual = {path.relative_to(payload) for path in payload.rglob('*.ico')}
+    if actual != expected or (payload / 'IconPacks').exists():
+        raise AssertionError('Release payload must contain only the 64 bundled Monogram EZ icons.')
     executable = (payload / 'ExcellentZipC.exe').resolve()
     def run(*arguments, cwd=None):
         result = subprocess.run([str(executable), *arguments], cwd=cwd,

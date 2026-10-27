@@ -15,12 +15,12 @@
     <K7BaseDisableRedirector>true</K7BaseDisableRedirector>
     <K7UserDisableRedirector>true</K7UserDisableRedirector>
   </PropertyGroup>
-  <Import Project="..\ExcellentZip.Project\ExcellentZip.Project.props" />
+  <Import Project="..\Project\ExcellentZip.Project.props" />
   <Import Sdk="Mile.Project.Configurations" Project="Mile.Project.Platform.x64.props" />
   <Import Sdk="Mile.Project.Configurations" Project="Mile.Project.Platform.ARM64.props" />
   <Import Sdk="Mile.Project.Configurations" Project="Mile.Project.Cpp.Default.props" />
   <Import Sdk="Mile.Project.Configurations" Project="Mile.Project.Cpp.props" />
-  <Import Project="..\ExcellentZip.Project\ExcellentZip.Project.Runtime.props" />
+  <Import Project="..\Project\ExcellentZip.Project.Runtime.props" />
   <Import Project="$(MSBuildThisFileDirectory)K7UserStatic.props" />
   <Import Project="..\K7Base\K7Base.props" />
   <ItemDefinitionGroup>

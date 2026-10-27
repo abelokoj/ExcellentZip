@@ -14,12 +14,12 @@
     <MileProjectProductName>ExcellentZip</MileProjectProductName>
     <K7BaseDisableRedirector>true</K7BaseDisableRedirector>
   </PropertyGroup>
-  <Import Project="..\ExcellentZip.Project\ExcellentZip.Project.props" />
+  <Import Project="..\Project\ExcellentZip.Project.props" />
   <Import Sdk="Mile.Project.Configurations" Project="Mile.Project.Platform.x64.props" />
   <Import Sdk="Mile.Project.Configurations" Project="Mile.Project.Platform.ARM64.props" />
   <Import Sdk="Mile.Project.Configurations" Project="Mile.Project.Cpp.Default.props" />
   <Import Sdk="Mile.Project.Configurations" Project="Mile.Project.Cpp.props" />
-  <Import Project="..\ExcellentZip.Project\ExcellentZip.Project.Runtime.props" />
+  <Import Project="..\Project\ExcellentZip.Project.Runtime.props" />
   <Import Project="$(MSBuildThisFileDirectory)K7BaseStatic.props" />
   <ItemDefinitionGroup>
     <Link>

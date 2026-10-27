@@ -1,0 +1,2699 @@
+{
+  "version": 1,
+  "setId": "90f8c6153e505117",
+  "archive": {
+    "name": "optional-packs-90f8c6153e505117.zip",
+    "sha256": "90f8c6153e505117b2f0d1968b82f9505b13a83bf5b84bd5577e13727e094d5c",
+    "bytes": 38251555
+  },
+  "files": [
+    {
+      "pack": 1,
+      "stem": "001",
+      "path": "1-fluent-zip/001.ico",
+      "bytes": 80527,
+      "sha256": "0fdb9ee5b2436b1c69e5ee951320833aa947ce02f32880e23a6f85293b34db6d"
+    },
+    {
+      "pack": 1,
+      "stem": "7z",
+      "path": "1-fluent-zip/7z.ico",
+      "bytes": 79008,
+      "sha256": "91e6d81c26989436d41a415e8ff6e0433409c0a8678741a25a04a7da0042ce87"
+    },
+    {
+      "pack": 1,
+      "stem": "apfs",
+      "path": "1-fluent-zip/apfs.ico",
+      "bytes": 82880,
+      "sha256": "e60ff1a6ebee30578371306f49ccaee6e3c6156eb30a3708a669397d5999e0a8"
+    },
+    {
+      "pack": 1,
+      "stem": "app",
+      "path": "1-fluent-zip/app.ico",
+      "bytes": 129291,
+      "sha256": "f28f1881e1f17c07a595cdcbf582d01df875dd3d738d37a6eb3072ab4e64e0c1"
+    },
+    {
+      "pack": 1,
+      "stem": "archive",
+      "path": "1-fluent-zip/archive.ico",
+      "bytes": 81975,
+      "sha256": "fab565e32e89202e98df674e96545c19a62243cccff894a8fe727e23019fbaa7"
+    },
+    {
+      "pack": 1,
+      "stem": "arj",
+      "path": "1-fluent-zip/arj.ico",
+      "bytes": 81633,
+      "sha256": "92169751dbf289cff9c3d6d42288af2cba152ae03635307213d5b37ca7f06927"
+    },
+    {
+      "pack": 1,
+      "stem": "asar",
+      "path": "1-fluent-zip/asar.ico",
+      "bytes": 84080,
+      "sha256": "f3a060d8d27efdc791f5e5f5f5e0766b259a0430aa2953fc4a8789448657c4e8"
+    },
+    {
+      "pack": 1,
+      "stem": "b64",
+      "path": "1-fluent-zip/b64.ico",
+      "bytes": 81585,
+      "sha256": "b885a9c60b86a0679c18288b3132dacf6a4f821780c3a7702ee652c87d191e87"
+    },
+    {
+      "pack": 1,
+      "stem": "br",
+      "path": "1-fluent-zip/br.ico",
+      "bytes": 80436,
+      "sha256": "1af2ffa5b5938db8e944f4c2ac1f2161fb03f7a7bc1971ccd1eb7d81dd51e80a"
+    },
+    {
+      "pack": 1,
+      "stem": "bz2",
+      "path": "1-fluent-zip/bz2.ico",
+      "bytes": 81602,
+      "sha256": "b4e8e8e9bbb2d81c9032b1c73a502f98ac6a06af2282a65fcc63aa2acc59b495"
+    },
+    {
+      "pack": 1,
+      "stem": "bzip2",
+      "path": "1-fluent-zip/bzip2.ico",
+      "bytes": 82437,
+      "sha256": "6e7fc5ba53dab0e9ac37b322004e9e2452c5f78763cfe4fd1f71238f6a3f8476"
+    },
+    {
+      "pack": 1,
+      "stem": "cab",
+      "path": "1-fluent-zip/cab.ico",
+      "bytes": 82357,
+      "sha256": "20071fc0f44720723994896f40b881b10b5e8b5a4144b644ef791afb3cf67e67"
+    },
+    {
+      "pack": 1,
+      "stem": "cb7",
+      "path": "1-fluent-zip/cb7.ico",
+      "bytes": 81678,
+      "sha256": "eb1a1084b9ca6ee1158387823a4884ce774d5c6a2a2afb4e7bfb486f05244bea"
+    },
+    {
+      "pack": 1,
+      "stem": "cbr",
+      "path": "1-fluent-zip/cbr.ico",
+      "bytes": 82137,
+      "sha256": "6680294fd6b8da316144c4238d55d5d0af8b1596d11e14337d521d87859d8b4e"
+    },
+    {
+      "pack": 1,
+      "stem": "cbz",
+      "path": "1-fluent-zip/cbz.ico",
+      "bytes": 82067,
+      "sha256": "7d69e22f8a2f82eab1daff5f8727817339e542dbada709714198c96ef12b9471"
+    },
+    {
+      "pack": 1,
+      "stem": "cpio",
+      "path": "1-fluent-zip/cpio.ico",
+      "bytes": 82645,
+      "sha256": "f68c99d2f2befa11da543738babc1f6e4316ee3fbfbc96491e650a597277c0f4"
+    },
+    {
+      "pack": 1,
+      "stem": "deb",
+      "path": "1-fluent-zip/deb.ico",
+      "bytes": 81051,
+      "sha256": "f18710e3094ce54fd6e69104b46d2b8c9c6bebadd913fca6e63896e247f593b7"
+    },
+    {
+      "pack": 1,
+      "stem": "dmg",
+      "path": "1-fluent-zip/dmg.ico",
+      "bytes": 82561,
+      "sha256": "b2eeccb1dd50f86a4634b4a266832e14d062f2fc84bd072756c94fa54a0e9597"
+    },
+    {
+      "pack": 1,
+      "stem": "esd",
+      "path": "1-fluent-zip/esd.ico",
+      "bytes": 81648,
+      "sha256": "03a3103c389dae0519c494671da3f6a44ba5d17a65947d1cce2d64898faa5a9c"
+    },
+    {
+      "pack": 1,
+      "stem": "fat",
+      "path": "1-fluent-zip/fat.ico",
+      "bytes": 80454,
+      "sha256": "faf748b681084f866f36ac42ffea2b7e0327bfce94a600277272491d03bd4fa2"
+    },
+    {
+      "pack": 1,
+      "stem": "gz",
+      "path": "1-fluent-zip/gz.ico",
+      "bytes": 80932,
+      "sha256": "e2947399163e7de3e1a035406076f32d50656d93d017db7b5d3f61ff8f45b2a5"
+    },
+    {
+      "pack": 1,
+      "stem": "gzip",
+      "path": "1-fluent-zip/gzip.ico",
+      "bytes": 82135,
+      "sha256": "d4e8ba1473a1df665abb98ec41c07b37612bc1eec7a36a30bb850c541c52b2a5"
+    },
+    {
+      "pack": 1,
+      "stem": "hfs",
+      "path": "1-fluent-zip/hfs.ico",
+      "bytes": 80902,
+      "sha256": "99a2e442cbcaa6669153e2d0871b1e70cecd5dfdf04e18cc9404fb93567f8fbd"
+    },
+    {
+      "pack": 1,
+      "stem": "hfsx",
+      "path": "1-fluent-zip/hfsx.ico",
+      "bytes": 82578,
+      "sha256": "eb7d7c3b6bdf0bab233687b602bc26de8cea1cedce62baadc1351ad0a79969fa"
+    },
+    {
+      "pack": 1,
+      "stem": "iso",
+      "path": "1-fluent-zip/iso.ico",
+      "bytes": 81521,
+      "sha256": "2e3a32a6fde8589f7c1d750e778da2cc34020df4a8fa283b623382ccad9f8c93"
+    },
+    {
+      "pack": 1,
+      "stem": "lha",
+      "path": "1-fluent-zip/lha.ico",
+      "bytes": 80600,
+      "sha256": "2936822ff45e1e3a695fbebce91d3ff8d156e5926d418d3c911133bb625e44c9"
+    },
+    {
+      "pack": 1,
+      "stem": "liz",
+      "path": "1-fluent-zip/liz.ico",
+      "bytes": 78777,
+      "sha256": "794a8c9ab92828d4f51c6299ff03e2cd84f365ea737214c30332a0b49303f348"
+    },
+    {
+      "pack": 1,
+      "stem": "lz",
+      "path": "1-fluent-zip/lz.ico",
+      "bytes": 79323,
+      "sha256": "d5ab5c50d342baf4fa71c0f6a6e2efd671c723716ff9ae827771e7f9fe414244"
+    },
+    {
+      "pack": 1,
+      "stem": "lz4",
+      "path": "1-fluent-zip/lz4.ico",
+      "bytes": 80135,
+      "sha256": "4d868cb9a500a94f848de5d8415109b0ed8e8970d409733a836cf2fa8e4007c9"
+    },
+    {
+      "pack": 1,
+      "stem": "lz5",
+      "path": "1-fluent-zip/lz5.ico",
+      "bytes": 80871,
+      "sha256": "8cebf6437f53d2524b9b7e3ac96d45014262dc761ee77645e3450f57bf47aad5"
+    },
+    {
+      "pack": 1,
+      "stem": "lzh",
+      "path": "1-fluent-zip/lzh.ico",
+      "bytes": 79931,
+      "sha256": "3b4f5a29060ff42218714693fbd439259b9220fca56ff7577a1616381d3891ca"
+    },
+    {
+      "pack": 1,
+      "stem": "lzma",
+      "path": "1-fluent-zip/lzma.ico",
+      "bytes": 82626,
+      "sha256": "34ed013f6c8ecf8daec29d37eedad409db63caf541720580d1b0dd225fa89e4b"
+    },
+    {
+      "pack": 1,
+      "stem": "lzma2",
+      "path": "1-fluent-zip/lzma2.ico",
+      "bytes": 84092,
+      "sha256": "f5c03a2ac44a72b23eb57fea91fe618ba84d53ea2d6ac57a01efb01bf09d11fa"
+    },
+    {
+      "pack": 1,
+      "stem": "ntfs",
+      "path": "1-fluent-zip/ntfs.ico",
+      "bytes": 81953,
+      "sha256": "747dd22252acff26422c4d9b0d4880fbee83301c7850803a49a6032a0e03832e"
+    },
+    {
+      "pack": 1,
+      "stem": "nupkg",
+      "path": "1-fluent-zip/nupkg.ico",
+      "bytes": 84197,
+      "sha256": "13420d7adf1832c9b8d815f5e95101f8038531b8760629ddf4de3ac04cfa36f0"
+    },
+    {
+      "pack": 1,
+      "stem": "rar",
+      "path": "1-fluent-zip/rar.ico",
+      "bytes": 81084,
+      "sha256": "b1638f94ebbc38526f93c4acfcae5b0064ceebab875ba909ff84db6f0caec8a8"
+    },
+    {
+      "pack": 1,
+      "stem": "rpm",
+      "path": "1-fluent-zip/rpm.ico",
+      "bytes": 81879,
+      "sha256": "072758bc505ff19fc7c9c30f69c8fa38f1b753eab7f014ea80a931352045ebab"
+    },
+    {
+      "pack": 1,
+      "stem": "squashfs",
+      "path": "1-fluent-zip/squashfs.ico",
+      "bytes": 83736,
+      "sha256": "c0694be26d2adc7cf881729d2fb9b7d4b85c5d59725d50880f691cc281744042"
+    },
+    {
+      "pack": 1,
+      "stem": "swm",
+      "path": "1-fluent-zip/swm.ico",
+      "bytes": 83886,
+      "sha256": "e915055bc7ac987f21ad0c75e927c90ff12d87a9c60ad35a3628960fc82785a3"
+    },
+    {
+      "pack": 1,
+      "stem": "tar",
+      "path": "1-fluent-zip/tar.ico",
+      "bytes": 81323,
+      "sha256": "f9b78ca53767d8a641103dc2dde5002f9e6f2b3d7858be98d3646f7595133481"
+    },
+    {
+      "pack": 1,
+      "stem": "taz",
+      "path": "1-fluent-zip/taz.ico",
+      "bytes": 80908,
+      "sha256": "6de9647c80f0a63501a8f2a8e8b53342edcd09fb987f6e5a74b0e81c3c146e0c"
+    },
+    {
+      "pack": 1,
+      "stem": "tbz",
+      "path": "1-fluent-zip/tbz.ico",
+      "bytes": 80663,
+      "sha256": "abd75f28ab0b6dda8450f1379e0e3501de54b8e8dff728e0bd8173678a1c47f9"
+    },
+    {
+      "pack": 1,
+      "stem": "tbz2",
+      "path": "1-fluent-zip/tbz2.ico",
+      "bytes": 81698,
+      "sha256": "b9d1f0d16239e114a3f836a353bc4cee425ad08dcadcfddbe7e906141eb4c553"
+    },
+    {
+      "pack": 1,
+      "stem": "tgz",
+      "path": "1-fluent-zip/tgz.ico",
+      "bytes": 81002,
+      "sha256": "d77b7d798c14cc8be46804344493f046b4871088f05122b8388d94991bbd5424"
+    },
+    {
+      "pack": 1,
+      "stem": "tlz",
+      "path": "1-fluent-zip/tlz.ico",
+      "bytes": 79720,
+      "sha256": "cf73adb69ee476fa69fe32e631d5fac1830cf1343f244aeda2c9e340186fc3ec"
+    },
+    {
+      "pack": 1,
+      "stem": "tlz4",
+      "path": "1-fluent-zip/tlz4.ico",
+      "bytes": 80673,
+      "sha256": "db678b2af4ee416959633d58271215d893a91d1da82b390103a217f0c14eaa91"
+    },
+    {
+      "pack": 1,
+      "stem": "tlz5",
+      "path": "1-fluent-zip/tlz5.ico",
+      "bytes": 80886,
+      "sha256": "0c71d2045b5dcf50d3beda4278e6ec0f6cfb33807f1ccc52fc7700555ad8cf5c"
+    },
+    {
+      "pack": 1,
+      "stem": "tpz",
+      "path": "1-fluent-zip/tpz.ico",
+      "bytes": 80018,
+      "sha256": "e43988d8172347a5ca8b0b06ecafe7579779d0ad0997035faf6b276c84c7c99e"
+    },
+    {
+      "pack": 1,
+      "stem": "txz",
+      "path": "1-fluent-zip/txz.ico",
+      "bytes": 80680,
+      "sha256": "ed467104856ef8595fec61907da94d0fe7e9ff9b4ae6221e98714fe363420bf2"
+    },
+    {
+      "pack": 1,
+      "stem": "tz",
+      "path": "1-fluent-zip/tz.ico",
+      "bytes": 79310,
+      "sha256": "8310c82e87110a9a045a182618af5531aeb5ca7bed7622704b8f4183a2f10609"
+    },
+    {
+      "pack": 1,
+      "stem": "tzst",
+      "path": "1-fluent-zip/tzst.ico",
+      "bytes": 81308,
+      "sha256": "c1b67b5b1cf91e6bea389a3e2957a2af1dc8b9bd5dd3d8fab21defc5a886acbe"
+    },
+    {
+      "pack": 1,
+      "stem": "tzstd",
+      "path": "1-fluent-zip/tzstd.ico",
+      "bytes": 82746,
+      "sha256": "0a51c55ff76008c978b4f5794ec2267f8be6b2585503f543212eeac81b603726"
+    },
+    {
+      "pack": 1,
+      "stem": "vdi",
+      "path": "1-fluent-zip/vdi.ico",
+      "bytes": 81187,
+      "sha256": "baad35fa70f54a2c26d2fb4cdd66a15d20619a948ef84a7aa9f83de931ad6029"
+    },
+    {
+      "pack": 1,
+      "stem": "vhd",
+      "path": "1-fluent-zip/vhd.ico",
+      "bytes": 81287,
+      "sha256": "df69bebf21c9b67ba43cbc06643787a43194b0a2a74ebcc6d17ef193ab297f46"
+    },
+    {
+      "pack": 1,
+      "stem": "vhdx",
+      "path": "1-fluent-zip/vhdx.ico",
+      "bytes": 82939,
+      "sha256": "d1b26c22e55c47602c1f8b7cc03dff57b6f8390f841e9a5de289f212a65f3422"
+    },
+    {
+      "pack": 1,
+      "stem": "vmdk",
+      "path": "1-fluent-zip/vmdk.ico",
+      "bytes": 83784,
+      "sha256": "e437c65ee759b76b645e8ba18363fd4cd125f352113f02baff59bfc1ccc96811"
+    },
+    {
+      "pack": 1,
+      "stem": "wim",
+      "path": "1-fluent-zip/wim.ico",
+      "bytes": 81904,
+      "sha256": "c6cd62365772688d19d1a40d63b66a2e7fc0147dc7c7b6c2d9ac66f04e8face4"
+    },
+    {
+      "pack": 1,
+      "stem": "xar",
+      "path": "1-fluent-zip/xar.ico",
+      "bytes": 82992,
+      "sha256": "54ccd0aa7265ae2a26595c6cb6d18ade06fbd2bb2606f8576eec064f3b29f032"
+    },
+    {
+      "pack": 1,
+      "stem": "xz",
+      "path": "1-fluent-zip/xz.ico",
+      "bytes": 80777,
+      "sha256": "1813a653fe82f2e1a33ecc52c7276f408af927c8c6205bc7f8335dc8849bc1c5"
+    },
+    {
+      "pack": 1,
+      "stem": "z",
+      "path": "1-fluent-zip/z.ico",
+      "bytes": 78578,
+      "sha256": "4cebf85468a2ddd54a6c115c386a38c5c3d152265b9bd2cfd785479e5d6950be"
+    },
+    {
+      "pack": 1,
+      "stem": "zip",
+      "path": "1-fluent-zip/zip.ico",
+      "bytes": 78595,
+      "sha256": "7ca002e636e4e011c9b86d7d1218ce361703a9df0a69dfcc61a26694f52b7634"
+    },
+    {
+      "pack": 1,
+      "stem": "zipx",
+      "path": "1-fluent-zip/zipx.ico",
+      "bytes": 81810,
+      "sha256": "6e79d3be3886fab324c16220a670f9cc6c313157de59b84bd204773b495f6069"
+    },
+    {
+      "pack": 1,
+      "stem": "zst",
+      "path": "1-fluent-zip/zst.ico",
+      "bytes": 81572,
+      "sha256": "b968244ddae3edb16068026bb1a3fb63b0e4bf88fbf3e0758e10b3d30ee9ccf5"
+    },
+    {
+      "pack": 1,
+      "stem": "zstd",
+      "path": "1-fluent-zip/zstd.ico",
+      "bytes": 82609,
+      "sha256": "58366b7f5d7b014cd61828c491c5799e5260a3b3361a3c13fae3f6d938ffdb75"
+    },
+    {
+      "pack": 2,
+      "stem": "001",
+      "path": "2-outlined-pages/001.ico",
+      "bytes": 94561,
+      "sha256": "0cfd31bcae1015fc4986a5a5a587fccaf413a5372f20ec1963149911b14078dd"
+    },
+    {
+      "pack": 2,
+      "stem": "7z",
+      "path": "2-outlined-pages/7z.ico",
+      "bytes": 93350,
+      "sha256": "09455fb36ff188a973793997e1a2716da205f3708f03a51075d30a11d161460a"
+    },
+    {
+      "pack": 2,
+      "stem": "apfs",
+      "path": "2-outlined-pages/apfs.ico",
+      "bytes": 95798,
+      "sha256": "bbc6fac3de8549cea8f650aca1a6b0501804edc5cad82c11b62ceb5e986f13cf"
+    },
+    {
+      "pack": 2,
+      "stem": "app",
+      "path": "2-outlined-pages/app.ico",
+      "bytes": 124476,
+      "sha256": "22743bd8d14b0555092cd069867f38c871384016e94da6059bff3c156e070d68"
+    },
+    {
+      "pack": 2,
+      "stem": "archive",
+      "path": "2-outlined-pages/archive.ico",
+      "bytes": 95574,
+      "sha256": "0fe0c8412fe1aef2e0f51e681590eb7148b095b870f2979cb77a7ee54fecc4bf"
+    },
+    {
+      "pack": 2,
+      "stem": "arj",
+      "path": "2-outlined-pages/arj.ico",
+      "bytes": 94986,
+      "sha256": "257e32185e59ab63a373babb3750a74dd13f3753a8f8ac9fdaf7a3a54ce4a0fc"
+    },
+    {
+      "pack": 2,
+      "stem": "asar",
+      "path": "2-outlined-pages/asar.ico",
+      "bytes": 96664,
+      "sha256": "cbbd5ceeed1e54f2a9cee9c1288638e5cf2d58dd805ee98da0c8acd7b40cd312"
+    },
+    {
+      "pack": 2,
+      "stem": "b64",
+      "path": "2-outlined-pages/b64.ico",
+      "bytes": 94824,
+      "sha256": "0d46d72ee339f5b93e86d92b6c6a7595e565020841697a18a95cacc7f3d8c024"
+    },
+    {
+      "pack": 2,
+      "stem": "br",
+      "path": "2-outlined-pages/br.ico",
+      "bytes": 94009,
+      "sha256": "78af380db19e4fa6f6e7558e6a6ae66928c32bf5ada8db79b8f29ed0e3b93f04"
+    },
+    {
+      "pack": 2,
+      "stem": "bz2",
+      "path": "2-outlined-pages/bz2.ico",
+      "bytes": 94614,
+      "sha256": "ad37fadcf5d5e922d45e7f69ec0c270f370ed79f9c4a25f473c20bbb6b730720"
+    },
+    {
+      "pack": 2,
+      "stem": "bzip2",
+      "path": "2-outlined-pages/bzip2.ico",
+      "bytes": 95187,
+      "sha256": "dd9bd2392ade22272cf8619b2b35cf10b5ec432da1c3144d3aa25e8651b57cfd"
+    },
+    {
+      "pack": 2,
+      "stem": "cab",
+      "path": "2-outlined-pages/cab.ico",
+      "bytes": 95528,
+      "sha256": "7f2e3da5a298ba9c8fe974e32a1e138f99f863105abb6b01b6d0c5c4ab718d18"
+    },
+    {
+      "pack": 2,
+      "stem": "cb7",
+      "path": "2-outlined-pages/cb7.ico",
+      "bytes": 94999,
+      "sha256": "7cba8f32429050d22ea413cbbe05257b9e3054079f6f9757c989776db5b54015"
+    },
+    {
+      "pack": 2,
+      "stem": "cbr",
+      "path": "2-outlined-pages/cbr.ico",
+      "bytes": 95263,
+      "sha256": "fb8a8759d0c9ba3b166a074d6cd6e8fc9c74abab261a6949ccad0ba7966afcb6"
+    },
+    {
+      "pack": 2,
+      "stem": "cbz",
+      "path": "2-outlined-pages/cbz.ico",
+      "bytes": 94946,
+      "sha256": "232363ec844cf3cb059449a614bdc80be54c0178409248faae1ae85ddbaa57da"
+    },
+    {
+      "pack": 2,
+      "stem": "cpio",
+      "path": "2-outlined-pages/cpio.ico",
+      "bytes": 95642,
+      "sha256": "5c705a9acd673ed2e70941a76f7617055cbb5537493fecba96a1fe1fd46f5103"
+    },
+    {
+      "pack": 2,
+      "stem": "deb",
+      "path": "2-outlined-pages/deb.ico",
+      "bytes": 93849,
+      "sha256": "13d7b2fedd26f811c2456cdeaf40c2e5ececd5cb49d2b0854f23a1e5f4f5d7be"
+    },
+    {
+      "pack": 2,
+      "stem": "dmg",
+      "path": "2-outlined-pages/dmg.ico",
+      "bytes": 95169,
+      "sha256": "b390844a4fd9f581c4c2ee283de398f08885e854505888bd49dd67dd41c22b44"
+    },
+    {
+      "pack": 2,
+      "stem": "esd",
+      "path": "2-outlined-pages/esd.ico",
+      "bytes": 94758,
+      "sha256": "bb1471d65abeafb1e61e341c7a89ad670de1f520774a952b96973628869cc735"
+    },
+    {
+      "pack": 2,
+      "stem": "fat",
+      "path": "2-outlined-pages/fat.ico",
+      "bytes": 93782,
+      "sha256": "0c547cbee6ba703db438d6d18dc42f5697e51505340371ee937ab4b1ecc69335"
+    },
+    {
+      "pack": 2,
+      "stem": "gz",
+      "path": "2-outlined-pages/gz.ico",
+      "bytes": 94280,
+      "sha256": "56c8e67afa08fcdcf2d33a251a19cc15b3a8a8bb535eb62cfed1a4ff3c2d8c1e"
+    },
+    {
+      "pack": 2,
+      "stem": "gzip",
+      "path": "2-outlined-pages/gzip.ico",
+      "bytes": 94885,
+      "sha256": "6659eab06ffdc4dde65af9a41b2ea329cb590e9d2df079b797e6394798dcaddd"
+    },
+    {
+      "pack": 2,
+      "stem": "hfs",
+      "path": "2-outlined-pages/hfs.ico",
+      "bytes": 94130,
+      "sha256": "17c6d791cd69277c6efa86b002295e4c97cc2448c711449f6ef45cbb42c2ce08"
+    },
+    {
+      "pack": 2,
+      "stem": "hfsx",
+      "path": "2-outlined-pages/hfsx.ico",
+      "bytes": 95665,
+      "sha256": "9408ee17720d3a566878d49656e8f540ac51c3693afb03d35c321c62bd28641c"
+    },
+    {
+      "pack": 2,
+      "stem": "iso",
+      "path": "2-outlined-pages/iso.ico",
+      "bytes": 94940,
+      "sha256": "5b56c4387fe35de9e60ecd846ab539d8b6dd09bb0a29e747086399b7003c9107"
+    },
+    {
+      "pack": 2,
+      "stem": "lha",
+      "path": "2-outlined-pages/lha.ico",
+      "bytes": 93823,
+      "sha256": "973b115d1ffc63676abc899727f699ee81b131c96b421636b492d76ce46ce15d"
+    },
+    {
+      "pack": 2,
+      "stem": "liz",
+      "path": "2-outlined-pages/liz.ico",
+      "bytes": 93066,
+      "sha256": "bf53c98deaed4bba2c57beb5fd48bbe2d108b7e6056484004d975ca25b04ad9e"
+    },
+    {
+      "pack": 2,
+      "stem": "lz",
+      "path": "2-outlined-pages/lz.ico",
+      "bytes": 92999,
+      "sha256": "e50465420973338b7c2c6c1f3031d4b387ed5e1d963de6d466fc9d889e12a908"
+    },
+    {
+      "pack": 2,
+      "stem": "lz4",
+      "path": "2-outlined-pages/lz4.ico",
+      "bytes": 93649,
+      "sha256": "ed18edff9ea5fefd033bfdc67474306c2e43b4580555b0d2d9082e2da9f2ec0a"
+    },
+    {
+      "pack": 2,
+      "stem": "lz5",
+      "path": "2-outlined-pages/lz5.ico",
+      "bytes": 94151,
+      "sha256": "9899e4df8a8002049a7de8a84eba5bf298605759a524bf250bdbe2572196fa56"
+    },
+    {
+      "pack": 2,
+      "stem": "lzh",
+      "path": "2-outlined-pages/lzh.ico",
+      "bytes": 93227,
+      "sha256": "d213f71b4e4d55801feb1a0933048d98419ac29a133cda1461e65e5d8f74ff97"
+    },
+    {
+      "pack": 2,
+      "stem": "lzma",
+      "path": "2-outlined-pages/lzma.ico",
+      "bytes": 95199,
+      "sha256": "8979e9af14f611e9dd118f81f8f8b1636f69ebaa33f4c0b085839f7b841c631f"
+    },
+    {
+      "pack": 2,
+      "stem": "lzma2",
+      "path": "2-outlined-pages/lzma2.ico",
+      "bytes": 95899,
+      "sha256": "f5349ab6690e282365d582c30256e1c583e111b77039839750286280211dea4d"
+    },
+    {
+      "pack": 2,
+      "stem": "ntfs",
+      "path": "2-outlined-pages/ntfs.ico",
+      "bytes": 94719,
+      "sha256": "75956d97bab436dd4940edc1f981c3a1e503c614cc26fd7b7db1ce423ee4e937"
+    },
+    {
+      "pack": 2,
+      "stem": "nupkg",
+      "path": "2-outlined-pages/nupkg.ico",
+      "bytes": 96222,
+      "sha256": "9199e867e0c3aa0e555508c482944111dfe385a23b454f46a2d4b6c7547f7492"
+    },
+    {
+      "pack": 2,
+      "stem": "rar",
+      "path": "2-outlined-pages/rar.ico",
+      "bytes": 95068,
+      "sha256": "655c203f665b4def6671cfab1352513997f1e4d77944a4a8082d14d61098b70c"
+    },
+    {
+      "pack": 2,
+      "stem": "rpm",
+      "path": "2-outlined-pages/rpm.ico",
+      "bytes": 94754,
+      "sha256": "a92131ea7b5f008a7bab0376efa186bbc2f412c23c352aac209f89397eacfb84"
+    },
+    {
+      "pack": 2,
+      "stem": "squashfs",
+      "path": "2-outlined-pages/squashfs.ico",
+      "bytes": 97141,
+      "sha256": "14e411454edd43f6483811f6d590f35d12f7f9181fe6650e9b09638c17ae7924"
+    },
+    {
+      "pack": 2,
+      "stem": "swm",
+      "path": "2-outlined-pages/swm.ico",
+      "bytes": 96413,
+      "sha256": "e353246e97c685c831afd2391c37a01443999c63b79732c677bd2070e52c8953"
+    },
+    {
+      "pack": 2,
+      "stem": "tar",
+      "path": "2-outlined-pages/tar.ico",
+      "bytes": 94572,
+      "sha256": "0a9188ccaf94483d2457ca3f39b2f1306b6c87d0a52b17f84a4029f582300723"
+    },
+    {
+      "pack": 2,
+      "stem": "taz",
+      "path": "2-outlined-pages/taz.ico",
+      "bytes": 94224,
+      "sha256": "9d19d549431eee9ecd6d0593ec0d5d993e0ba928f3e01766131dade2789807e6"
+    },
+    {
+      "pack": 2,
+      "stem": "tbz",
+      "path": "2-outlined-pages/tbz.ico",
+      "bytes": 93763,
+      "sha256": "a3681b7e5201eb813fa2aaf753551673131dd303e306ce741f9243cff4f2f512"
+    },
+    {
+      "pack": 2,
+      "stem": "tbz2",
+      "path": "2-outlined-pages/tbz2.ico",
+      "bytes": 94768,
+      "sha256": "a69b894cea20ebabcf47024161d9e43ebc03357e029e7980b1361cacbd7915db"
+    },
+    {
+      "pack": 2,
+      "stem": "tgz",
+      "path": "2-outlined-pages/tgz.ico",
+      "bytes": 94227,
+      "sha256": "d08f40f2eb0275f7a79bf94a0206914deab5b48f1792a3476b151eee9e3f799c"
+    },
+    {
+      "pack": 2,
+      "stem": "tlz",
+      "path": "2-outlined-pages/tlz.ico",
+      "bytes": 93254,
+      "sha256": "93848086506a2853b9afdb840de4d2f2be48baa78edb794afd28b49cc0f7923e"
+    },
+    {
+      "pack": 2,
+      "stem": "tlz4",
+      "path": "2-outlined-pages/tlz4.ico",
+      "bytes": 93605,
+      "sha256": "20ff63920ff3476b12fb3b0a82fa7ecdbba400b091a7980143dfdc79e45eaf17"
+    },
+    {
+      "pack": 2,
+      "stem": "tlz5",
+      "path": "2-outlined-pages/tlz5.ico",
+      "bytes": 94150,
+      "sha256": "0454c95ac0c71ea0767a0f8eeb7388133ea3d5df05ed57cfd6ef98cc13573161"
+    },
+    {
+      "pack": 2,
+      "stem": "tpz",
+      "path": "2-outlined-pages/tpz.ico",
+      "bytes": 93625,
+      "sha256": "f007bf62b0ec773de49cf5b20259cc0ff017a8179c0aa1ba128d7a551596997a"
+    },
+    {
+      "pack": 2,
+      "stem": "txz",
+      "path": "2-outlined-pages/txz.ico",
+      "bytes": 94374,
+      "sha256": "9c0e19f45fdeccc5518a5072f4da80aa52a8efbdf2e79f1094e9c7efe2a3ae16"
+    },
+    {
+      "pack": 2,
+      "stem": "tz",
+      "path": "2-outlined-pages/tz.ico",
+      "bytes": 93131,
+      "sha256": "dd2ed0dc4cbbc88d318f53ad5f6d83af8b202c21aacf27b0c5436df64c279c7f"
+    },
+    {
+      "pack": 2,
+      "stem": "tzst",
+      "path": "2-outlined-pages/tzst.ico",
+      "bytes": 94531,
+      "sha256": "11b30be5aa9c1440b36a41ef72419292310b58f0af6f308b3da58b446e8b3fee"
+    },
+    {
+      "pack": 2,
+      "stem": "tzstd",
+      "path": "2-outlined-pages/tzstd.ico",
+      "bytes": 95143,
+      "sha256": "2ef39a48ad2820c0f09fcecc5f325420fe43b05a68e3d92e5795560a16191c9f"
+    },
+    {
+      "pack": 2,
+      "stem": "vdi",
+      "path": "2-outlined-pages/vdi.ico",
+      "bytes": 94354,
+      "sha256": "f1a82f76f28380de5e812a50d5a5496a368aee292fae4bf2bdd60ead8daf7c80"
+    },
+    {
+      "pack": 2,
+      "stem": "vhd",
+      "path": "2-outlined-pages/vhd.ico",
+      "bytes": 94337,
+      "sha256": "1724b83c2af6baf6d37e968b972656b7cf4209aa9eb331cb4b26f23b79180ee6"
+    },
+    {
+      "pack": 2,
+      "stem": "vhdx",
+      "path": "2-outlined-pages/vhdx.ico",
+      "bytes": 95772,
+      "sha256": "726b934374867e47604839d2933041c9bca03e772ecd59b27f782d56f2980d5a"
+    },
+    {
+      "pack": 2,
+      "stem": "vmdk",
+      "path": "2-outlined-pages/vmdk.ico",
+      "bytes": 95988,
+      "sha256": "d01311991e58534c75a5fc9afbb995974cdba1d4e8f5580681a43e987c00d249"
+    },
+    {
+      "pack": 2,
+      "stem": "wim",
+      "path": "2-outlined-pages/wim.ico",
+      "bytes": 94939,
+      "sha256": "1785f15e73296ef85d39be5ba19267394d4e5b38fa750d21c81d5dad5466665d"
+    },
+    {
+      "pack": 2,
+      "stem": "xar",
+      "path": "2-outlined-pages/xar.ico",
+      "bytes": 95800,
+      "sha256": "2eba253e9e7aca67c57d455e1454eefcb65e0a076a3032719f63ef65f69aeb56"
+    },
+    {
+      "pack": 2,
+      "stem": "xz",
+      "path": "2-outlined-pages/xz.ico",
+      "bytes": 94388,
+      "sha256": "471ffee9fc58eed0c7cec3be16a41885410e5823e5aae20cb92fb5dd3198d60b"
+    },
+    {
+      "pack": 2,
+      "stem": "z",
+      "path": "2-outlined-pages/z.ico",
+      "bytes": 93029,
+      "sha256": "9c651f08866646c8e4fba516e37dfbd10b287472e87bb75d4b7a7a0efcbb551f"
+    },
+    {
+      "pack": 2,
+      "stem": "zip",
+      "path": "2-outlined-pages/zip.ico",
+      "bytes": 93115,
+      "sha256": "8c4ca9741ece8d87b073ce2970ed03cf5ff808c9bf0fc790567da6180b258bc3"
+    },
+    {
+      "pack": 2,
+      "stem": "zipx",
+      "path": "2-outlined-pages/zipx.ico",
+      "bytes": 94855,
+      "sha256": "57168c8c5617bf2c683ce1b9969da005ca68665fb38c296a5e7a87f41c21fd85"
+    },
+    {
+      "pack": 2,
+      "stem": "zst",
+      "path": "2-outlined-pages/zst.ico",
+      "bytes": 94586,
+      "sha256": "e44b6d9ed382afb29e4a81ed7328bc25ef21d575c04e03bcdfce7be111d014a5"
+    },
+    {
+      "pack": 2,
+      "stem": "zstd",
+      "path": "2-outlined-pages/zstd.ico",
+      "bytes": 95264,
+      "sha256": "f90fc2a327033c74894d611941c5b08f74832353852697d340d32742c5384480"
+    },
+    {
+      "pack": 3,
+      "stem": "001",
+      "path": "3-golden-parcel/001.ico",
+      "bytes": 113387,
+      "sha256": "88b7266a5677ab621ebf7955ccd9e8ffbbc368663fbcfcbb19afd574200e0090"
+    },
+    {
+      "pack": 3,
+      "stem": "7z",
+      "path": "3-golden-parcel/7z.ico",
+      "bytes": 112822,
+      "sha256": "01871ce9c5a4e6479bdefad428f87fbb1038d87ff767ccc6ad3499c3e1a6d47a"
+    },
+    {
+      "pack": 3,
+      "stem": "apfs",
+      "path": "3-golden-parcel/apfs.ico",
+      "bytes": 115145,
+      "sha256": "e2ebe019574aaabd5ebf6a5fcbca7e72dfb9d123bc5a49a4bfb3f7b7b226078e"
+    },
+    {
+      "pack": 3,
+      "stem": "app",
+      "path": "3-golden-parcel/app.ico",
+      "bytes": 151437,
+      "sha256": "f139dcda53d37fc067fde220e9f7c5f6038009b8db925489e475d7df02295097"
+    },
+    {
+      "pack": 3,
+      "stem": "archive",
+      "path": "3-golden-parcel/archive.ico",
+      "bytes": 115232,
+      "sha256": "64a5657def0e79026e7dfe27ea447b0739614f5f9412bc18d9a15a08c98216f0"
+    },
+    {
+      "pack": 3,
+      "stem": "arj",
+      "path": "3-golden-parcel/arj.ico",
+      "bytes": 114118,
+      "sha256": "641daacd767e61481820fd61340b608cf20f98cebcd09f489315f953cb7000f9"
+    },
+    {
+      "pack": 3,
+      "stem": "asar",
+      "path": "3-golden-parcel/asar.ico",
+      "bytes": 115724,
+      "sha256": "0486fabff9901a69fc76eed757c39e28fc64fe71c38fd42c864eb1ca876f5299"
+    },
+    {
+      "pack": 3,
+      "stem": "b64",
+      "path": "3-golden-parcel/b64.ico",
+      "bytes": 114263,
+      "sha256": "c7114d430e4f9b1b637bc91c5e846a5e68d248ddc13b89eff38fdedb96b320ef"
+    },
+    {
+      "pack": 3,
+      "stem": "br",
+      "path": "3-golden-parcel/br.ico",
+      "bytes": 113890,
+      "sha256": "2fc9030280c8912b19d62820f4d81674510659c419ccbd269644164cc5062f86"
+    },
+    {
+      "pack": 3,
+      "stem": "bz2",
+      "path": "3-golden-parcel/bz2.ico",
+      "bytes": 114497,
+      "sha256": "7fa93604b9c23329c41bdb21dc353fed231db5f16c6e07a427c5778a87d1570c"
+    },
+    {
+      "pack": 3,
+      "stem": "bzip2",
+      "path": "3-golden-parcel/bzip2.ico",
+      "bytes": 114299,
+      "sha256": "4ef76f478a111eb351940e0b6dd5edc554a9bcfc4e77c6a00f792f581127edaf"
+    },
+    {
+      "pack": 3,
+      "stem": "cab",
+      "path": "3-golden-parcel/cab.ico",
+      "bytes": 114929,
+      "sha256": "17d5409593e8101dc3c32a8acb334da15f1972e3bb60e164222cbbb007f6b0a5"
+    },
+    {
+      "pack": 3,
+      "stem": "cb7",
+      "path": "3-golden-parcel/cb7.ico",
+      "bytes": 114415,
+      "sha256": "3777d1bd313ad49d377b1d5b522e66f476d5fea2093a9d2ec4b608914d377989"
+    },
+    {
+      "pack": 3,
+      "stem": "cbr",
+      "path": "3-golden-parcel/cbr.ico",
+      "bytes": 114426,
+      "sha256": "6a8c363d4c0507eebaa2f32e5c67451653b8bea7092f62c138b9f547411aa1e8"
+    },
+    {
+      "pack": 3,
+      "stem": "cbz",
+      "path": "3-golden-parcel/cbz.ico",
+      "bytes": 114627,
+      "sha256": "c013a45d0928d40c5a0ad92d7088c7b0304a7574420e6e9a5df17fe561367a54"
+    },
+    {
+      "pack": 3,
+      "stem": "cpio",
+      "path": "3-golden-parcel/cpio.ico",
+      "bytes": 115015,
+      "sha256": "b5f5bd01aaf10eb66470a4f859d9d7d9a202a5ea86d7670144da8388f1a9f731"
+    },
+    {
+      "pack": 3,
+      "stem": "deb",
+      "path": "3-golden-parcel/deb.ico",
+      "bytes": 113742,
+      "sha256": "30db2fb88dbba7aa548b8a68abe82f9cc38867a1ca86c3877f8ae7b9595ef5b9"
+    },
+    {
+      "pack": 3,
+      "stem": "dmg",
+      "path": "3-golden-parcel/dmg.ico",
+      "bytes": 114762,
+      "sha256": "ac3e7e4ec2d707e0819ffefa27ad45f882d1547093c91c2826b9b5d88356be72"
+    },
+    {
+      "pack": 3,
+      "stem": "esd",
+      "path": "3-golden-parcel/esd.ico",
+      "bytes": 114026,
+      "sha256": "c3700f9d03626325c2900193dc5274afc7c3c056cdcbc9f9e1b2c9ff687b1de1"
+    },
+    {
+      "pack": 3,
+      "stem": "fat",
+      "path": "3-golden-parcel/fat.ico",
+      "bytes": 113431,
+      "sha256": "fa9cd21c52a76608d3b937662872641c969cf411ed569f2ffb6aa883ed392eb7"
+    },
+    {
+      "pack": 3,
+      "stem": "gz",
+      "path": "3-golden-parcel/gz.ico",
+      "bytes": 114015,
+      "sha256": "093fccd3146bc248c70a4f87c5f25a155fec24886c097482d083fc0f5d0116e4"
+    },
+    {
+      "pack": 3,
+      "stem": "gzip",
+      "path": "3-golden-parcel/gzip.ico",
+      "bytes": 114463,
+      "sha256": "fc164cb3327bcd1b312fb958c1c983faa5c1e967b85e9abf4fe03dec560bda06"
+    },
+    {
+      "pack": 3,
+      "stem": "hfs",
+      "path": "3-golden-parcel/hfs.ico",
+      "bytes": 114225,
+      "sha256": "b3e4b7316debed78c2fc178947880662194bfd8ad6078940225fd4c766b870d0"
+    },
+    {
+      "pack": 3,
+      "stem": "hfsx",
+      "path": "3-golden-parcel/hfsx.ico",
+      "bytes": 114892,
+      "sha256": "0e15f2c7b7c9124c8d7b8f676bc7a9226d04e4d206735c30e3dd5ba853c912be"
+    },
+    {
+      "pack": 3,
+      "stem": "iso",
+      "path": "3-golden-parcel/iso.ico",
+      "bytes": 114816,
+      "sha256": "f2bff15e30c18afdd3a56340072c99231ebbf6b332821e25a7608e2ac6e7d10e"
+    },
+    {
+      "pack": 3,
+      "stem": "lha",
+      "path": "3-golden-parcel/lha.ico",
+      "bytes": 113723,
+      "sha256": "c17a95ee7d3ab86b4be464a3e26966ba469c464811b6570e1c77b08be2213ffe"
+    },
+    {
+      "pack": 3,
+      "stem": "liz",
+      "path": "3-golden-parcel/liz.ico",
+      "bytes": 112151,
+      "sha256": "ab7de3eabb86a46eb23c57a82781d7b54d5a9f49d30abb4cbbba07d50178de5a"
+    },
+    {
+      "pack": 3,
+      "stem": "lz",
+      "path": "3-golden-parcel/lz.ico",
+      "bytes": 113344,
+      "sha256": "a07e618cf55f1a1b1c4b900997be6550388b47cd63f1f1b9b5a1623f70d4179d"
+    },
+    {
+      "pack": 3,
+      "stem": "lz4",
+      "path": "3-golden-parcel/lz4.ico",
+      "bytes": 113663,
+      "sha256": "f794b8949e6c68614f99de770f26f7cd3769e8867918b67c6bcedda12fe6322c"
+    },
+    {
+      "pack": 3,
+      "stem": "lz5",
+      "path": "3-golden-parcel/lz5.ico",
+      "bytes": 114136,
+      "sha256": "dbf6a2cc5339c026bc4370b5bcfae3d676a50e9cf475b61db0569acc7755a32e"
+    },
+    {
+      "pack": 3,
+      "stem": "lzh",
+      "path": "3-golden-parcel/lzh.ico",
+      "bytes": 113475,
+      "sha256": "d4ba94e894aa5b2de4087e1cf5f942da896ab72673e8deeb296a2cc20805de97"
+    },
+    {
+      "pack": 3,
+      "stem": "lzma",
+      "path": "3-golden-parcel/lzma.ico",
+      "bytes": 114114,
+      "sha256": "2326807b4dadd4f8b85be726b551e70df6f9a5ddd444469cc301cc68e9983032"
+    },
+    {
+      "pack": 3,
+      "stem": "lzma2",
+      "path": "3-golden-parcel/lzma2.ico",
+      "bytes": 115048,
+      "sha256": "845b4b5d89d7b5a1e9a691187c5dde45a149a32524dfd3c7ad92ef0cabe6c770"
+    },
+    {
+      "pack": 3,
+      "stem": "ntfs",
+      "path": "3-golden-parcel/ntfs.ico",
+      "bytes": 114030,
+      "sha256": "8e64b05446a88c5ad824b61b77cad7c2eba71ed81979ad1d55891a9e9572b59a"
+    },
+    {
+      "pack": 3,
+      "stem": "nupkg",
+      "path": "3-golden-parcel/nupkg.ico",
+      "bytes": 115195,
+      "sha256": "4eb8f637baf469bba624018e1f8e5058bf495cd3b7ce5a9252c5095fbd451536"
+    },
+    {
+      "pack": 3,
+      "stem": "rar",
+      "path": "3-golden-parcel/rar.ico",
+      "bytes": 114599,
+      "sha256": "f95afea6fa7866e65fae59321a1ac3c6cc4b09c2aee5f70135cd3d2ee2aefe04"
+    },
+    {
+      "pack": 3,
+      "stem": "rpm",
+      "path": "3-golden-parcel/rpm.ico",
+      "bytes": 114019,
+      "sha256": "899eec6953df8317d09fb80dae66c55e951ef88645346ab92095257312fa7544"
+    },
+    {
+      "pack": 3,
+      "stem": "squashfs",
+      "path": "3-golden-parcel/squashfs.ico",
+      "bytes": 116856,
+      "sha256": "e14d37816797fc0d548935dc435c1b439e42c82c526cc3a1e504b46b2afb43b1"
+    },
+    {
+      "pack": 3,
+      "stem": "swm",
+      "path": "3-golden-parcel/swm.ico",
+      "bytes": 115728,
+      "sha256": "d04ba33ed08a120ab90798ea1a3004a7e8b97e5ab19efb8dec8d2df27afc7014"
+    },
+    {
+      "pack": 3,
+      "stem": "tar",
+      "path": "3-golden-parcel/tar.ico",
+      "bytes": 113781,
+      "sha256": "e9ed5fd8291c33cbc438f92e58af041b93c3ecb7f5042dfb02ef1ac4d2979fc7"
+    },
+    {
+      "pack": 3,
+      "stem": "taz",
+      "path": "3-golden-parcel/taz.ico",
+      "bytes": 113759,
+      "sha256": "6ecf7865a093c16bd0070eeb2227e4e13071c836a615e942d185e35259235bce"
+    },
+    {
+      "pack": 3,
+      "stem": "tbz",
+      "path": "3-golden-parcel/tbz.ico",
+      "bytes": 113468,
+      "sha256": "c1e40f5b1b75bcf281e3593d954d0104a44278eb8865398809ee9be0a0de0e6e"
+    },
+    {
+      "pack": 3,
+      "stem": "tbz2",
+      "path": "3-golden-parcel/tbz2.ico",
+      "bytes": 114403,
+      "sha256": "892ef4b860a1191f92fe0c5085f8d19e8169ff9c53e3170ebd5034fd8f70619c"
+    },
+    {
+      "pack": 3,
+      "stem": "tgz",
+      "path": "3-golden-parcel/tgz.ico",
+      "bytes": 114230,
+      "sha256": "129710636caff8c8c9c618257ae4c49609efa2b98c85257bb630ff4cf454fb27"
+    },
+    {
+      "pack": 3,
+      "stem": "tlz",
+      "path": "3-golden-parcel/tlz.ico",
+      "bytes": 113191,
+      "sha256": "6dfc42ec0cdcce1d09506b2d4b65708bcd14b0350273cfb0fd18e5fe4add440d"
+    },
+    {
+      "pack": 3,
+      "stem": "tlz4",
+      "path": "3-golden-parcel/tlz4.ico",
+      "bytes": 113683,
+      "sha256": "370cf34e0a1eb201428358345bce645526df6485b7d09cada423d909c8f70600"
+    },
+    {
+      "pack": 3,
+      "stem": "tlz5",
+      "path": "3-golden-parcel/tlz5.ico",
+      "bytes": 113778,
+      "sha256": "fdd8fcfd5c62b5cdaa4b3578cc144a7dc444554352e09dea393d0c5ef5a1af33"
+    },
+    {
+      "pack": 3,
+      "stem": "tpz",
+      "path": "3-golden-parcel/tpz.ico",
+      "bytes": 113091,
+      "sha256": "30d5c99bde52c3faa02b84659bfc86b4d380508bacca19b854e6e4bce788a87f"
+    },
+    {
+      "pack": 3,
+      "stem": "txz",
+      "path": "3-golden-parcel/txz.ico",
+      "bytes": 114150,
+      "sha256": "02c5860f64c049b567eca1e68fee92f5e4c3313bc68af12c0f2ee06f656c33f7"
+    },
+    {
+      "pack": 3,
+      "stem": "tz",
+      "path": "3-golden-parcel/tz.ico",
+      "bytes": 113389,
+      "sha256": "8428e3f505341734a5a65b177ba8c852d9b800a109d99d1b437c1327fb534b6c"
+    },
+    {
+      "pack": 3,
+      "stem": "tzst",
+      "path": "3-golden-parcel/tzst.ico",
+      "bytes": 114409,
+      "sha256": "4697a4b4bcc24754bf9b463610f3cff4efb385bea24eb65c26f3a4053fd9082c"
+    },
+    {
+      "pack": 3,
+      "stem": "tzstd",
+      "path": "3-golden-parcel/tzstd.ico",
+      "bytes": 114676,
+      "sha256": "f2efdea2d5887ea1328a756dfb265e6452c0472a33cad7fda8d828cc8e990955"
+    },
+    {
+      "pack": 3,
+      "stem": "vdi",
+      "path": "3-golden-parcel/vdi.ico",
+      "bytes": 113685,
+      "sha256": "d9174762b256655857d13c371cb3eece67e679d216cc35863a8bfd1d1d21497d"
+    },
+    {
+      "pack": 3,
+      "stem": "vhd",
+      "path": "3-golden-parcel/vhd.ico",
+      "bytes": 113827,
+      "sha256": "16bc8f6e4d1c013dd5f6c0bf34e90c0eb4ad22b3861ef0894e1c8ea8fffb4c90"
+    },
+    {
+      "pack": 3,
+      "stem": "vhdx",
+      "path": "3-golden-parcel/vhdx.ico",
+      "bytes": 114823,
+      "sha256": "739c4350e500a38a254b6f519a8e27ffc52098a83003d329a42643a078dadd6f"
+    },
+    {
+      "pack": 3,
+      "stem": "vmdk",
+      "path": "3-golden-parcel/vmdk.ico",
+      "bytes": 115007,
+      "sha256": "659459a8cbd0a81f237e749b304892c79d2da0527dc53531a91c02b804357c37"
+    },
+    {
+      "pack": 3,
+      "stem": "wim",
+      "path": "3-golden-parcel/wim.ico",
+      "bytes": 114618,
+      "sha256": "1c9db555be16b0bb9a7a15de92d0351c488223bd086f2da1ab24f0c42f2f7707"
+    },
+    {
+      "pack": 3,
+      "stem": "xar",
+      "path": "3-golden-parcel/xar.ico",
+      "bytes": 115022,
+      "sha256": "06df9b8c94c1e0284253f865742dc8b49d063f63e89b529a80544669be066a82"
+    },
+    {
+      "pack": 3,
+      "stem": "xz",
+      "path": "3-golden-parcel/xz.ico",
+      "bytes": 114438,
+      "sha256": "9b1b221641d2b0155cda2d00180b6457bfb16241d664231c4299767f12be3a2d"
+    },
+    {
+      "pack": 3,
+      "stem": "z",
+      "path": "3-golden-parcel/z.ico",
+      "bytes": 113393,
+      "sha256": "3ca40bf51be5231915d7b5e57cebb33e027aa549e98ed61502355ee296bda0a0"
+    },
+    {
+      "pack": 3,
+      "stem": "zip",
+      "path": "3-golden-parcel/zip.ico",
+      "bytes": 112869,
+      "sha256": "f83e6988a0dacad5abf8c312d2d7f3fef31c14bcba7c28c1573d2b366f2c81c0"
+    },
+    {
+      "pack": 3,
+      "stem": "zipx",
+      "path": "3-golden-parcel/zipx.ico",
+      "bytes": 114463,
+      "sha256": "6d7ac2cbcc8b36e9962628c7dc3ac25ee8fce0a2942569decc9c65052bebbe19"
+    },
+    {
+      "pack": 3,
+      "stem": "zst",
+      "path": "3-golden-parcel/zst.ico",
+      "bytes": 114254,
+      "sha256": "d269d60bf5427de04dc91e575ba510c1224a8585398831861e9735302cbbc51a"
+    },
+    {
+      "pack": 3,
+      "stem": "zstd",
+      "path": "3-golden-parcel/zstd.ico",
+      "bytes": 114811,
+      "sha256": "d502800d6d1ad04bde8963ce54b95c2e7c066221a123966cc248245d679c41df"
+    },
+    {
+      "pack": 5,
+      "stem": "001",
+      "path": "5-prism-stack/001.ico",
+      "bytes": 103633,
+      "sha256": "1cebbe52b849655fdd174357eff2ab2220ba0fb934267b44838f975fb2f92fdd"
+    },
+    {
+      "pack": 5,
+      "stem": "7z",
+      "path": "5-prism-stack/7z.ico",
+      "bytes": 101835,
+      "sha256": "8a88a3e33105bd70dc6e0146f1d1afa0c4ab631cdb322e6a1ad5eadd740c0666"
+    },
+    {
+      "pack": 5,
+      "stem": "apfs",
+      "path": "5-prism-stack/apfs.ico",
+      "bytes": 105861,
+      "sha256": "0409804ea4a47c102b480e0525649e979729fe6cb9367cc38b2e594914fcc3f4"
+    },
+    {
+      "pack": 5,
+      "stem": "app",
+      "path": "5-prism-stack/app.ico",
+      "bytes": 128828,
+      "sha256": "70c131df8ffeee9e7fb525cf2b4fc59316e7d56c3419975274043ade5a40fb52"
+    },
+    {
+      "pack": 5,
+      "stem": "archive",
+      "path": "5-prism-stack/archive.ico",
+      "bytes": 105051,
+      "sha256": "0bf818e707560b66e5807d395c68196b3bd6ab1929b1db31ad8737041cc3b01c"
+    },
+    {
+      "pack": 5,
+      "stem": "arj",
+      "path": "5-prism-stack/arj.ico",
+      "bytes": 105156,
+      "sha256": "94b643c779d90bd9102e8b169f581a31a1c979e5d717e77c6d79c4d49381f419"
+    },
+    {
+      "pack": 5,
+      "stem": "asar",
+      "path": "5-prism-stack/asar.ico",
+      "bytes": 107546,
+      "sha256": "31fe38a8568a949258c68624b6e8ede7f4907c653f99b20e4ca0a5f23088e14f"
+    },
+    {
+      "pack": 5,
+      "stem": "b64",
+      "path": "5-prism-stack/b64.ico",
+      "bytes": 104683,
+      "sha256": "84ba5f6dcb82cd125983906788e914c0863c573232b018e1b100ef2c828ac1b7"
+    },
+    {
+      "pack": 5,
+      "stem": "br",
+      "path": "5-prism-stack/br.ico",
+      "bytes": 103347,
+      "sha256": "62698d09d0bae61c481326ce373c647dadbb5364dbcf7e92c3eb4d638cd9cd33"
+    },
+    {
+      "pack": 5,
+      "stem": "bz2",
+      "path": "5-prism-stack/bz2.ico",
+      "bytes": 104507,
+      "sha256": "d77ac718a871edbb765f239a0372d1cc96fe3f09862f599e4c2b70be0d47f0c1"
+    },
+    {
+      "pack": 5,
+      "stem": "bzip2",
+      "path": "5-prism-stack/bzip2.ico",
+      "bytes": 105569,
+      "sha256": "df78271b590fe80faab3865b2328c5cbfd920865b04d071a3ca2e77ec2529418"
+    },
+    {
+      "pack": 5,
+      "stem": "cab",
+      "path": "5-prism-stack/cab.ico",
+      "bytes": 105571,
+      "sha256": "33977c8789388b1a66b8de9196520c47dee6bc3e29d908daa90cbc0772917598"
+    },
+    {
+      "pack": 5,
+      "stem": "cb7",
+      "path": "5-prism-stack/cb7.ico",
+      "bytes": 104993,
+      "sha256": "fc95c3e43ba1a2b9951668fc07a6e5892871638e67924cc4e689ee20207f459b"
+    },
+    {
+      "pack": 5,
+      "stem": "cbr",
+      "path": "5-prism-stack/cbr.ico",
+      "bytes": 105516,
+      "sha256": "cbc8eeb69c706c44012c9fe7cbbf632610b20deacc2b5d3bd0fe2192aa01f17f"
+    },
+    {
+      "pack": 5,
+      "stem": "cbz",
+      "path": "5-prism-stack/cbz.ico",
+      "bytes": 104904,
+      "sha256": "ba5abaf85782d689eaca401ff1d8f1ddc659b1a5c3f429a17772448828f8ad16"
+    },
+    {
+      "pack": 5,
+      "stem": "cpio",
+      "path": "5-prism-stack/cpio.ico",
+      "bytes": 105708,
+      "sha256": "3ba6ce9e2ce1d2cf6c843dd53352466d8b23cfed091e40ac250d611380f968ab"
+    },
+    {
+      "pack": 5,
+      "stem": "deb",
+      "path": "5-prism-stack/deb.ico",
+      "bytes": 103982,
+      "sha256": "08e77f962e85f16ce542a643d71ead9d5a8fe0f7360fda87d064ccad3acf4231"
+    },
+    {
+      "pack": 5,
+      "stem": "dmg",
+      "path": "5-prism-stack/dmg.ico",
+      "bytes": 105710,
+      "sha256": "5b4457d77e04a16263f8f6fb624912a6af2a606639e41fe5094a97ab78fbe97a"
+    },
+    {
+      "pack": 5,
+      "stem": "esd",
+      "path": "5-prism-stack/esd.ico",
+      "bytes": 104928,
+      "sha256": "bf6917588a33aca62eac79fde7faebb4b53f861a8e5e883f77a3616bc4addb97"
+    },
+    {
+      "pack": 5,
+      "stem": "fat",
+      "path": "5-prism-stack/fat.ico",
+      "bytes": 103435,
+      "sha256": "fcab45dde3aaf9d2d23b4e9db1cd0db971c467fec6506eb764ba6089d7bf6071"
+    },
+    {
+      "pack": 5,
+      "stem": "gz",
+      "path": "5-prism-stack/gz.ico",
+      "bytes": 103902,
+      "sha256": "0501f0673e6c808624b89a4d17b7e1bc93e557b9fa949e646566868b9645d47b"
+    },
+    {
+      "pack": 5,
+      "stem": "gzip",
+      "path": "5-prism-stack/gzip.ico",
+      "bytes": 105060,
+      "sha256": "10289535e72ee91677a851329e4e01a3f3783ee848132ab412e297c6973cc6cb"
+    },
+    {
+      "pack": 5,
+      "stem": "hfs",
+      "path": "5-prism-stack/hfs.ico",
+      "bytes": 103666,
+      "sha256": "9233ae0adbf5daa1444a7ee14f0aae1c52ec8f7de608abfa424fb72056bb2774"
+    },
+    {
+      "pack": 5,
+      "stem": "hfsx",
+      "path": "5-prism-stack/hfsx.ico",
+      "bytes": 105838,
+      "sha256": "48b3ff780e577426aeca2086284c35f2c55770c198aa5c5bb0a258d83fcb26ce"
+    },
+    {
+      "pack": 5,
+      "stem": "iso",
+      "path": "5-prism-stack/iso.ico",
+      "bytes": 104539,
+      "sha256": "21cd524fe0d02ccd5ae6b6ca14e350249b822ee6fb04c6e019da883ee745a7ad"
+    },
+    {
+      "pack": 5,
+      "stem": "lha",
+      "path": "5-prism-stack/lha.ico",
+      "bytes": 103584,
+      "sha256": "ec0b3ea8261772d507bb307b13f63c93faefc4dcb0490572bb76ce9c9397008a"
+    },
+    {
+      "pack": 5,
+      "stem": "liz",
+      "path": "5-prism-stack/liz.ico",
+      "bytes": 101919,
+      "sha256": "2038fd6dff7411a60461de4f0ee7399cb7e1e4c933dc7849c3efe95d06aa29c1"
+    },
+    {
+      "pack": 5,
+      "stem": "lz",
+      "path": "5-prism-stack/lz.ico",
+      "bytes": 102459,
+      "sha256": "99b9864d4903f0c816160b3759024b891fd07b1f3f633425c7a59316997cf935"
+    },
+    {
+      "pack": 5,
+      "stem": "lz4",
+      "path": "5-prism-stack/lz4.ico",
+      "bytes": 103265,
+      "sha256": "78174e2218e862984524a304edd459a973cad786d5e4d3b7ec53d8f111e876a2"
+    },
+    {
+      "pack": 5,
+      "stem": "lz5",
+      "path": "5-prism-stack/lz5.ico",
+      "bytes": 103825,
+      "sha256": "b65066a52dd2ce52cfee0c8cd5de6298851c5b3ba607074453d0dc380cc6a145"
+    },
+    {
+      "pack": 5,
+      "stem": "lzh",
+      "path": "5-prism-stack/lzh.ico",
+      "bytes": 102927,
+      "sha256": "e0c6def61e41d8a9516c89e128eb749da19f1f0764e1786b130dc050d6074dba"
+    },
+    {
+      "pack": 5,
+      "stem": "lzma",
+      "path": "5-prism-stack/lzma.ico",
+      "bytes": 106106,
+      "sha256": "94ff1982e64d848b27cc0cdd683968d4d4aba25ec88be63a1e14b26865d5d597"
+    },
+    {
+      "pack": 5,
+      "stem": "lzma2",
+      "path": "5-prism-stack/lzma2.ico",
+      "bytes": 106661,
+      "sha256": "f63e9e2d0a14ea24ea77d7c80980d61d5268df73ebf84ca6ddf5d729c20d35b3"
+    },
+    {
+      "pack": 5,
+      "stem": "ntfs",
+      "path": "5-prism-stack/ntfs.ico",
+      "bytes": 105242,
+      "sha256": "24f9beaf9f52408a4c1c239eb84514cb3aa76929109313f4fd33b7c8dae11f2b"
+    },
+    {
+      "pack": 5,
+      "stem": "nupkg",
+      "path": "5-prism-stack/nupkg.ico",
+      "bytes": 106849,
+      "sha256": "c7df28d598644f83e6372ddf6f5b8ba48195f9749c9d7f745dc409ee997f7471"
+    },
+    {
+      "pack": 5,
+      "stem": "rar",
+      "path": "5-prism-stack/rar.ico",
+      "bytes": 104676,
+      "sha256": "e9ef6f17beb37873b474542cb9b5a55390d33190670fb8a1ad9efa9b6808de1f"
+    },
+    {
+      "pack": 5,
+      "stem": "rpm",
+      "path": "5-prism-stack/rpm.ico",
+      "bytes": 105226,
+      "sha256": "39df8de315fcfb17e18c3282898d74da267279f63740d40f53db46ef7565d062"
+    },
+    {
+      "pack": 5,
+      "stem": "squashfs",
+      "path": "5-prism-stack/squashfs.ico",
+      "bytes": 106617,
+      "sha256": "b7b70cec4f7c42a9f1b66125611a647cfbf8e5cbdc02d8d48cc4969969a8b0f9"
+    },
+    {
+      "pack": 5,
+      "stem": "swm",
+      "path": "5-prism-stack/swm.ico",
+      "bytes": 107194,
+      "sha256": "6af352c47edd46e93486237c08c52ad229d832d14e61b8bf58a275e649e959b1"
+    },
+    {
+      "pack": 5,
+      "stem": "tar",
+      "path": "5-prism-stack/tar.ico",
+      "bytes": 104582,
+      "sha256": "631d9d2913a1a3739f34913bed468759950f904b33f1bec2a495067369c4a655"
+    },
+    {
+      "pack": 5,
+      "stem": "taz",
+      "path": "5-prism-stack/taz.ico",
+      "bytes": 103865,
+      "sha256": "6addec7949994d08747d9b875f4036696729ac14c24b8e764e1d40b0176c045a"
+    },
+    {
+      "pack": 5,
+      "stem": "tbz",
+      "path": "5-prism-stack/tbz.ico",
+      "bytes": 103786,
+      "sha256": "a3100cb6ca35d07ebba060eae906664c88307d5a821ac791523a5ac3f5532307"
+    },
+    {
+      "pack": 5,
+      "stem": "tbz2",
+      "path": "5-prism-stack/tbz2.ico",
+      "bytes": 104922,
+      "sha256": "a8a1308e9798b5a412c3044c309f842826e6108832c582be1004c7db47092f62"
+    },
+    {
+      "pack": 5,
+      "stem": "tgz",
+      "path": "5-prism-stack/tgz.ico",
+      "bytes": 103815,
+      "sha256": "2ebf4c25cc537b0b17d81103331d6c7177b00d8354e6a085590bdd7a7e0b08e9"
+    },
+    {
+      "pack": 5,
+      "stem": "tlz",
+      "path": "5-prism-stack/tlz.ico",
+      "bytes": 102814,
+      "sha256": "b6fbb80f8524108664f2fad6e11b6d4ee18c0ccf9b4ec6568310b9ddc601a546"
+    },
+    {
+      "pack": 5,
+      "stem": "tlz4",
+      "path": "5-prism-stack/tlz4.ico",
+      "bytes": 103655,
+      "sha256": "4cdc0c33ac7be5acf3fd38e7e2be88bb91239aa40c2f9bae012173d47b256595"
+    },
+    {
+      "pack": 5,
+      "stem": "tlz5",
+      "path": "5-prism-stack/tlz5.ico",
+      "bytes": 103964,
+      "sha256": "fea34d257294eed4e77e2012b824dad87b9bc5540c0881c7cb1331d6576ec9df"
+    },
+    {
+      "pack": 5,
+      "stem": "tpz",
+      "path": "5-prism-stack/tpz.ico",
+      "bytes": 103262,
+      "sha256": "03aa8ff385fca29525e99bf2a6d86b06d8e287b22ed4612e8f5a1c97f82f239b"
+    },
+    {
+      "pack": 5,
+      "stem": "txz",
+      "path": "5-prism-stack/txz.ico",
+      "bytes": 103652,
+      "sha256": "c8e5fc6497c61c70ad217aa6f745730ffb012ec5ca05db8738cb72c1b3f1d810"
+    },
+    {
+      "pack": 5,
+      "stem": "tz",
+      "path": "5-prism-stack/tz.ico",
+      "bytes": 102490,
+      "sha256": "2f3cb87b5b450752110f09b66b4e01fd1fdacf42099ac67191478c0b74f2d292"
+    },
+    {
+      "pack": 5,
+      "stem": "tzst",
+      "path": "5-prism-stack/tzst.ico",
+      "bytes": 104134,
+      "sha256": "8369deb31f1c60fefb1795399a30901fe8d850b2b429ac99350acbd1284fd755"
+    },
+    {
+      "pack": 5,
+      "stem": "tzstd",
+      "path": "5-prism-stack/tzstd.ico",
+      "bytes": 105611,
+      "sha256": "d3b8b479a6b2b13e41c0b7a919d4d7adcea925e18a0de8e6145cdad16023f9ef"
+    },
+    {
+      "pack": 5,
+      "stem": "vdi",
+      "path": "5-prism-stack/vdi.ico",
+      "bytes": 104287,
+      "sha256": "c9401101cd632d4cb51a5f188c59ed491ddf7c39a00dc359ac52cebbb7feb459"
+    },
+    {
+      "pack": 5,
+      "stem": "vhd",
+      "path": "5-prism-stack/vhd.ico",
+      "bytes": 104543,
+      "sha256": "7393cd7634292dce1b897f1f67f3813413a2e88332ad1a1a7109a9d91d4c990c"
+    },
+    {
+      "pack": 5,
+      "stem": "vhdx",
+      "path": "5-prism-stack/vhdx.ico",
+      "bytes": 106465,
+      "sha256": "8a9533bfeac08861fbb4db098a42b5d6d342ef505759a50f0ffd5bb935dbf5f7"
+    },
+    {
+      "pack": 5,
+      "stem": "vmdk",
+      "path": "5-prism-stack/vmdk.ico",
+      "bytes": 107315,
+      "sha256": "84f27ef995d3dffcf3831184af77885005e1dd4c6b268a032c1b5b2413d93041"
+    },
+    {
+      "pack": 5,
+      "stem": "wim",
+      "path": "5-prism-stack/wim.ico",
+      "bytes": 105062,
+      "sha256": "05c717095c6c861867c0cec82d507d3ca0103a7e6eaf49430ba25273d14625ba"
+    },
+    {
+      "pack": 5,
+      "stem": "xar",
+      "path": "5-prism-stack/xar.ico",
+      "bytes": 106471,
+      "sha256": "c4ede70916232cf05224a579ee77c8c239bf37f980b7c47b868689a6bc8289be"
+    },
+    {
+      "pack": 5,
+      "stem": "xz",
+      "path": "5-prism-stack/xz.ico",
+      "bytes": 103869,
+      "sha256": "a00395290052c5df44fb891c86ffec24b6cac61d4e2a879379616bc5876ee6bb"
+    },
+    {
+      "pack": 5,
+      "stem": "z",
+      "path": "5-prism-stack/z.ico",
+      "bytes": 101724,
+      "sha256": "d82b4b8de40da6ba334ddc21066c765428199abd206904a7323b9baaba5f0596"
+    },
+    {
+      "pack": 5,
+      "stem": "zip",
+      "path": "5-prism-stack/zip.ico",
+      "bytes": 101715,
+      "sha256": "824870170f37aa698fbc8aece821418b28615bb751d054afab1cd7a250fa86c6"
+    },
+    {
+      "pack": 5,
+      "stem": "zipx",
+      "path": "5-prism-stack/zipx.ico",
+      "bytes": 104774,
+      "sha256": "183179b3f0a9d09898e57280348272a3e56470edc865e88c59ac0c852461a67f"
+    },
+    {
+      "pack": 5,
+      "stem": "zst",
+      "path": "5-prism-stack/zst.ico",
+      "bytes": 104306,
+      "sha256": "c734de8b4a67d57af8c7d9221398e281181389956885e392fe5e5bf33c762ba4"
+    },
+    {
+      "pack": 5,
+      "stem": "zstd",
+      "path": "5-prism-stack/zstd.ico",
+      "bytes": 105637,
+      "sha256": "896cc73a333312aa8f43285f082cae47bab8e40376f29e86e3539ebb6de0b4be"
+    },
+    {
+      "pack": 6,
+      "stem": "001",
+      "path": "6-archive-seal/001.ico",
+      "bytes": 118910,
+      "sha256": "2fd2a8fae989209d2871c9dcbab6dc53e4354a2397cd671ac4d387b4f385ac1d"
+    },
+    {
+      "pack": 6,
+      "stem": "7z",
+      "path": "6-archive-seal/7z.ico",
+      "bytes": 118129,
+      "sha256": "d2e83edc5d31a98b80779a942dc422a22efbc3442472bcaca8a83c167e8e591f"
+    },
+    {
+      "pack": 6,
+      "stem": "apfs",
+      "path": "6-archive-seal/apfs.ico",
+      "bytes": 119839,
+      "sha256": "f28224880a7e62158ef545e38495f9780e6560087110a9efd0cfb7f84714c196"
+    },
+    {
+      "pack": 6,
+      "stem": "app",
+      "path": "6-archive-seal/app.ico",
+      "bytes": 145984,
+      "sha256": "12d3938b93c485259ede11636832d104080204026c86dd4c97a07ac9a626906d"
+    },
+    {
+      "pack": 6,
+      "stem": "archive",
+      "path": "6-archive-seal/archive.ico",
+      "bytes": 119661,
+      "sha256": "9eccb7b94a979e270803dbdc65b44e9abcc872af7378c692c34547d489a9c2a3"
+    },
+    {
+      "pack": 6,
+      "stem": "arj",
+      "path": "6-archive-seal/arj.ico",
+      "bytes": 119094,
+      "sha256": "1bfab821ac2974a2311eb4827014ebfbb1ea1b69e3e247b504be66ec9b272889"
+    },
+    {
+      "pack": 6,
+      "stem": "asar",
+      "path": "6-archive-seal/asar.ico",
+      "bytes": 120448,
+      "sha256": "3c67cc794352db670f181869fd6fbac8d62deaf4e8c8a7368069a8db98cd2c4c"
+    },
+    {
+      "pack": 6,
+      "stem": "b64",
+      "path": "6-archive-seal/b64.ico",
+      "bytes": 119207,
+      "sha256": "b0d06748f696fbe6e96c9dc22da5c37952029ab40c4f1e60912100ddd7cc238f"
+    },
+    {
+      "pack": 6,
+      "stem": "br",
+      "path": "6-archive-seal/br.ico",
+      "bytes": 118453,
+      "sha256": "53f60f895cab5a0e2acec89b754f7a4005fb81e9ac5e100511dbd57da3e458a8"
+    },
+    {
+      "pack": 6,
+      "stem": "bz2",
+      "path": "6-archive-seal/bz2.ico",
+      "bytes": 119070,
+      "sha256": "9a815b6426e5de399c00334c9d51ad69642483434ee2ad92a7f5f1c5b323c9a4"
+    },
+    {
+      "pack": 6,
+      "stem": "bzip2",
+      "path": "6-archive-seal/bzip2.ico",
+      "bytes": 119209,
+      "sha256": "c413a01c1f700722d86b309b640df655dde6ac6586968813f0727ecde9f980b1"
+    },
+    {
+      "pack": 6,
+      "stem": "cab",
+      "path": "6-archive-seal/cab.ico",
+      "bytes": 119688,
+      "sha256": "1959e32c5c93a2aa612b44094552afdf794473fa286f53a498e1c6e04cf67686"
+    },
+    {
+      "pack": 6,
+      "stem": "cb7",
+      "path": "6-archive-seal/cb7.ico",
+      "bytes": 119282,
+      "sha256": "025c3e6ff3eb2ac849451c66ff5e94480022a24cb36658ffbaa1d2b9220f3adf"
+    },
+    {
+      "pack": 6,
+      "stem": "cbr",
+      "path": "6-archive-seal/cbr.ico",
+      "bytes": 119277,
+      "sha256": "d63ef94276cafc309fedd7fc8bd0b7f933cbf9da1568e413ebe1f66a93704373"
+    },
+    {
+      "pack": 6,
+      "stem": "cbz",
+      "path": "6-archive-seal/cbz.ico",
+      "bytes": 119330,
+      "sha256": "219639f5b6c989141d2c39ccf13190b09b552f3d178727c4bc9cb8e3a9114742"
+    },
+    {
+      "pack": 6,
+      "stem": "cpio",
+      "path": "6-archive-seal/cpio.ico",
+      "bytes": 119715,
+      "sha256": "52c7fdbe232d98a2da93fc7cecea08fb82b9f3a07a034d71c15c5fe6d72d71b6"
+    },
+    {
+      "pack": 6,
+      "stem": "deb",
+      "path": "6-archive-seal/deb.ico",
+      "bytes": 118275,
+      "sha256": "9fc41185118cad68b9012eb7cfa2e0f71774297af18001087b31d33d758f63d6"
+    },
+    {
+      "pack": 6,
+      "stem": "dmg",
+      "path": "6-archive-seal/dmg.ico",
+      "bytes": 119341,
+      "sha256": "1c5ed378b354455636bc9f8667ffe571e75b023fa337b46f805471efe2b573bf"
+    },
+    {
+      "pack": 6,
+      "stem": "esd",
+      "path": "6-archive-seal/esd.ico",
+      "bytes": 119076,
+      "sha256": "2a327acb258fafbd03d4e1e1c305b0d988969a54cdcbb51776e6217b52d2fd79"
+    },
+    {
+      "pack": 6,
+      "stem": "fat",
+      "path": "6-archive-seal/fat.ico",
+      "bytes": 118292,
+      "sha256": "f784845425995b3c741320be32d85f8729e0b3f43bcaec0942d984e4474f02d2"
+    },
+    {
+      "pack": 6,
+      "stem": "gz",
+      "path": "6-archive-seal/gz.ico",
+      "bytes": 118806,
+      "sha256": "f79cf7a37144340743a6972c5c2b8998d7220c8126685c90bf4c9480b8f8c3fb"
+    },
+    {
+      "pack": 6,
+      "stem": "gzip",
+      "path": "6-archive-seal/gzip.ico",
+      "bytes": 119054,
+      "sha256": "ed3bac4b48005bd3a2b3ffbf8c6afb008376abb7d51684fc7d54a83a11428418"
+    },
+    {
+      "pack": 6,
+      "stem": "hfs",
+      "path": "6-archive-seal/hfs.ico",
+      "bytes": 118770,
+      "sha256": "abd695454c33db34a8e30187e153f55f569667a2f6c9c56bfd9a480d47f58444"
+    },
+    {
+      "pack": 6,
+      "stem": "hfsx",
+      "path": "6-archive-seal/hfsx.ico",
+      "bytes": 119755,
+      "sha256": "eca1c247b58864ae2b2f88965f396c623abc8ef59b614f39114729251708636c"
+    },
+    {
+      "pack": 6,
+      "stem": "iso",
+      "path": "6-archive-seal/iso.ico",
+      "bytes": 119544,
+      "sha256": "65c0e462851be0b9bc244de43f96784067823d25c0753c18cb79f19f7c315310"
+    },
+    {
+      "pack": 6,
+      "stem": "lha",
+      "path": "6-archive-seal/lha.ico",
+      "bytes": 118243,
+      "sha256": "90bc2316ec01707ecbaa030ee3b7059383310cf3bf8683922ceb46a8400cb9d9"
+    },
+    {
+      "pack": 6,
+      "stem": "liz",
+      "path": "6-archive-seal/liz.ico",
+      "bytes": 117746,
+      "sha256": "6ab8734944473b3730a93422bf9ef9e26231b8012e58f21f0d911dfde84b3917"
+    },
+    {
+      "pack": 6,
+      "stem": "lz",
+      "path": "6-archive-seal/lz.ico",
+      "bytes": 117758,
+      "sha256": "567788d09889ed2359ea0335a282f6f77251b6e68138223b8e3b5eb726ecc688"
+    },
+    {
+      "pack": 6,
+      "stem": "lz4",
+      "path": "6-archive-seal/lz4.ico",
+      "bytes": 118281,
+      "sha256": "a61593b590e89da3afe404a0bad7ea69faf009943af1917e0e8359bb94531947"
+    },
+    {
+      "pack": 6,
+      "stem": "lz5",
+      "path": "6-archive-seal/lz5.ico",
+      "bytes": 118736,
+      "sha256": "2dc5d1525798271624b93005c2cf10d958d018fc068cd336a506975b7b01027f"
+    },
+    {
+      "pack": 6,
+      "stem": "lzh",
+      "path": "6-archive-seal/lzh.ico",
+      "bytes": 117979,
+      "sha256": "a8fc8333eec87cf0aed2b416684585c6121f28cbb37a7a9af0fac4dcdf54ea67"
+    },
+    {
+      "pack": 6,
+      "stem": "lzma",
+      "path": "6-archive-seal/lzma.ico",
+      "bytes": 119355,
+      "sha256": "fc92f57ab60c390ea782ea879b85e9fd5f258e3d71aec1de5ea34b11932c1c32"
+    },
+    {
+      "pack": 6,
+      "stem": "lzma2",
+      "path": "6-archive-seal/lzma2.ico",
+      "bytes": 119915,
+      "sha256": "b14bea234376963557335928f2597e88ba5b0d4ced759e70cf6e3de9dade32f2"
+    },
+    {
+      "pack": 6,
+      "stem": "ntfs",
+      "path": "6-archive-seal/ntfs.ico",
+      "bytes": 118785,
+      "sha256": "acd34d0d80ea234809ba70937c9f7a2e50125e75e04f4fe01517146a171faceb"
+    },
+    {
+      "pack": 6,
+      "stem": "nupkg",
+      "path": "6-archive-seal/nupkg.ico",
+      "bytes": 120180,
+      "sha256": "8d86d3582519325e0d23ad4f2d0f1276d39da1e8fabe0eaeea062b8625d9052d"
+    },
+    {
+      "pack": 6,
+      "stem": "rar",
+      "path": "6-archive-seal/rar.ico",
+      "bytes": 119007,
+      "sha256": "f2cd7476567c4c84fd784d4881dc128e3a111ee3f7b00218acf94eef8d01da17"
+    },
+    {
+      "pack": 6,
+      "stem": "rpm",
+      "path": "6-archive-seal/rpm.ico",
+      "bytes": 118782,
+      "sha256": "594625ce434e35f2c832ba21e9d6a5b897c3b25e0a4cc2244a236e9f8a592e7b"
+    },
+    {
+      "pack": 6,
+      "stem": "squashfs",
+      "path": "6-archive-seal/squashfs.ico",
+      "bytes": 121235,
+      "sha256": "320149a28345ef397aae37237f98c34920993cd00e7c8647e764eedc06ad8b85"
+    },
+    {
+      "pack": 6,
+      "stem": "swm",
+      "path": "6-archive-seal/swm.ico",
+      "bytes": 120240,
+      "sha256": "c3e6441220a8cf73d7e6f5b956bf6da51606bc83f47399b091e4eb47c61e3897"
+    },
+    {
+      "pack": 6,
+      "stem": "tar",
+      "path": "6-archive-seal/tar.ico",
+      "bytes": 118684,
+      "sha256": "93f89419eac4a98acdf24fe1fce211be5d60cacf763002ea43ed7a3167089fe9"
+    },
+    {
+      "pack": 6,
+      "stem": "taz",
+      "path": "6-archive-seal/taz.ico",
+      "bytes": 118668,
+      "sha256": "9ac9a4757369aae0d4db7ddc178fef9cc40a928a03c2f2925b3a3e330072ab51"
+    },
+    {
+      "pack": 6,
+      "stem": "tbz",
+      "path": "6-archive-seal/tbz.ico",
+      "bytes": 118246,
+      "sha256": "4722a6f9a4d98bc069f3ad7e76006cb50da30cec615cf2a0a95677ab186dc03d"
+    },
+    {
+      "pack": 6,
+      "stem": "tbz2",
+      "path": "6-archive-seal/tbz2.ico",
+      "bytes": 119043,
+      "sha256": "9c31b71a6dcbd3ab6c5326baa08d7bff5c35c5304db276aa4a73f77527c1fa82"
+    },
+    {
+      "pack": 6,
+      "stem": "tgz",
+      "path": "6-archive-seal/tgz.ico",
+      "bytes": 118840,
+      "sha256": "6c5cc7b7d9f2ae3d1ca7e79d4bb91681870e2918631806cb152863f320ba29e2"
+    },
+    {
+      "pack": 6,
+      "stem": "tlz",
+      "path": "6-archive-seal/tlz.ico",
+      "bytes": 117792,
+      "sha256": "87eb3a68b47f1f7aca9d74403aa958a56f00e13be919d2f2dc1f709becd98f97"
+    },
+    {
+      "pack": 6,
+      "stem": "tlz4",
+      "path": "6-archive-seal/tlz4.ico",
+      "bytes": 118181,
+      "sha256": "8c72daaeff7f00d029d3954b89a818a6c1a92d68c25c080aa6a3b5268c827d0e"
+    },
+    {
+      "pack": 6,
+      "stem": "tlz5",
+      "path": "6-archive-seal/tlz5.ico",
+      "bytes": 118523,
+      "sha256": "89a68a97402dfb90d7522925ef717ca251554353554d2e9dfab6e81a8d09471e"
+    },
+    {
+      "pack": 6,
+      "stem": "tpz",
+      "path": "6-archive-seal/tpz.ico",
+      "bytes": 118109,
+      "sha256": "b73ccd31ec187a9def0a8dde2794b76c9def506dccdb60d0c7619d052a6148e2"
+    },
+    {
+      "pack": 6,
+      "stem": "txz",
+      "path": "6-archive-seal/txz.ico",
+      "bytes": 118803,
+      "sha256": "833752fbfbb7ee5c6eca688691038d897b5abe671cafb02dcbf73cae28b76b1f"
+    },
+    {
+      "pack": 6,
+      "stem": "tz",
+      "path": "6-archive-seal/tz.ico",
+      "bytes": 117741,
+      "sha256": "8d46e684a14fdbe0acbecf5c4e0c3fdc752b83dc682641ba4ac974996938837f"
+    },
+    {
+      "pack": 6,
+      "stem": "tzst",
+      "path": "6-archive-seal/tzst.ico",
+      "bytes": 118826,
+      "sha256": "f81736545e85b03e3c27f3c50c75be75beaa7bd46c7e062c97e288645a6c7f73"
+    },
+    {
+      "pack": 6,
+      "stem": "tzstd",
+      "path": "6-archive-seal/tzstd.ico",
+      "bytes": 119143,
+      "sha256": "d5fa5aa914e8f88675e3291251a2a8cb0813b8ecc25f48ba893e186a89f16604"
+    },
+    {
+      "pack": 6,
+      "stem": "vdi",
+      "path": "6-archive-seal/vdi.ico",
+      "bytes": 118781,
+      "sha256": "55974fde7fa5847acb2fdcfbaffee46a37efe1bf03bec3e6ad360228053fac1e"
+    },
+    {
+      "pack": 6,
+      "stem": "vhd",
+      "path": "6-archive-seal/vhd.ico",
+      "bytes": 118668,
+      "sha256": "206fe8078ea86a6626edd25783b9a6da501d2f6f479f84adc8ef4ba93dba0c1b"
+    },
+    {
+      "pack": 6,
+      "stem": "vhdx",
+      "path": "6-archive-seal/vhdx.ico",
+      "bytes": 119677,
+      "sha256": "cf78ec8eff83d24d57b2f5d65c20572d47b162fecc9cbc8c3c971b35c727a1a6"
+    },
+    {
+      "pack": 6,
+      "stem": "vmdk",
+      "path": "6-archive-seal/vmdk.ico",
+      "bytes": 119859,
+      "sha256": "ec364a2a0879eb55521811388ee508ddeeefc19d5ac7d5f5ded7fd86e9e1a24d"
+    },
+    {
+      "pack": 6,
+      "stem": "wim",
+      "path": "6-archive-seal/wim.ico",
+      "bytes": 119098,
+      "sha256": "9d58f1218c5c4aff62e4c4acd6685c3d7eaf9dacdff969bd831b7db6faaae886"
+    },
+    {
+      "pack": 6,
+      "stem": "xar",
+      "path": "6-archive-seal/xar.ico",
+      "bytes": 119813,
+      "sha256": "e511b547e3ec98f7e00274e8bdacdcb9d491ca91db2b5bfd48543e4dab423942"
+    },
+    {
+      "pack": 6,
+      "stem": "xz",
+      "path": "6-archive-seal/xz.ico",
+      "bytes": 118991,
+      "sha256": "4467b0f7d21c7807dba38beb15e95e748ff2cbca4c4c8d5b69cb9db2f07b2a65"
+    },
+    {
+      "pack": 6,
+      "stem": "z",
+      "path": "6-archive-seal/z.ico",
+      "bytes": 117802,
+      "sha256": "117abd4f9412fe389153683b02e5f049fe01c7d350b684de49c038ff9b4b9f92"
+    },
+    {
+      "pack": 6,
+      "stem": "zip",
+      "path": "6-archive-seal/zip.ico",
+      "bytes": 117870,
+      "sha256": "b50c36639b520f81e1e6b14ec667bdb62164bb3d283b97b363911e26ea1b0c2d"
+    },
+    {
+      "pack": 6,
+      "stem": "zipx",
+      "path": "6-archive-seal/zipx.ico",
+      "bytes": 119059,
+      "sha256": "0211f9dd3b88857f2cc9148d605a7b3bba160c0cf3c1a7ce8544ee3a6c389bfa"
+    },
+    {
+      "pack": 6,
+      "stem": "zst",
+      "path": "6-archive-seal/zst.ico",
+      "bytes": 119003,
+      "sha256": "37da3c24a03572b7a848696e2d041f69e5df17c89d4cbff6b8056d8b7bf460d2"
+    },
+    {
+      "pack": 6,
+      "stem": "zstd",
+      "path": "6-archive-seal/zstd.ico",
+      "bytes": 119331,
+      "sha256": "6cffd34bffb2ccaa5782c7c5cda2ea046b7c430d53fcace10fdf806d7ade3e2b"
+    },
+    {
+      "pack": 7,
+      "stem": "001",
+      "path": "7-color-tabs/001.ico",
+      "bytes": 79131,
+      "sha256": "16cd6d41987379ba49b56d4030352646d53334ce49818d655ee6804e651ce99e"
+    },
+    {
+      "pack": 7,
+      "stem": "7z",
+      "path": "7-color-tabs/7z.ico",
+      "bytes": 77257,
+      "sha256": "cc0ffb87e5e698819c60645965597b89acf03338b2974fa0c40fb59eb47aea3a"
+    },
+    {
+      "pack": 7,
+      "stem": "apfs",
+      "path": "7-color-tabs/apfs.ico",
+      "bytes": 81403,
+      "sha256": "401781e95fe3408ced8b1368e1c0f2c9749fae1f54dcee5e90d998a6f12a6537"
+    },
+    {
+      "pack": 7,
+      "stem": "app",
+      "path": "7-color-tabs/app.ico",
+      "bytes": 112387,
+      "sha256": "9ffcc35028703fef18a6dc28d93a2ea732778e099fa92a0da322266a970902b0"
+    },
+    {
+      "pack": 7,
+      "stem": "archive",
+      "path": "7-color-tabs/archive.ico",
+      "bytes": 80863,
+      "sha256": "d10aab51601396ccc7553ec203b583891dd68494e926421288019b12a7202375"
+    },
+    {
+      "pack": 7,
+      "stem": "arj",
+      "path": "7-color-tabs/arj.ico",
+      "bytes": 79891,
+      "sha256": "4c9edd8c67ccf1ae33325c7df9390f2ed46bf09d0d572172470313a392bbf488"
+    },
+    {
+      "pack": 7,
+      "stem": "asar",
+      "path": "7-color-tabs/asar.ico",
+      "bytes": 83148,
+      "sha256": "8a92a6a700c82241d670285ddb07b79ad358802b004f23e71af4eb83c482c76a"
+    },
+    {
+      "pack": 7,
+      "stem": "b64",
+      "path": "7-color-tabs/b64.ico",
+      "bytes": 80234,
+      "sha256": "42f544eaecd76b749f1c1e1b2a5bdc9b162b9f3878b204f364a8bed7421c1c33"
+    },
+    {
+      "pack": 7,
+      "stem": "br",
+      "path": "7-color-tabs/br.ico",
+      "bytes": 78815,
+      "sha256": "88ded7e683930fcf2d039af58bfa18b58a705adb080ad1da4165bfa7753a4cf2"
+    },
+    {
+      "pack": 7,
+      "stem": "bz2",
+      "path": "7-color-tabs/bz2.ico",
+      "bytes": 79835,
+      "sha256": "0a21da3fe923c4f919292b2b05c986d9b00102777ec9b8f6e196d4a868d8360d"
+    },
+    {
+      "pack": 7,
+      "stem": "bzip2",
+      "path": "7-color-tabs/bzip2.ico",
+      "bytes": 81370,
+      "sha256": "0bdb2fb2e6869e862ec43cf4930b39ce3b6baa6b3834dc6cc930600ebbba7042"
+    },
+    {
+      "pack": 7,
+      "stem": "cab",
+      "path": "7-color-tabs/cab.ico",
+      "bytes": 81072,
+      "sha256": "cf3f7c69a16148c3cbf243f9fece7050ec9f9c800923ff8b41e6b767bbeeb0ce"
+    },
+    {
+      "pack": 7,
+      "stem": "cb7",
+      "path": "7-color-tabs/cb7.ico",
+      "bytes": 80181,
+      "sha256": "b45165112b96d690bca37a94d9743befc95143c139532fcf748f7c4bf7d4f908"
+    },
+    {
+      "pack": 7,
+      "stem": "cbr",
+      "path": "7-color-tabs/cbr.ico",
+      "bytes": 80621,
+      "sha256": "87a359c422517d34242b9b58fa11e36084135a1342f782d927483880e2fb6ca9"
+    },
+    {
+      "pack": 7,
+      "stem": "cbz",
+      "path": "7-color-tabs/cbz.ico",
+      "bytes": 80650,
+      "sha256": "c162216b2151151dd958c8b6c4aefc930c2d063887d35d5f5eae6507a8e7b122"
+    },
+    {
+      "pack": 7,
+      "stem": "cpio",
+      "path": "7-color-tabs/cpio.ico",
+      "bytes": 81535,
+      "sha256": "1ca04906ce45262556b1028ede11e8cd3212a595bdb8550ed1974c74ac726778"
+    },
+    {
+      "pack": 7,
+      "stem": "deb",
+      "path": "7-color-tabs/deb.ico",
+      "bytes": 79152,
+      "sha256": "f19cdcfb49f760fe0a1523e2f591958cffc4fb3265aa6d9a363a0b0cd451a776"
+    },
+    {
+      "pack": 7,
+      "stem": "dmg",
+      "path": "7-color-tabs/dmg.ico",
+      "bytes": 80960,
+      "sha256": "e0784abaa60566b2557a40a36600fe3e2ccb65cccef5552b795ddb0191112c32"
+    },
+    {
+      "pack": 7,
+      "stem": "esd",
+      "path": "7-color-tabs/esd.ico",
+      "bytes": 79986,
+      "sha256": "20992ba89361246e80460bf58b620e43d1a9774a8556ab5714ada7976c5ed57f"
+    },
+    {
+      "pack": 7,
+      "stem": "fat",
+      "path": "7-color-tabs/fat.ico",
+      "bytes": 78253,
+      "sha256": "bb254e10490cc879bedaded27c0a6b2f05c1f103e9cd9553dcde33bcdc1c5cdf"
+    },
+    {
+      "pack": 7,
+      "stem": "gz",
+      "path": "7-color-tabs/gz.ico",
+      "bytes": 79163,
+      "sha256": "48fd090a312c10c81bac4150a29d0d2a32f2d0fe9ae4dd02945f62d7ec2f6554"
+    },
+    {
+      "pack": 7,
+      "stem": "gzip",
+      "path": "7-color-tabs/gzip.ico",
+      "bytes": 80597,
+      "sha256": "d24bf56bf44f9b1e70a7305965360182c08e7fc2fbf3a9ec4ddc3e91b1047c07"
+    },
+    {
+      "pack": 7,
+      "stem": "hfs",
+      "path": "7-color-tabs/hfs.ico",
+      "bytes": 79430,
+      "sha256": "136536ef444af1fc3b499cfba777dcc43535b7dae8297d8b5da5fb02850f2baa"
+    },
+    {
+      "pack": 7,
+      "stem": "hfsx",
+      "path": "7-color-tabs/hfsx.ico",
+      "bytes": 81620,
+      "sha256": "770f24c597b68d22d88454d92b8e7f8a313e4ef89e15fdf90ccb3d66a79961d8"
+    },
+    {
+      "pack": 7,
+      "stem": "iso",
+      "path": "7-color-tabs/iso.ico",
+      "bytes": 80478,
+      "sha256": "c06f3accda4676dff982b0fadd2020b830d5c7c61cefa70ee0098f4eb6a90745"
+    },
+    {
+      "pack": 7,
+      "stem": "lha",
+      "path": "7-color-tabs/lha.ico",
+      "bytes": 78432,
+      "sha256": "8e7c04790fc6d054a5d9d61b0c21b82ace49b5a632351072a29b6b43ec410c27"
+    },
+    {
+      "pack": 7,
+      "stem": "liz",
+      "path": "7-color-tabs/liz.ico",
+      "bytes": 76589,
+      "sha256": "128d5cdd9b8bc816c2ff32b61d90ddd644e3d505089e37741de675606d949259"
+    },
+    {
+      "pack": 7,
+      "stem": "lz",
+      "path": "7-color-tabs/lz.ico",
+      "bytes": 76946,
+      "sha256": "93cd66bc5dbf72edd0012ffed3700b5763cc3bcd3f255848c7bb8f54e796f3a5"
+    },
+    {
+      "pack": 7,
+      "stem": "lz4",
+      "path": "7-color-tabs/lz4.ico",
+      "bytes": 77996,
+      "sha256": "395bfb569950d22f323cbed040b3859b10daac20cfad8cb158af4af2de917179"
+    },
+    {
+      "pack": 7,
+      "stem": "lz5",
+      "path": "7-color-tabs/lz5.ico",
+      "bytes": 79193,
+      "sha256": "7a27cfc0c6cc5fc7ea299e6463f523af8c848579dc924b069dea5bf636343107"
+    },
+    {
+      "pack": 7,
+      "stem": "lzh",
+      "path": "7-color-tabs/lzh.ico",
+      "bytes": 77881,
+      "sha256": "e8e9c893ca9213aac1765e8d1e4e55bc4c80230353b3cf29c49af120ab9dd436"
+    },
+    {
+      "pack": 7,
+      "stem": "lzma",
+      "path": "7-color-tabs/lzma.ico",
+      "bytes": 81153,
+      "sha256": "54adb5f7a142d8e67619a0f4745d89aa40a30cc94362e9cc0c79745dce894dbe"
+    },
+    {
+      "pack": 7,
+      "stem": "lzma2",
+      "path": "7-color-tabs/lzma2.ico",
+      "bytes": 82825,
+      "sha256": "1e3c40582b7618dfa9ff2c5752e67520949ac9fdf2d7b3494e0b0a181f5525e9"
+    },
+    {
+      "pack": 7,
+      "stem": "ntfs",
+      "path": "7-color-tabs/ntfs.ico",
+      "bytes": 80102,
+      "sha256": "d8ac5de3de8bdab4e739562fb6540b56ef970f1ab2f2de6973488ab9fc98f500"
+    },
+    {
+      "pack": 7,
+      "stem": "nupkg",
+      "path": "7-color-tabs/nupkg.ico",
+      "bytes": 83178,
+      "sha256": "7de0c26edfef3a4a6607c993fa868530ad51bf9454ded841154c99786e2d5422"
+    },
+    {
+      "pack": 7,
+      "stem": "rar",
+      "path": "7-color-tabs/rar.ico",
+      "bytes": 80329,
+      "sha256": "0a60d284409f4b1b5b7aed0bca82b77d6b24cbaf98e6007a696cd2426eef42c9"
+    },
+    {
+      "pack": 7,
+      "stem": "rpm",
+      "path": "7-color-tabs/rpm.ico",
+      "bytes": 80415,
+      "sha256": "a277b0d9d01934a688e53a6366c5809f3d3f078fc426c7cbba17152e21db3f3f"
+    },
+    {
+      "pack": 7,
+      "stem": "squashfs",
+      "path": "7-color-tabs/squashfs.ico",
+      "bytes": 84664,
+      "sha256": "d95e46517ed9f75b75d78b8f22c8e838bb962ea2fba7242838b377ce6752f866"
+    },
+    {
+      "pack": 7,
+      "stem": "swm",
+      "path": "7-color-tabs/swm.ico",
+      "bytes": 82923,
+      "sha256": "7f6a0858e5acb0fd838a3928f9a28e8fcbbb90569fc32f8c4fae4d3d453fc62e"
+    },
+    {
+      "pack": 7,
+      "stem": "tar",
+      "path": "7-color-tabs/tar.ico",
+      "bytes": 79658,
+      "sha256": "c6aef68f3858e60b149b469b08a007ac46528a257e2dcb3d6480cf2a4bda4f37"
+    },
+    {
+      "pack": 7,
+      "stem": "taz",
+      "path": "7-color-tabs/taz.ico",
+      "bytes": 79005,
+      "sha256": "baff80e51157cf49229ae71ea7bc2f9d3e56347edb44141c5460f711284c6b0c"
+    },
+    {
+      "pack": 7,
+      "stem": "tbz",
+      "path": "7-color-tabs/tbz.ico",
+      "bytes": 78641,
+      "sha256": "bf334975111a144d2c3e436bd32ea01e97d9a8e073b57d8e94d26cafa3df57df"
+    },
+    {
+      "pack": 7,
+      "stem": "tbz2",
+      "path": "7-color-tabs/tbz2.ico",
+      "bytes": 80571,
+      "sha256": "406defb279d91a15f9268491890b4712484fd38ec4de9b7c5f75d4a2ed891470"
+    },
+    {
+      "pack": 7,
+      "stem": "tgz",
+      "path": "7-color-tabs/tgz.ico",
+      "bytes": 79378,
+      "sha256": "1c5862eae256f119d4dac8731a0ed1518669d155546e0093d550e70d38f82bae"
+    },
+    {
+      "pack": 7,
+      "stem": "tlz",
+      "path": "7-color-tabs/tlz.ico",
+      "bytes": 77721,
+      "sha256": "c318aeca310490294f955f3043c635d378e04c5896be503de48db04dda906ba3"
+    },
+    {
+      "pack": 7,
+      "stem": "tlz4",
+      "path": "7-color-tabs/tlz4.ico",
+      "bytes": 78654,
+      "sha256": "c2b5bb3c2e6edb4cfed815a3c6267d2425fbe7ccd287aa1b1fb788cface677a5"
+    },
+    {
+      "pack": 7,
+      "stem": "tlz5",
+      "path": "7-color-tabs/tlz5.ico",
+      "bytes": 79415,
+      "sha256": "e37ba0ed8d4d66da9d1e70178fd89dbefeeef453581cb5469ece6e1b4be5e44c"
+    },
+    {
+      "pack": 7,
+      "stem": "tpz",
+      "path": "7-color-tabs/tpz.ico",
+      "bytes": 78168,
+      "sha256": "ffc62355ead51cbd24e3a5d0d85b55d2be34187514211712652d70e9ea98f779"
+    },
+    {
+      "pack": 7,
+      "stem": "txz",
+      "path": "7-color-tabs/txz.ico",
+      "bytes": 79153,
+      "sha256": "fc46fbcb14a46ae8932b0a3a023657fe8272c0babc5fb632c965b2d69eb818a9"
+    },
+    {
+      "pack": 7,
+      "stem": "tz",
+      "path": "7-color-tabs/tz.ico",
+      "bytes": 77148,
+      "sha256": "dcba1cc1892261157bfe6bf0da79ad66897578280a2ae9a860e264fc14a9e806"
+    },
+    {
+      "pack": 7,
+      "stem": "tzst",
+      "path": "7-color-tabs/tzst.ico",
+      "bytes": 79702,
+      "sha256": "f52af6eee19ac9899f143c85bf8acaf761c46577230461f6431dc32712a44a50"
+    },
+    {
+      "pack": 7,
+      "stem": "tzstd",
+      "path": "7-color-tabs/tzstd.ico",
+      "bytes": 81675,
+      "sha256": "34b2f2438fc1594dc0091f62e3f705cab32ba6c2d16e0a1413935b1d219a55bc"
+    },
+    {
+      "pack": 7,
+      "stem": "vdi",
+      "path": "7-color-tabs/vdi.ico",
+      "bytes": 79247,
+      "sha256": "c844760872d0321fe2d755112b295664de2d783d68c767e0cf267553bcac8a76"
+    },
+    {
+      "pack": 7,
+      "stem": "vhd",
+      "path": "7-color-tabs/vhd.ico",
+      "bytes": 79273,
+      "sha256": "b22e2a9a4c308d4fa37bd623cdc87246f58559f60524270f11e6d801a5327b40"
+    },
+    {
+      "pack": 7,
+      "stem": "vhdx",
+      "path": "7-color-tabs/vhdx.ico",
+      "bytes": 81988,
+      "sha256": "fce81ccb5dc69803742c86f25c8aa233b0a056c69cec8cfe5bb3caf67d13822a"
+    },
+    {
+      "pack": 7,
+      "stem": "vmdk",
+      "path": "7-color-tabs/vmdk.ico",
+      "bytes": 82788,
+      "sha256": "b370bbcf1e0d6493116ad0d5b93468ec63d1a5f0e2c25bf2dcce598a391a43bb"
+    },
+    {
+      "pack": 7,
+      "stem": "wim",
+      "path": "7-color-tabs/wim.ico",
+      "bytes": 80763,
+      "sha256": "edbe8d18fc7df8d2458fc6bd75499e7a623b886b736620fb1f142eaf1800e2f0"
+    },
+    {
+      "pack": 7,
+      "stem": "xar",
+      "path": "7-color-tabs/xar.ico",
+      "bytes": 81743,
+      "sha256": "2c1d80b07f5e8d4a794308eaf9651e40821fa7ed5df9b81bc41063f454712a4e"
+    },
+    {
+      "pack": 7,
+      "stem": "xz",
+      "path": "7-color-tabs/xz.ico",
+      "bytes": 79440,
+      "sha256": "148d8c164912c8edda204bfafaaacf3625ef36f0e0e8b6ba224e5a0b3b8ec502"
+    },
+    {
+      "pack": 7,
+      "stem": "z",
+      "path": "7-color-tabs/z.ico",
+      "bytes": 76203,
+      "sha256": "b47fc59426e11a9cf99ba3d6174ab00400622e798c4fd52adec69407bd4285be"
+    },
+    {
+      "pack": 7,
+      "stem": "zip",
+      "path": "7-color-tabs/zip.ico",
+      "bytes": 76592,
+      "sha256": "40e9e973713ba66cc5fd1edbddab32a7a1fcfdcc76da703402ea145b8053805a"
+    },
+    {
+      "pack": 7,
+      "stem": "zipx",
+      "path": "7-color-tabs/zipx.ico",
+      "bytes": 80155,
+      "sha256": "32b9787d2d1bc39932ecf2c9ec098c24e0183667594b59d7467f0427c2598d91"
+    },
+    {
+      "pack": 7,
+      "stem": "zst",
+      "path": "7-color-tabs/zst.ico",
+      "bytes": 80061,
+      "sha256": "9a653c9fdc8271c4b317365ac7114b6cf1c03bfe7969d3a12bfb36a5e28c40b8"
+    },
+    {
+      "pack": 7,
+      "stem": "zstd",
+      "path": "7-color-tabs/zstd.ico",
+      "bytes": 81502,
+      "sha256": "b80e2abd521c48dff42548ba9686f1132fda0ba909b00c091e051ec3f5b721ab"
+    }
+  ]
+}

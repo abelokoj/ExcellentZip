@@ -7,22 +7,24 @@ $ErrorActionPreference = 'Stop'
 $ExcellentZipRoot = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..'))
 Set-Location -LiteralPath $ExcellentZipRoot
 if (-not $Version) {
-    [xml]$versionProperties = Get-Content -LiteralPath 'ExcellentZip.Project/ExcellentZip.Project.Version.props'
+    [xml]$versionProperties = Get-Content -LiteralPath 'Project/ExcellentZip.Project.Version.props'
     $Version = $versionProperties.Project.PropertyGroup.ExcellentZipDisplayVersion
 }
-if ($Version -notmatch '^\d{4}-\d{2}-\d{2}\.[1-9]\d*$') { throw 'Use an app version like 2026-10-26.1.' }
+if ($Version -notmatch '^\d{4}-\d{2}-\d{2}\.[1-9]\d*$') { throw 'Use an app version like 2026-10-27.1.' }
 $parts = $Version.Split('.')
 $date = [datetime]::ParseExact($parts[0], 'yyyy-MM-dd', [Globalization.CultureInfo]::InvariantCulture)
 $revision = [int]$parts[1]
 if ($revision -gt 65535) { throw 'Windows version revision must not exceed 65535.' }
 $numericVersion = '{0}.{1}.{2}.{3}' -f $date.Year, $date.Month, $date.Day, $revision
+& python scripts\generate_icon_download.py --check
+if ($LASTEXITCODE) { throw 'Optional icon download metadata is stale; regenerate it before building.' }
 $vswhere = Join-Path ${env:ProgramFiles(x86)} 'Microsoft Visual Studio\Installer\vswhere.exe'
 $vsPath = & $vswhere -latest -products '*' -requires Microsoft.VisualStudio.Component.VC.Tools.x86.x64 -property installationPath
 if (-not $vsPath) { throw 'Visual Studio C++ build tools are required.' }
 $msbuild = Join-Path $vsPath 'MSBuild\Current\Bin\MSBuild.exe'
 
 if (-not $Payload) {
-    & $msbuild ExcellentZipPackage\ExcellentZipPackage.wapproj /restore /t:Build /m:2 /p:CL_MPCount=2 /nologo /v:minimal `
+    & $msbuild Package\ExcellentZipPackage.wapproj /restore /t:Build /m:2 /p:CL_MPCount=2 /nologo /v:minimal `
         /p:Configuration=Release /p:Platform=x64 /p:AppxBundle=Never /p:AppxPackageSigningEnabled=false `
         "/p:MileProjectVersion=$numericVersion" "/p:ExcellentZipDisplayVersion=$Version"
     if ($LASTEXITCODE) { throw 'Windows app build failed.' }

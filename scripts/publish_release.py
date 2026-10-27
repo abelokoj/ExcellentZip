@@ -51,10 +51,10 @@ def publish(version):
     head = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip()
     body = f'''ExcellentZip {version} for Windows x64.
 
-- Seven bundled icon packs; Monogram EZ is the default.
+- Monogram EZ is included; Settings downloads all six optional packs together after consent.
 - 62 registered file types with distinct colors and readable labels.
 - Setup installs per user and can register ExcellentZip in Windows Default apps without choosing defaults.
-- The portable ZIP runs after extraction. Keep all DLLs, resources and IconPacks together; preferences are stored per Windows user.
+- The portable ZIP runs after extraction. Keep all DLLs, resources and the icons folder together; preferences are stored per Windows user.
 
 Download **Setup-x64.exe** to install, or **Portable-x64.zip** to extract and run. SHA-256 checksums are included.
 
@@ -71,5 +71,6 @@ These binaries are unsigned; Windows may request confirmation before running the
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--version', default='2026-10-26.1')
+    from package_release import current_version
+    parser.add_argument('--version', default=current_version())
     publish(parser.parse_args().version)

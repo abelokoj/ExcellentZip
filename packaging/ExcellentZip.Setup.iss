@@ -1,8 +1,8 @@
 #ifndef AppVersion
-  #define AppVersion "2026-10-26.1"
+  #define AppVersion "2026-10-27.1"
 #endif
 #ifndef WindowsVersion
-  #define WindowsVersion "2026.10.26.1"
+  #define WindowsVersion "2026.10.27.1"
 #endif
 #ifndef PayloadDir
   #error PayloadDir must name the verified portable payload directory.
@@ -29,7 +29,7 @@ ArchitecturesInstallIn64BitMode=x64compatible
 MinVersion=10.0.19041
 OutputDir={#ReleaseDir}
 OutputBaseFilename=ExcellentZip-{#AppVersion}-Setup-x64
-SetupIconFile=..\Assets\ExcellentZip\Packs\4-monogram-ez\app.ico
+SetupIconFile=..\icons\Packs\4-monogram-ez\app.ico
 UninstallDisplayIcon={app}\ExcellentZip.exe
 VersionInfoVersion={#WindowsVersion}
 VersionInfoProductTextVersion={#AppVersion}
@@ -48,6 +48,9 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 [Tasks]
 Name: "fileassociations"; Description: "Register ExcellentZip in Windows Default apps"; GroupDescription: "File types:"; Flags: checkedonce
 Name: "desktopicon"; Description: "Create a desktop shortcut"; GroupDescription: "Shortcuts:"; Flags: unchecked
+
+[InstallDelete]
+Type: filesandordirs; Name: "{app}\IconPacks"
 
 [Files]
 Source: "{#PayloadDir}\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs

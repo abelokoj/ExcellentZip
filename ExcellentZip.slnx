@@ -4,21 +4,21 @@
     <Platform Name="x64" />
   </Configurations>
   <Folder Name="/Core/">
-    <Project Path="ExcellentZip.Codecs/ExcellentZip.Codecs.vcxproj" Id="89b81a5b-ff0d-4193-9cb1-738692775dd2" />
-    <Project Path="ExcellentZip.Core/ExcellentZip.Core.Sfx.Console.vcxproj" Id="96c0a1a0-d964-4725-afdc-73ebf7fc1416">
+    <Project Path="Codecs/ExcellentZip.Codecs.vcxproj" Id="89b81a5b-ff0d-4193-9cb1-738692775dd2" />
+    <Project Path="Core/ExcellentZip.Core.Sfx.Console.vcxproj" Id="96c0a1a0-d964-4725-afdc-73ebf7fc1416">
       <Platform Project="x64" />
       <Build Solution="*|ARM64" Project="false" />
     </Project>
-    <Project Path="ExcellentZip.Core/ExcellentZip.Core.Sfx.Shared.vcxproj" Id="7262ba1e-732d-4814-972f-698f0b4330a1">
+    <Project Path="Core/ExcellentZip.Core.Sfx.Shared.vcxproj" Id="7262ba1e-732d-4814-972f-698f0b4330a1">
       <Platform Project="x64" />
       <Build Solution="*|ARM64" Project="false" />
     </Project>
-    <Project Path="ExcellentZip.Core/ExcellentZip.Core.Sfx.Windows.vcxproj" Id="c11f288b-9e3c-4da9-8206-852bb91c7e4c">
+    <Project Path="Core/ExcellentZip.Core.Sfx.Windows.vcxproj" Id="c11f288b-9e3c-4da9-8206-852bb91c7e4c">
       <Platform Project="x64" />
       <Build Solution="*|ARM64" Project="false" />
     </Project>
-    <Project Path="ExcellentZip.Core/ExcellentZip.Core.vcxproj" Id="5220420b-9a5c-44a7-be69-97f25365bb26" />
-    <Project Path="ExcellentZip.ZS.Codecs/ExcellentZip.ZS.Codecs.vcxproj" Id="3ed4769f-3aae-4dcb-a050-3f9c3fe36607" />
+    <Project Path="Core/ExcellentZip.Core.vcxproj" Id="5220420b-9a5c-44a7-be69-97f25365bb26" />
+    <Project Path="ZS_Codecs/ExcellentZip.ZS.Codecs.vcxproj" Id="3ed4769f-3aae-4dcb-a050-3f9c3fe36607" />
   </Folder>
   <Folder Name="/Core/K7/">
     <Project Path="K7Base/K7Base.vcxproj" Id="5998305e-d017-47c2-8025-a19111f73539" />
@@ -27,15 +27,15 @@
     <Project Path="K7User/K7UserStatic.vcxproj" Id="0b7d00be-6890-453e-86a4-def68b5c22a4" />
   </Folder>
   <Folder Name="/UI/">
-    <Project Path="ExcellentZip.Modern/ExcellentZip.Modern.vcxproj" Id="1ab11057-1f48-44d2-a913-c945bfc1aa93" />
-    <Project Path="ExcellentZip.Universal/ExcellentZip.Universal.Console.vcxproj" Id="86e818b3-d657-4e03-9336-48ee242a79d1" />
-    <Project Path="ExcellentZip.Universal/ExcellentZip.Universal.Windows.vcxproj" Id="8ddac25d-d16a-4440-9ade-902255549d1e" />
+    <Project Path="Modern/ExcellentZip.Modern.vcxproj" Id="1ab11057-1f48-44d2-a913-c945bfc1aa93" />
+    <Project Path="Universal/ExcellentZip.Universal.Console.vcxproj" Id="86e818b3-d657-4e03-9336-48ee242a79d1" />
+    <Project Path="Universal/ExcellentZip.Universal.Windows.vcxproj" Id="8ddac25d-d16a-4440-9ade-902255549d1e" />
   </Folder>
   <Folder Name="/UI/Modern/">
-    <Project Path="ExcellentZip.UI.Modern/ExcellentZip.Modern.FileManager.vcxproj" Id="f4511f91-b0eb-41b4-99d6-aeb48169132b" />
-    <Project Path="ExcellentZip.UI.Modern/ExcellentZip.ShellExtension.vcxproj" Id="53934e7a-686e-42f1-8a80-4299cde30564" />
+    <Project Path="UI_Modern/ExcellentZip.Modern.FileManager.vcxproj" Id="f4511f91-b0eb-41b4-99d6-aeb48169132b" />
+    <Project Path="UI_Modern/ExcellentZip.ShellExtension.vcxproj" Id="53934e7a-686e-42f1-8a80-4299cde30564" />
   </Folder>
-  <Project Path="ExcellentZipPackage/ExcellentZipPackage.wapproj" Type="c7167f0d-bc9f-4e6e-afe1-012c56b48db5">
+  <Project Path="Package/ExcellentZipPackage.wapproj" Type="c7167f0d-bc9f-4e6e-afe1-012c56b48db5">
     <Deploy />
   </Project>
 </Solution>

@@ -9,3 +9,8 @@
 ## 
 
 * text=auto eol=crlf
+
+# Keep authenticated generated download artifacts reproducible after checkout.
+/UI_Modern/ExcellentZip.IconDownloadCatalog.h text eol=lf
+/icons/optional-packs.json text eol=lf
+/icons/optional-packs-*.zip -text

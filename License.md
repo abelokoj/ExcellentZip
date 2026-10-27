@@ -13,9 +13,9 @@ The new ExcellentZip icon artwork and generation code are distributed under the 
 See THIRD_PARTY_NOTICES.md for original upstream attribution notices.
 
 The source code from 7-Zip or other 7-Zip derivatives (these contents are only 
-in the `ExcellentZip.Core\SevenZip`, `ExcellentZip.Core\Extensions\ZSCodecs`,
-`ExcellentZip.Universal\SevenZip`,
-`ExcellentZip.ZS.Codecs\SevenZip` and `ExcellentZip.UI.Modern\SevenZip` folders) is
+in the `Core\SevenZip`, `Core\Extensions\ZSCodecs`,
+`Universal\SevenZip`,
+`ZS_Codecs\SevenZip` and `UI_Modern\SevenZip` folders) is
 distributed under the 7-Zip License.
 
 The source code from third-party libraries is distributed under their respective

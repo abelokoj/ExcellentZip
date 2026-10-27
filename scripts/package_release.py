@@ -9,13 +9,19 @@ import shutil
 import subprocess
 import tempfile
 import zipfile
+import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
+
+
+def current_version():
+    return ET.parse(ROOT / 'Project/ExcellentZip.Project.Version.props').findtext(
+        './/{*}ExcellentZipDisplayVersion')
 
 def version_numbers(version):
     match = re.fullmatch(r'(\d{4}-\d{2}-\d{2})\.([1-9]\d*)', version)
     if not match:
-        raise ValueError('Use an app version like 2026-10-26.1')
+        raise ValueError('Use an app version like 2026-10-27.1')
     day = datetime.date.fromisoformat(match[1])
     revision = int(match[2])
     if revision > 65535:
@@ -28,7 +34,7 @@ def associations(catalog):
         if not re.fullmatch(r'[a-z0-9]+', extension):
             raise ValueError('Invalid file extension in icon catalog')
         progid = 'ExcellentZip.Archive.' + extension
-        icon = '""{app}\\IconPacks\\4-monogram-ez\\' + extension + '.ico"",0'
+        icon = '""{app}\\icons\\4-monogram-ez\\' + extension + '.ico"",0'
         command = '""{app}\\ExcellentZip.exe"" ""%1"" -open'
         lines.extend([
             f'Root: HKCU; Subkey: "Software\\Classes\\{progid}"; ValueType: string; ValueData: "ExcellentZip {extension.upper()} archive"; Flags: uninsdeletekey; Tasks: fileassociations',
@@ -40,27 +46,33 @@ def associations(catalog):
     return '\n'.join(lines) + '\n'
 
 def copy_runtime_payload(source, destination):
-    # Both downloads must exclude private notes and compiler debugging/build metadata.
+    catalog = json.loads((ROOT / 'icons/manifest.json').read_text(encoding='utf-8'))
+    default = next(pack for pack in catalog['packs'] if pack['id'] == catalog['defaultPack'])
+    folder = Path('icons') / default['folder']
+    icons = [folder / f'{stem}.ico' for stem in ['app', 'archive', *catalog['extensions']]]
+    for path in icons:
+        if not (source / path).is_file():
+            raise FileNotFoundError(f'Missing default icon: {source / path}')
+    # Copy the catalog's default icons explicitly so old payloads cannot bundle optional packs.
     shutil.copytree(source, destination, dirs_exist_ok=True,
-        ignore=shutil.ignore_patterns('*.pdb', '*.lib', '*.exp', '*.ilk', '*.obj',
+        ignore=shutil.ignore_patterns('*.pdb', '*.lib', '*.exp', '*.ilk', '*.obj', '*.ico',
                                      '*.appxrecipe', 'AppxManifest.xml', 'AppxBlockMap.xml', 'AppxSignature.p7x',
-                                     '[[]Content_Types].xml', 'AppxMetadata', 'dev_notes', '.tools', '.git'))
+                                     '[[]Content_Types].xml', 'AppxMetadata', 'dev_notes', '.tools', '.git',
+                                     'IconPacks', 'icons'))
+    (destination / folder).mkdir(parents=True, exist_ok=True)
+    for path in icons:
+        shutil.copy2(source / path, destination / path)
 
 
 def package(payload, compiler, version):
     numeric = version_numbers(version)
-    catalog = json.loads((ROOT / 'Assets/ExcellentZip/manifest.json').read_text(encoding='utf-8'))
+    catalog = json.loads((ROOT / 'icons/manifest.json').read_text(encoding='utf-8'))
     payload = payload.resolve()
     for name in ['ExcellentZip.exe', 'ExcellentZipC.exe', 'ExcellentZipG.exe', 'ExcellentZip.Modern.dll',
                  'ExcellentZip.Core.dll', 'ExcellentZip.Codecs.dll', 'ExcellentZip.ZS.Codecs.dll',
                  'K7Base.dll', 'K7User.dll', 'resources.pri']:
         if not (payload / name).is_file():
             raise FileNotFoundError(f'Incomplete release payload: {name}')
-    for family in catalog['packs']:
-        for stem in ['app', 'archive', *catalog['extensions']]:
-            path = payload / 'IconPacks' / family['folder'] / f'{stem}.ico'
-            if not path.is_file():
-                raise FileNotFoundError(f'Missing icon: {path}')
     with tempfile.TemporaryDirectory(prefix='excellentzip-release-') as directory:
         staged = Path(directory)
         copy_runtime_payload(payload, staged)
@@ -71,9 +83,10 @@ def package(payload, compiler, version):
             shutil.copy2(ROOT / name, payload / name)
         (payload / 'PORTABLE.txt').write_text(
             f'ExcellentZip {version}\n\nExtract this entire folder and run ExcellentZip.exe.\n'
-            'No installer or administrator rights are required. Keep IconPacks and all DLLs beside the app.\n'
+            'No installer or administrator rights are required. Keep the icons folder and all DLLs beside the app.\n'
             'Settings are stored per Windows user. Moving the folder does not erase those preferences.\n'
-            'Choose icon packs in Tools > Options > Settings. Selecting a pack does not change default apps.\n'
+            'Monogram EZ is included. Settings can download the six optional packs together with your consent.\n'
+            'Downloaded packs are cached per Windows user. Selecting a pack does not change default apps.\n'
             'Use the Setup download to register ExcellentZip file types in Windows Default apps.\n', encoding='utf-8')
         archive = dist / f'ExcellentZip-{version}-Portable-x64.zip'
         with zipfile.ZipFile(archive, 'w', zipfile.ZIP_DEFLATED, compresslevel=9) as output:
@@ -89,8 +102,9 @@ def package(payload, compiler, version):
             raise FileNotFoundError('Installer compiler did not produce the expected output')
         artifacts = []
         for path in [archive, installer]:
-            artifacts.append({'name': path.name, 'bytes': path.stat().st_size,
-                              'sha256': hashlib.file_digest(path.open('rb'), 'sha256').hexdigest()})
+            with path.open('rb') as stream:
+                digest = hashlib.file_digest(stream, 'sha256').hexdigest()
+            artifacts.append({'name': path.name, 'bytes': path.stat().st_size, 'sha256': digest})
         (dist / f'ExcellentZip-{version}-SHA256.txt').write_text(
             ''.join(f"{entry['sha256']}  {entry['name']}\n" for entry in artifacts), encoding='utf-8')
         (dist / f'ExcellentZip-{version}-manifest.json').write_text(json.dumps(
@@ -101,6 +115,6 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--payload', required=True, type=Path)
     parser.add_argument('--compiler', required=True, type=Path)
-    parser.add_argument('--version', default='2026-10-26.1')
+    parser.add_argument('--version', default=current_version())
     arguments = parser.parse_args()
     package(arguments.payload, arguments.compiler, arguments.version)
