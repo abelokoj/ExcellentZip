@@ -1,15 +1,15 @@
 # Changelog
 
-## Unreleased — 2026-10-27.2
+## [2026-10-27.2](https://github.com/abelokoj/ExcellentZip/releases/tag/2026-10-27.2)
 
-Recorded 2026-10-27T03:24:49-04:00. Source changes are ready; distribution build and publication are pending.
+Recorded 2026-10-27T03:24:49-04:00. Publication confirmed 2026-10-27T03:47:54-04:00 (recording time). Installer and portable downloads are available.
 
 - Corrects the executable description and Windows application registration so the app picker shows ExcellentZip.
 - Adds Tools → Options → File types with all 62 extensions, current default-app names, native checkbox selection, Select all/Clear, and guided Windows confirmation for all or selected extensions.
 - Adds an optional installer step to choose default file types in Windows. Existing default choices are preserved until the user confirms them.
 - Refreshes file-type previews and ExcellentZip-owned icons from the saved pack when defaults change.
 
-Validation: 12 packaging/name/installer checks passed. Native tests passed for all 62 capability registrations, exact app naming, extension/URI validation, launch failures, preserved existing defaults, and compilation of the File types controls/resources. Icon/download tests also passed. Full build, installer verification and publication remain pending. Windows confirmations and Explorer behavior have not been tested live; older Windows may open the general Default apps screen. Builds are unsigned.
+Validation: 12 packaging/name/installer checks passed. Native tests passed for all 62 capability registrations, exact app naming, extension/URI validation, launch failures, preserved existing defaults, and compilation of the File types controls/resources. Icon/download tests also passed. Validation update 2026-10-27T03:47:54-04:00 (recording time): the full Windows build, compiled executable name/version, all 11 shipped dialog controls and their bounds, portable ZIP CRCs/checksums, default-only icons, extracted archive operations, and test install/uninstall with association tasks disabled passed. The installed executable reports exactly ExcellentZip and version2026.10.27.2. Windows confirmations and Explorer behavior have not been tested live; older Windows may open the general Default apps screen. Builds are unsigned.
 
 ## [2026-10-27.1](https://github.com/abelokoj/ExcellentZip/releases/tag/2026-10-27.1)
 
