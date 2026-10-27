@@ -2,7 +2,7 @@
 
 ## Unreleased — 2026-10-26.1
 
-Recorded 2026-10-27T00:52:39-04:00. Source changes are available; installer and portable downloads are being prepared.
+Recorded 2026-10-27T00:52:39-04:00. Source changes are available; Windows x64 installer and portable downloads have been built. Release publication is pending.
 
 - Introduces ExcellentZip branding and seven bundled icon packs. Monogram EZ (pack 4) is the default.
 - Gives each of the 62 registered file types a distinct color and readable format label, consistent across all packs.
@@ -11,6 +11,7 @@ Recorded 2026-10-27T00:52:39-04:00. Source changes are available; installer and 
 - Adds per-user installer and portable packaging, checksums, and automated Windows x64 builds.
 - Presents all seven icon packs separately in the README and retains third-party source licenses and credits.
 - Removes the unused classic frontend, legacy translation migrator, obsolete custom build tasks, duplicate frontend project, and retired build/installer scripts. The supported release build uses one packaging path.
+- Packages the complete built app and all 448 icons, omitting compiler symbols, build metadata, and private folders from both downloads.
 - Reduces package artwork to Windows image-size limits. Private development notes are excluded from source and release packages.
 
-Asset, packaging, and native icon checks have passed. Full distribution build and live Windows Explorer testing remain pending. Builds are unsigned.
+Validation updated 2026-10-27T01:06:58-04:00 (recording time): the full Windows x64 package build, six asset checks, five packaging checks, and ZIP/encrypted-7Z creation, integrity, and extraction checks passed. Native icon checks also passed. Live Windows Explorer testing remains pending. Builds are unsigned.

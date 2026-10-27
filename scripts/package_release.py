@@ -43,7 +43,8 @@ def copy_runtime_payload(source, destination):
     # Both downloads must exclude private notes and compiler debugging/build metadata.
     shutil.copytree(source, destination, dirs_exist_ok=True,
         ignore=shutil.ignore_patterns('*.pdb', '*.lib', '*.exp', '*.ilk', '*.obj',
-                                     '*.appxrecipe', 'dev_notes', '.tools', '.git'))
+                                     '*.appxrecipe', 'AppxManifest.xml', 'AppxBlockMap.xml', 'AppxSignature.p7x',
+                                     '[[]Content_Types].xml', 'AppxMetadata', 'dev_notes', '.tools', '.git'))
 
 
 def package(payload, compiler, version):
@@ -80,7 +81,7 @@ def package(payload, compiler, version):
                 if path.is_file():
                     output.write(path, Path('ExcellentZip') / path.relative_to(payload))
         (ROOT / 'packaging/ExcellentZip.Associations.iss').write_text(associations(catalog), encoding='utf-8')
-        subprocess.run([str(compiler), f'/DAppVersion={version}', f'/DWindowsVersion={numeric}',
+        subprocess.run([str(compiler), '/Q', f'/DAppVersion={version}', f'/DWindowsVersion={numeric}',
                         f'/DPayloadDir={payload}', f'/DReleaseDir={dist}',
                         str(ROOT / 'packaging/ExcellentZip.Setup.iss')], check=True)
         installer = dist / f'ExcellentZip-{version}-Setup-x64.exe'

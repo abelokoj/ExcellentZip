@@ -26,12 +26,15 @@ if (-not $Payload) {
         /p:Configuration=Release /p:Platform=x64 /p:AppxBundle=Never /p:AppxPackageSigningEnabled=false `
         "/p:MileProjectVersion=$numericVersion" "/p:ExcellentZipDisplayVersion=$Version"
     if ($LASTEXITCODE) { throw 'Windows app build failed.' }
-    $candidates = Get-ChildItem -LiteralPath (Join-Path $ExcellentZipRoot 'Output\Binaries\Release') -Filter ExcellentZip.exe -File -Recurse |
-        Where-Object { Test-Path -LiteralPath (Join-Path $_.DirectoryName 'resources.pri') }
-    $candidate = $candidates | Sort-Object { $_.FullName -match 'AppX|ExcellentZipPackage' } -Descending | Select-Object -First 1
-    if (-not $candidate) { throw 'No complete native payload with resources.pri was produced.' }
-    $Payload = $candidate.DirectoryName
+    $package = Get-ChildItem -LiteralPath (Join-Path $ExcellentZipRoot 'Output\Binaries\AppPackages') `
+        -Filter "ExcellentZipPackage_${numericVersion}_x64.msix" -File -Recurse |
+        Sort-Object LastWriteTimeUtc -Descending | Select-Object -First 1
+    if (-not $package) { throw 'The app build did not produce the expected x64 MSIX payload.' }
+    $Payload = Join-Path $ExcellentZipRoot ('Output\ReleaseLayout\' + [guid]::NewGuid().ToString('N'))
+    [IO.Compression.ZipFile]::ExtractToDirectory($package.FullName, $Payload)
 }
+& python scripts\test_release_smoke.py --payload $Payload --version $Version
+if ($LASTEXITCODE) { throw 'Archive engine smoke checks failed.' }
 if (-not $InnoCompiler) {
     $InnoCompiler = Join-Path $ExcellentZipRoot '.tools\InnoSetup6.4.2\tools\ISCC.exe'
     if (-not (Test-Path -LiteralPath $InnoCompiler)) {

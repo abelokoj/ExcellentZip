@@ -30,7 +30,8 @@ class PackagingTests(unittest.TestCase):
             root = Path(directory)
             source, destination = root / 'source', root / 'distribution'
             source.mkdir()
-            for name in ['ExcellentZip.exe', 'resources.pri', 'ExcellentZip.pdb', 'package.appxrecipe']:
+            for name in ['ExcellentZip.exe', 'resources.pri', 'ExcellentZip.pdb', 'package.appxrecipe',
+                         'AppxManifest.xml', 'AppxBlockMap.xml', '[Content_Types].xml']:
                 (source / name).write_text('fixture')
             for name in ['dev_notes', '.tools', '.git', 'IconPacks']:
                 (source / name).mkdir()

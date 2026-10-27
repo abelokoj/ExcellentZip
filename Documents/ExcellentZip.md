@@ -16,7 +16,8 @@ The Windows 11 22H2+ package declares a shell icon handler. Native Setup registe
 
 - `python scripts/test_icon_assets.py`: coverage, unique colors, native ICO frames, hashes, package consistency, and master references.
 - `scripts\test_icon_runtime.cmd`: native icon/COM boundary and ownership tests plus compilation of the actual Settings page and resources. It does not change default apps or saved icon selection.
-- `python scripts/test_packaging.py`: date/revision mapping, invalid versions, safe registration entries, and incomplete-payload rejection.
+- `python scripts/test_packaging.py`: date/revision mapping, invalid versions, safe registration entries, incomplete-payload rejection, and private/debug-file exclusion.
+- The release build also exercises ZIP and encrypted 7Z creation, integrity testing, and byte-for-byte extraction before packaging.
 
 ## Build and package
 
