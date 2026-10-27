@@ -1,8 +1,8 @@
 # Changelog
 
-## Unreleased — 2026-10-27.1
+## [2026-10-27.1](https://github.com/abelokoj/ExcellentZip/releases/tag/2026-10-27.1)
 
-Recorded 2026-10-27T02:09:30-04:00. Source changes are ready; Windows distribution build and publication are pending.
+Recorded 2026-10-27T02:09:30-04:00. Publication confirmed 2026-10-27T02:44:04-04:00 (recording time). The Windows x64 installer is 13.0 MB and portable ZIP is 24.4 MB; both include only the default icon pack.
 
 - Moves all icon artwork and downloadable packs to the repository's icons/ directory.
 - Bundles only Monogram EZ (pack 4). Selecting an unavailable optional pack asks before downloading all six additional packs from GitHub, with progress and cancellation. Declining or failing leaves the selected pack unchanged.
@@ -10,7 +10,7 @@ Recorded 2026-10-27T02:09:30-04:00. Source changes are ready; Windows distributi
 - Removes obsolete bundled IconPacks files during Setup upgrades while preserving downloaded caches and Windows default-opener choices.
 - Renames source directories to Codecs, Core, Modern, Project, Specification, UI_Modern, Universal, ZS_Codecs, and Package; updates build paths and documentation.
 
-Validation: 10 packaging tests, eight asset tests, two source-layout tests, and native icon/download checks passed. Native checks cover consent refusal, cancellation, corrupted downloads, safe installation/repair, association ownership, and compilation of Settings controls/resources. Full Windows build, live GitHub download, and live Explorer/UI testing are pending. Builds are unsigned.
+Validation: 10 packaging tests, eight asset tests, two source-layout tests, and native icon/download checks passed. Native checks cover consent refusal, cancellation, corrupted downloads, safe installation/repair, association ownership, and compilation of Settings controls/resources. Validation update 2026-10-27T02:44:04-04:00 (recording time): the full Windows build, live GitHub download of all six packs (38,251,555 bytes), transfer cancellation, ZIP checksums/CRCs, and an isolated installer upgrade from all 448 old icons to 64 default icons passed. Installed ZIP/encrypted-7Z operations and uninstall also passed. Live Explorer/UI testing remains pending. Builds are unsigned.
 
 ## [2026-10-26.1](https://github.com/abelokoj/ExcellentZip/releases/tag/2026-10-26.1)
 
