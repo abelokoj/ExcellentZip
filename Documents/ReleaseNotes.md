@@ -1,5 +1,12 @@
 # ExcellentZip release notes
 
+## 2026-10-27.2
+
+- Uses ExcellentZip as the Windows app-picker name.
+- Adds a File types tab with current defaults, individual checkboxes, Select all/Clear, and guided Windows confirmation for selected extensions.
+- Adds an optional Setup step to choose ExcellentZip for supported file types through Windows Settings.
+- Refreshes associated icons and previews using the saved icon pack after default-app changes.
+
 ## 2026-10-27.1
 
 - Smaller app downloads bundle Monogram EZ only, with its complete set of 64 ICOs and Windows package images.

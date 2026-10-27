@@ -15,6 +15,8 @@
 #include "MenuPageRes.h"
 #include "SettingsPage.h"
 #include "SettingsPageRes.h"
+#include "DefaultAppsPage.h"
+#include "DefaultAppsPageRes.h"
 
 #include "App.h"
 #include "LangUtils.h"
@@ -31,6 +33,7 @@ void OptionsDialog(HWND hwndOwner, HINSTANCE /* hInstance */)
   CFoldersPage foldersPage;
   CEditPage editPage;
   CSettingsPage settingsPage;
+  CDefaultAppsPage defaultAppsPage;
 
   CObjectVector<NControl::CPageInfo> pages;
   BIG_DIALOG_SIZE(200, 200);
@@ -39,10 +42,11 @@ void OptionsDialog(HWND hwndOwner, HINSTANCE /* hInstance */)
       SIZED_DIALOG(IDD_MENU),
       SIZED_DIALOG(IDD_FOLDERS),
       SIZED_DIALOG(IDD_EDIT),
-      SIZED_DIALOG(IDD_SETTINGS)
+      SIZED_DIALOG(IDD_SETTINGS),
+      IDD_DEFAULT_APPS
   };
 
-  NControl::CPropertyPage *pagePointers[] = { &menuPage, &foldersPage, &editPage, &settingsPage };
+  NControl::CPropertyPage *pagePointers[] = { &menuPage, &foldersPage, &editPage, &settingsPage, &defaultAppsPage };
 
   for (unsigned i = 0; i < ARRAY_SIZE(pageIDs); i++)
   {

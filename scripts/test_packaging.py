@@ -11,6 +11,19 @@ release = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(release)
 
 class PackagingTests(unittest.TestCase):
+    def test_windows_display_name_is_plain_excellentzip(self):
+        import xml.etree.ElementTree as ET
+        main = ET.parse(release.ROOT / 'UI_Modern/ExcellentZip.Modern.FileManager.vcxproj')
+        self.assertEqual('ExcellentZip', main.findtext('.//{*}MileProjectFileDescription'))
+        setup = (release.ROOT / 'packaging/ExcellentZip.Setup.iss').read_text(encoding='utf-8')
+        self.assertIn('ValueName: "FriendlyAppName"; ValueData: "ExcellentZip"', setup)
+
+    def test_installer_offers_windows_default_confirmation(self):
+        setup = (release.ROOT / 'packaging/ExcellentZip.Setup.iss').read_text(encoding='utf-8')
+        self.assertIn('Name: "fileassociations\\defaultapps"', setup)
+        self.assertIn('ms-settings:defaultapps?registeredAppUser=ExcellentZip', setup)
+        self.assertNotIn('UserChoice', setup)
+
     def test_default_version_comes_from_project_properties(self):
         self.assertRegex(release.current_version(), r'^\d{4}-\d{2}-\d{2}\.[1-9]\d*$')
 

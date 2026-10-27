@@ -1,8 +1,8 @@
 #ifndef AppVersion
-  #define AppVersion "2026-10-27.1"
+  #define AppVersion "2026-10-27.2"
 #endif
 #ifndef WindowsVersion
-  #define WindowsVersion "2026.10.27.1"
+  #define WindowsVersion "2026.10.27.2"
 #endif
 #ifndef PayloadDir
   #error PayloadDir must name the verified portable payload directory.
@@ -47,6 +47,7 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 
 [Tasks]
 Name: "fileassociations"; Description: "Register ExcellentZip in Windows Default apps"; GroupDescription: "File types:"; Flags: checkedonce
+Name: "fileassociations\defaultapps"; Description: "Choose ExcellentZip as the default for supported file types (Windows confirmation)"; Flags: unchecked
 Name: "desktopicon"; Description: "Create a desktop shortcut"; GroupDescription: "Shortcuts:"; Flags: unchecked
 
 [InstallDelete]
@@ -60,6 +61,7 @@ Name: "{group}\ExcellentZip"; Filename: "{app}\ExcellentZip.exe"
 Name: "{autodesktop}\ExcellentZip"; Filename: "{app}\ExcellentZip.exe"; Tasks: desktopicon
 
 [Registry]
+Root: HKCU; Subkey: "Software\Classes\Applications\ExcellentZip.exe"; ValueType: string; ValueName: "FriendlyAppName"; ValueData: "ExcellentZip"; Flags: uninsdeletevalue; Tasks: fileassociations
 Root: HKCU; Subkey: "Software\RegisteredApplications"; ValueType: string; ValueName: "ExcellentZip"; ValueData: "Software\ExcellentZip\Capabilities"; Flags: uninsdeletevalue; Tasks: fileassociations
 Root: HKCU; Subkey: "Software\ExcellentZip\Capabilities"; ValueType: string; ValueName: "ApplicationName"; ValueData: "ExcellentZip"; Flags: uninsdeletekey; Tasks: fileassociations
 Root: HKCU; Subkey: "Software\ExcellentZip\Capabilities"; ValueType: string; ValueName: "ApplicationDescription"; ValueData: "Open, create and extract archives with ExcellentZip."; Tasks: fileassociations
@@ -68,4 +70,4 @@ Root: HKCU; Subkey: "Software\ExcellentZip\Capabilities"; ValueType: string; Val
 
 [Run]
 Filename: "{app}\ExcellentZip.exe"; Description: "Launch ExcellentZip"; Flags: nowait postinstall skipifsilent
-Filename: "ms-settings:defaultapps"; Description: "Choose which files ExcellentZip opens"; Flags: shellexec postinstall skipifsilent unchecked; Tasks: fileassociations
+Filename: "ms-settings:defaultapps?registeredAppUser=ExcellentZip"; Flags: shellexec skipifsilent; Tasks: fileassociations\defaultapps

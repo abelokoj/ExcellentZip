@@ -10,7 +10,7 @@
     <CppWinRTGenerateWindowsMetadata>false</CppWinRTGenerateWindowsMetadata>
     <MileProjectUseProjectProperties>true</MileProjectUseProjectProperties>
     <MileProjectCompanyName>ExcellentZip contributors</MileProjectCompanyName>
-    <MileProjectFileDescription>ExcellentZip Modern Graphical User Interface</MileProjectFileDescription>
+    <MileProjectFileDescription>ExcellentZip</MileProjectFileDescription>
     <MileProjectInternalName>ExcellentZip.Modern.FileManager</MileProjectInternalName>
     <MileProjectLegalCopyright>© M2-Team and Contributors. All rights reserved.</MileProjectLegalCopyright>
     <MileProjectOriginalFilename>ExcellentZip.exe</MileProjectOriginalFilename>
@@ -47,6 +47,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ExcellentZip.Icons.cpp" />
+    <ClCompile Include="ExcellentZip.DefaultApps.cpp" />
+    <ClCompile Include="SevenZip\CPP\7zip\UI\FileManager\DefaultAppsPage.cpp" />
     <ClCompile Include="ExcellentZip.IconDownloads.cpp" />
     <ClCompile Include="ExcellentZip.UI.cpp" />
     <ClCompile Include="SevenZip\CPP\7zip\Archive\Common\ItemNameUtils.cpp" />

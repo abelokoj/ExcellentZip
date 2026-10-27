@@ -1,4 +1,4 @@
-// #define g1xs 60
+﻿// #define g1xs 60
 
 CAPTION "Settings"
 BEGIN 
@@ -23,7 +23,7 @@ BEGIN
   LTEXT "ZIP", -1, m + 53, 205, 40, 9
   LTEXT "7Z", -1, m + 106, 205, 40, 9
   LTEXT "RAR", -1, m + 159, 205, 40, 9
-  LTEXT "Every file type has its own color. Applies to files opened by ExcellentZip; default apps stay unchanged.", -1, m, 220, xc - 2*m, 25
+  LTEXT "Every format has its own color. To choose which files use these icons, open the File types tab.", -1, m, 220, xc - 2*m, 25
 
   // LTEXT     "Memory usage for Compressing:", IDT_COMPRESS_MEMORY, m, 140, xc, 8
   // COMBOBOX  IDC_SETTINGS_MEM, m , 152, g1xs, yc - 152, MY_COMBO

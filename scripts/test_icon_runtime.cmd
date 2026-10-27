@@ -20,3 +20,12 @@ if errorlevel 1 exit /b %errorlevel%
 cl /nologo /std:c++20 /EHsc /W4 /WX /DUNICODE /D_UNICODE /D_WIN32_WINNT=0x0A00 /I UI_Modern scripts\test_icon_downloads.cpp UI_Modern\ExcellentZip.Icons.cpp /FoOutput\IconTests\ /FeOutput\IconTests\test_icon_downloads.exe /link shell32.lib shlwapi.lib advapi32.lib user32.lib ole32.lib oleaut32.lib runtimeobject.lib winhttp.lib bcrypt.lib comctl32.lib
 if errorlevel 1 exit /b %errorlevel%
 Output\IconTests\test_icon_downloads.exe "%CD%"
+
+if errorlevel 1 exit /b %errorlevel%
+rc /nologo /fo Output\IconTests\defaults.res UI_Modern\SevenZip\CPP\7zip\UI\FileManager\DefaultAppsPage.rc
+if errorlevel 1 exit /b %errorlevel%
+cl /nologo /std:c++20 /EHsc /W4 /WX /Wv:18 /DLANG /DUNICODE /D_UNICODE /D_WIN32_WINNT=0x0A00 /I UI_Modern /c UI_Modern\SevenZip\CPP\7zip\UI\FileManager\DefaultAppsPage.cpp /FoOutput\IconTests\defaults-page.obj
+if errorlevel 1 exit /b %errorlevel%
+cl /nologo /std:c++20 /EHsc /W4 /WX /DUNICODE /D_UNICODE /D_WIN32_WINNT=0x0A00 /I UI_Modern scripts\test_default_apps.cpp UI_Modern\ExcellentZip.Icons.cpp /FoOutput\IconTests\ /FeOutput\IconTests\test_default_apps.exe /link shell32.lib shlwapi.lib advapi32.lib user32.lib ole32.lib oleaut32.lib runtimeobject.lib
+if errorlevel 1 exit /b %errorlevel%
+Output\IconTests\test_default_apps.exe

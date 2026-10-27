@@ -1,0 +1,22 @@
+#include "DefaultAppsPageRes.h"
+#include "../../GuiCommon.rc"
+#undef MY_FONT
+#define MY_FONT FONT 9, "Segoe UI"
+#define xc 320
+#define yc 250
+
+IDD_DEFAULT_APPS MY_PAGE
+CAPTION "File types"
+BEGIN
+  LTEXT "Choose what ExcellentZip opens", -1, m, 8, 300, 14
+  LTEXT "Windows asks you to confirm your default apps. Select all supported types, or choose individual extensions below.", -1, m, 26, 300, 27
+  PUSHBUTTON "&All file types...", IDB_DEFAULTS_ALL, m, 58, 112, 18
+  LTEXT "Or choose specific file types:", -1, m, 80, 300, 11
+  PUSHBUTTON "&Select all", IDB_DEFAULTS_SELECT_ALL, m, 96, 62, 17
+  PUSHBUTTON "&Clear", IDB_DEFAULTS_CLEAR, m+68, 96, 52, 17
+  PUSHBUTTON "&Refresh", IDB_DEFAULTS_REFRESH, 266, 96, 62, 17
+  CONTROL "", IDC_DEFAULTS_LIST, "SysListView32", LVS_REPORT | LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP, m, 118, 320, 83
+  LTEXT "Select file types to begin.", IDT_DEFAULTS_STATUS, m, 207, 320, 25
+  PUSHBUTTON "Choose &selected...", IDB_DEFAULTS_CHOOSE, m, 239, 120, 19
+  PUSHBUTTON "Stop", IDB_DEFAULTS_STOP, m+128, 239, 56, 19
+END

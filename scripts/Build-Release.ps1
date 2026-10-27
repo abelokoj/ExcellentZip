@@ -35,6 +35,9 @@ if (-not $Payload) {
     $Payload = Join-Path $ExcellentZipRoot ('Output\ReleaseLayout\' + [guid]::NewGuid().ToString('N'))
     [IO.Compression.ZipFile]::ExtractToDirectory($package.FullName, $Payload)
 }
+if ((Get-Item -LiteralPath (Join-Path $Payload "ExcellentZip.exe")).VersionInfo.FileDescription -ne "ExcellentZip") {
+    throw "Windows app display name must be exactly ExcellentZip."
+}
 & python scripts\test_release_smoke.py --payload $Payload --version $Version
 if ($LASTEXITCODE) { throw 'Archive engine smoke checks failed.' }
 if (-not $InnoCompiler) {

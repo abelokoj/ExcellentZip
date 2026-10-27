@@ -1,5 +1,16 @@
 # Changelog
 
+## Unreleased — 2026-10-27.2
+
+Recorded 2026-10-27T03:24:49-04:00. Source changes are ready; distribution build and publication are pending.
+
+- Corrects the executable description and Windows application registration so the app picker shows ExcellentZip.
+- Adds Tools → Options → File types with all 62 extensions, current default-app names, native checkbox selection, Select all/Clear, and guided Windows confirmation for all or selected extensions.
+- Adds an optional installer step to choose default file types in Windows. Existing default choices are preserved until the user confirms them.
+- Refreshes file-type previews and ExcellentZip-owned icons from the saved pack when defaults change.
+
+Validation: 12 packaging/name/installer checks passed. Native tests passed for all 62 capability registrations, exact app naming, extension/URI validation, launch failures, preserved existing defaults, and compilation of the File types controls/resources. Icon/download tests also passed. Full build, installer verification and publication remain pending. Windows confirmations and Explorer behavior have not been tested live; older Windows may open the general Default apps screen. Builds are unsigned.
+
 ## [2026-10-27.1](https://github.com/abelokoj/ExcellentZip/releases/tag/2026-10-27.1)
 
 Recorded 2026-10-27T02:09:30-04:00. Publication confirmed 2026-10-27T02:44:04-04:00 (recording time). The Windows x64 installer is 13.0 MB and portable ZIP is 24.4 MB; both include only the default icon pack.

@@ -53,7 +53,7 @@ def publish(version):
 
 - Monogram EZ is included; Settings downloads all six optional packs together after consent.
 - 62 registered file types with distinct colors and readable labels.
-- Setup installs per user and can register ExcellentZip in Windows Default apps without choosing defaults.
+- Windows shows the app as ExcellentZip. Setup can open default-app confirmation; Tools > Options > File types supports all or selected extensions with Windows confirmation.
 - The portable ZIP runs after extraction. Keep all DLLs, resources and the icons folder together; preferences are stored per Windows user.
 
 Download **Setup-x64.exe** to install, or **Portable-x64.zip** to extract and run. SHA-256 checksums are included.
