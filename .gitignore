@@ -421,7 +421,9 @@ FodyWeavers.xsd
 dist/
 __pycache__/
 *.pyc
-ExcellentZip.Project/ExcellentZip.Build.Tasks.dll
 
 # Private local notes; never include these in source commits or release packages
 /dev_notes/
+
+# Generated from the icon catalog while packaging
+/packaging/ExcellentZip.Associations.iss

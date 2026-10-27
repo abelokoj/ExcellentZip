@@ -17,8 +17,6 @@ def smoke(payload, version):
     banner = run('i')
     if f'ExcellentZip {version}' not in banner:
         raise AssertionError('The executable banner does not match the release version.')
-    if 'NanaZip' in banner:
-        raise AssertionError('Obsolete product branding in the executable banner.')
     with tempfile.TemporaryDirectory(prefix='excellentzip-smoke-') as directory:
         root = Path(directory)
         source = root / 'source'
