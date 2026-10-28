@@ -1,6 +1,8 @@
 // FM.cpp
 
 #include "StdAfx.h"
+#include "../../../../../ExcellentZip.DefaultApps.h"
+#include "../../../../../ExcellentZip.Zoom.h"
 
 #include "../../../Common/MyWindows.h"
 
@@ -577,6 +579,23 @@ static int WINAPI WinMain2(int nCmdShow)
   SplitStringToTwoStrings(commandsString, paramString, tailString);
   paramString.Trim();
   tailString.Trim();
+  if (paramString.IsEqualTo_NoCase(L"--default-types"))
+  {
+    std::wstring Selection(tailString.Ptr());
+    if (Selection != L"all")
+    {
+      std::vector<const wchar_t*> Extensions;
+      std::wstring Error;
+      if (!ExcellentZipDefaults::ParseExtensions(Selection, Extensions, Error))
+      {
+        ::MessageBoxW(nullptr, Error.c_str(), L"ExcellentZip", MB_OK | MB_ICONERROR);
+        return 1;
+      }
+    }
+    ExcellentZipDefaults::PendingSelection = Selection;
+    paramString.Empty();
+    tailString.Empty();
+  }
   if (tailString.IsPrefixedBy(L"-t"))
     g_ArcFormat = tailString.Ptr(2);
   // **************** ExcellentZip Modification Start ****************
@@ -669,6 +688,9 @@ static int WINAPI WinMain2(int nCmdShow)
   if (!InitInstance (nCmdShow))
     return FALSE;
 
+  if (!ExcellentZipDefaults::PendingSelection.empty())
+    ::PostMessageW(g_HWND, WM_COMMAND, 900, 0);
+
   // we will load Global_Codecs at first use instead.
   /*
   OutputDebugStringW(L"Before LoadGlobalCodecs");
@@ -756,6 +778,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE /* hPrevInstance */,
     /* lpCmdLine */, int nCmdShow)
 {
   g_hInstance = hInstance;
+  (void)ExcellentZipZoom::Percent();
 
   // **************** ExcellentZip Modification Start ****************
   ::ExcellentZipInitialize();
@@ -1176,7 +1199,7 @@ void CApp::MoveSubWindows()
       UINT DpiValue = ::GetDpiForWindow(hWnd);
 
       int MainWindowToolBarScaledHeight = ::MulDiv(
-          48,
+          ExcellentZipZoom::Scale(48),
           DpiValue,
           USER_DEFAULT_SCREEN_DPI);
 

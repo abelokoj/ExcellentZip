@@ -9,6 +9,7 @@
 #endif
 
 #include "Dialog.h"
+#include "../../../../../UI_Modern/ExcellentZip.Zoom.h"
 
 // **************** ExcellentZip Modification Start ****************
 #include <K7User.h>
@@ -42,6 +43,7 @@ DialogProcedure(HWND dialogHWND, UINT message, WPARAM wParam, LPARAM lParam)
   {
   // **************** ExcellentZip Modification End ****************
     dialog->Attach(dialogHWND);
+    ExcellentZipZoom::WatchDialog(dialogHWND);
   // **************** ExcellentZip Modification Start ****************
     ::K7UserModernSetForegroundWindow(dialogHWND);
   }
@@ -405,7 +407,9 @@ void CDialog::NormalizePosition()
 
 bool CModelessDialog::Create(LPCTSTR templateName, HWND parentWindow)
 {
-  const HWND aHWND = CreateDialogParam(g_hInstance, templateName, parentWindow, DialogProcedure, (LPARAM)this);
+  const auto Template = ExcellentZipZoom::DialogTemplate(g_hInstance, templateName);
+  const HWND aHWND = Template.empty() ? nullptr : CreateDialogIndirectParamW(g_hInstance,
+      reinterpret_cast<LPCDLGTEMPLATE>(Template.data()), parentWindow, DialogProcedure, (LPARAM)this);
   if (!aHWND)
     return false;
   Attach(aHWND);
@@ -414,7 +418,9 @@ bool CModelessDialog::Create(LPCTSTR templateName, HWND parentWindow)
 
 INT_PTR CModalDialog::Create(LPCTSTR templateName, HWND parentWindow)
 {
-  return DialogBoxParam(g_hInstance, templateName, parentWindow, DialogProcedure, (LPARAM)this);
+  const auto Template = ExcellentZipZoom::DialogTemplate(g_hInstance, templateName);
+  return Template.empty() ? -1 : DialogBoxIndirectParamW(g_hInstance,
+      reinterpret_cast<LPCDLGTEMPLATE>(Template.data()), parentWindow, DialogProcedure, (LPARAM)this);
 }
 
 #ifndef _UNICODE

@@ -5,7 +5,7 @@
   <p>Seven icon packs. Familiar archive tools. Your choice of style.</p>
   <p>
     <a href="https://github.com/abelokoj/ExcellentZip/actions/workflows/BuildBinaries.yml"><img src="https://github.com/abelokoj/ExcellentZip/actions/workflows/BuildBinaries.yml/badge.svg" alt="Windows build" /></a>
-    <img src="https://img.shields.io/badge/version-2026--10--27.2-087f8c" alt="Version 2026-10-27.2" />
+    <img src="https://img.shields.io/badge/version-2026--10--28.1-087f8c" alt="Version 2026-10-28.1" />
     <img src="https://img.shields.io/badge/platform-Windows%2010%20%2F%2011-0078D4" alt="Windows 10 and 11" />
   </p>
   <p><a href="#-overview">Overview</a> · <a href="#-icon-packs">Icon packs</a> · <a href="#-downloads">Downloads</a> · <a href="#-features">Features</a> · <a href="#-setup-guide">Setup guide</a> · <a href="#-build-from-source">Build from source</a></p>
@@ -17,7 +17,7 @@
 
 ExcellentZip brings a consistent visual identity to your archives while keeping the compression, extraction, browsing, and verification tools of a 7-Zip-based archive manager. Choose from seven icon packs; every one of the **62 registered file extensions** has its own accent color and readable format label.
 
-**Monogram EZ, option 4, is included and is the default.** The current app version is **2026-10-27.2**. The six other packs are downloaded together from this repository after you approve the download in Settings, then remain available offline for your Windows user.
+**Monogram EZ, option 4, is included and is the default.** The current app version is **2026-10-28.1**. The six other packs are downloaded together from this repository after you approve the download in Settings, then remain available offline for your Windows user.
 
 ---
 
@@ -43,11 +43,11 @@ The same file type keeps its color across every pack. Download the six optional 
 
 ## 📦 Downloads
 
-**[Download ExcellentZip 2026-10-27.2](https://github.com/abelokoj/ExcellentZip/releases/tag/2026-10-27.2)**
+**[Download ExcellentZip 2026-10-28.1](https://github.com/abelokoj/ExcellentZip/releases/tag/2026-10-28.1)**
 
-- **Installer:** [`ExcellentZip-2026-10-27.2-Setup-x64.exe`](https://github.com/abelokoj/ExcellentZip/releases/download/2026-10-27.2/ExcellentZip-2026-10-27.2-Setup-x64.exe) — installs per user, adds Start-menu access, and offers file-type registration in Windows Default apps.
-- **Portable:** [`ExcellentZip-2026-10-27.2-Portable-x64.zip`](https://github.com/abelokoj/ExcellentZip/releases/download/2026-10-27.2/ExcellentZip-2026-10-27.2-Portable-x64.zip) — extract the whole folder and run `ExcellentZip.exe`.
-- **Checksums:** [`ExcellentZip-2026-10-27.2-SHA256.txt`](https://github.com/abelokoj/ExcellentZip/releases/download/2026-10-27.2/ExcellentZip-2026-10-27.2-SHA256.txt) — SHA-256 hashes for both downloads.
+- **Installer:** [`ExcellentZip-2026-10-28.1-Setup-x64.exe`](https://github.com/abelokoj/ExcellentZip/releases/download/2026-10-28.1/ExcellentZip-2026-10-28.1-Setup-x64.exe) — installs per user, adds Start-menu access, and offers file-type registration in Windows Default apps.
+- **Portable:** [`ExcellentZip-2026-10-28.1-Portable-x64.zip`](https://github.com/abelokoj/ExcellentZip/releases/download/2026-10-28.1/ExcellentZip-2026-10-28.1-Portable-x64.zip) — extract the whole folder and run `ExcellentZip.exe`.
+- **Checksums:** [`ExcellentZip-2026-10-28.1-SHA256.txt`](https://github.com/abelokoj/ExcellentZip/releases/download/2026-10-28.1/ExcellentZip-2026-10-28.1-SHA256.txt) — SHA-256 hashes for both downloads.
 
 These builds target **Windows x64**, on Windows 10 version 2004 or later and Windows 11. Portable preferences are stored per Windows user. Keep the DLLs, resources, and `icons` folder together. Only Monogram EZ is bundled; optional packs are cached per Windows user after downloading.
 
@@ -71,6 +71,7 @@ Development builds are available under **Artifacts** on successful [GitHub Actio
 ### Windows experience
 
 - Dark-mode support, high-DPI awareness, and a Windows-native interface.
+- Interface zoom from **100% to 200%**, with presets and a field for custom whole percentages such as **135%**. Reopen the app to apply a saved zoom.
 - Smart Extraction and an option to open the destination folder after extraction.
 - Mark-of-the-Web propagation during extraction.
 - Graphical and command-line entry points: `ExcellentZip.exe`, `ExcellentZipG.exe`, and `ExcellentZipC.exe`.
@@ -88,7 +89,11 @@ Development builds are available under **Artifacts** on successful [GitHub Actio
 
 ### Install
 
-Setup can open Windows default-app confirmation for all supported types. Later, use **Tools → Options → File types** to select all, some, or individual extensions, see their current default apps, and confirm changes in Windows. Files assigned to ExcellentZip use the icon pack saved in Settings.
+Setup offers **Keep current defaults**, **All supported file types**, or **Only these extensions**. Enter a list such as `zip, 7z, rar` to register and request defaults for those types alone. Windows requires confirmation before the default opener changes. Existing unrelated registrations and default choices are preserved.
+
+Later, open **Tools → Options → File types**. Use the checklist, **Select all**, or enter extensions and select **Use list**; then choose **Choose selected** and follow Windows confirmation. The list shows current default apps. Files assigned to ExcellentZip use the icon pack saved in Settings.
+
+In **Tools → Options → Settings → Interface zoom**, choose a preset or type any whole percentage from **100% through 200%**, with or without `%`. Select **Apply** and reopen ExcellentZip. Text, controls, panels, and app dialogs enlarge together; Windows-owned menus and prompts follow Windows display settings.
 
 1. Download the x64 Setup from [Releases](https://github.com/abelokoj/ExcellentZip/releases).
 2. Run the installer and choose the shortcuts and file-type registration you want.
@@ -137,7 +142,7 @@ See [development and release notes](Documents/ExcellentZip.md) for details.
 
 Bug reports, improvements, and pull requests are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) before submitting changes. Report potential vulnerabilities through the process in [Security.md](Security.md).
 
-App versions follow **YYYY-MM-DD.revision**, such as `2026-10-27.2`. Windows numeric version fields use the equivalent `2026.10.27.2`.
+App versions follow **YYYY-MM-DD.revision**, such as `2026-10-28.1`. Windows numeric version fields use the equivalent `2026.10.28.1`.
 
 ---
 

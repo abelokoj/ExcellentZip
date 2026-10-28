@@ -53,10 +53,51 @@ bool CDefaultAppsPage::OnInit()
   }
   _imagePack = Pack;
   _updating = false;
+  SendItemMessage(IDE_DEFAULTS_EXTENSIONS, EM_SETLIMITTEXT, 4096, 0);
+  if (!ExcellentZipDefaults::PendingSelection.empty())
+  {
+    auto Text = std::move(ExcellentZipDefaults::PendingSelection);
+    ExcellentZipDefaults::PendingSelection.clear();
+    if (Text == L"all")
+    {
+      for (int i = 0; i < kCount; ++i) ListView_SetCheckState(List, i, TRUE);
+      _fromSetup = true;
+    }
+    else
+    {
+      SetItemText(IDE_DEFAULTS_EXTENSIONS, Text.c_str());
+      _fromSetup = SelectExtensions(Text);
+    }
+  }
   HideItem(IDB_DEFAULTS_STOP);
   RefreshApps();
   UpdateSelection();
   ::SetTimer(*this, kRefreshTimer, 1500, nullptr);
+  if (_fromSetup)
+    ::PostMessageW(*this, WM_COMMAND, MAKEWPARAM(IDB_DEFAULTS_CHOOSE, BN_CLICKED), 0);
+  return true;
+}
+
+bool CDefaultAppsPage::SelectExtensions(const std::wstring& Text)
+{
+  std::vector<const wchar_t*> Extensions;
+  std::wstring Error;
+  if (!ExcellentZipDefaults::ParseExtensions(Text, Extensions, Error))
+  {
+    ::MessageBoxW(*this, Error.c_str(), L"ExcellentZip", MB_OK | MB_ICONERROR);
+    ::SetFocus(GetItem(IDE_DEFAULTS_EXTENSIONS));
+    return false;
+  }
+  _updating = true;
+  for (int i = 0; i < kCount; ++i)
+  {
+    bool Selected = false;
+    for (const auto* Extension : Extensions)
+      if (::_wcsicmp(Extension, ExcellentZipIcons::kExtensions[i]) == 0) Selected = true;
+    ListView_SetCheckState(GetItem(IDC_DEFAULTS_LIST), i, Selected);
+  }
+  _updating = false;
+  UpdateSelection();
   return true;
 }
 
@@ -124,6 +165,8 @@ void CDefaultAppsPage::FinishSelection()
 {
   _pending.clear();
   _position = 0;
+  EnableItem(IDE_DEFAULTS_EXTENSIONS, true);
+  EnableItem(IDB_DEFAULTS_FROM_TEXT, true);
   EnableItem(IDC_DEFAULTS_LIST, true);
   EnableItem(IDB_DEFAULTS_SELECT_ALL, true);
   EnableItem(IDB_DEFAULTS_CLEAR, true);
@@ -168,6 +211,13 @@ bool CDefaultAppsPage::OnButtonClicked(int ID, HWND Button)
   const HWND List = GetItem(IDC_DEFAULTS_LIST);
   switch (ID)
   {
+    case IDB_DEFAULTS_FROM_TEXT:
+    {
+      wchar_t Text[4097]{};
+      ::GetWindowTextW(GetItem(IDE_DEFAULTS_EXTENSIONS), Text, ARRAYSIZE(Text));
+      SelectExtensions(Text);
+      return true;
+    }
     case IDB_DEFAULTS_SELECT_ALL:
     case IDB_DEFAULTS_CLEAR:
       _updating = true;
@@ -193,6 +243,7 @@ bool CDefaultAppsPage::OnButtonClicked(int ID, HWND Button)
       return true;
     }
     case IDB_DEFAULTS_CHOOSE:
+    {
       if (!_pending.empty())
       {
         RefreshApps();
@@ -208,7 +259,18 @@ bool CDefaultAppsPage::OnButtonClicked(int ID, HWND Button)
         FinishSelection();
         return OnButtonClicked(IDB_DEFAULTS_ALL, Button);
       }
+      std::vector<const wchar_t*> Extensions;
+      for (int Index : _pending) Extensions.push_back(ExcellentZipIcons::kExtensions[Index]);
+      std::wstring Error;
+      if (!ExcellentZipDefaults::Register(Extensions, Error))
+      {
+        ::MessageBoxW(*this, Error.c_str(), L"ExcellentZip", MB_OK | MB_ICONERROR);
+        FinishSelection();
+        return true;
+      }
       _position = 0;
+      EnableItem(IDE_DEFAULTS_EXTENSIONS, false);
+      EnableItem(IDB_DEFAULTS_FROM_TEXT, false);
       EnableItem(IDC_DEFAULTS_LIST, false);
       EnableItem(IDB_DEFAULTS_SELECT_ALL, false);
       EnableItem(IDB_DEFAULTS_CLEAR, false);
@@ -216,6 +278,7 @@ bool CDefaultAppsPage::OnButtonClicked(int ID, HWND Button)
       ShowItem(IDB_DEFAULTS_STOP, SW_SHOW);
       OpenNextType();
       return true;
+    }
     default:
       return CPropertyPage::OnButtonClicked(ID, Button);
   }

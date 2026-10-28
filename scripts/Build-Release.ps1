@@ -16,6 +16,10 @@ $date = [datetime]::ParseExact($parts[0], 'yyyy-MM-dd', [Globalization.CultureIn
 $revision = [int]$parts[1]
 if ($revision -gt 65535) { throw 'Windows version revision must not exceed 65535.' }
 $numericVersion = '{0}.{1}.{2}.{3}' -f $date.Year, $date.Month, $date.Day, $revision
+[xml]$ExcellentZipPackageManifest = Get-Content -LiteralPath 'Package/Package.appxmanifest'
+if ($ExcellentZipPackageManifest.Package.Identity.Version -ne $numericVersion) {
+    throw 'Package/Package.appxmanifest version must match the app version before building.'
+}
 & python scripts\generate_icon_download.py --check
 if ($LASTEXITCODE) { throw 'Optional icon download metadata is stale; regenerate it before building.' }
 $vswhere = Join-Path ${env:ProgramFiles(x86)} 'Microsoft Visual Studio\Installer\vswhere.exe'

@@ -1,4 +1,5 @@
 ﻿#include "pch.h"
+#include "InterfaceZoom.h"
 #include "MainWindowToolBarPage.h"
 #if __has_include("MainWindowToolBarPage.g.cpp")
 #include "MainWindowToolBarPage.g.cpp"
@@ -74,6 +75,7 @@ namespace winrt::ExcellentZip::Modern::implementation
     void MainWindowToolBarPage::InitializeComponent()
     {
         MainWindowToolBarPageT::InitializeComponent();
+        ::ExcellentZipZoom::ApplyPage(this->get_strong().as<winrt::Windows::UI::Xaml::Controls::Page>());
 
         winrt::AppBarButton ToolBarButtons[10] =
         {
@@ -300,7 +302,7 @@ namespace winrt::ExcellentZip::Modern::implementation
         winrt::AppBarButton Button = sender.as<winrt::AppBarButton>();
 
         winrt::GeneralTransform Transform =
-            Button.TransformToVisual(this->Content());
+            Button.TransformToVisual(this->get_strong().as<winrt::Windows::UI::Xaml::Controls::Page>());
         winrt::Point LogicalPoint = Transform.TransformPoint(
             winrt::Point(0.0f, 0.0f));
 
@@ -312,7 +314,7 @@ namespace winrt::ExcellentZip::Modern::implementation
             DpiValue,
             USER_DEFAULT_SCREEN_DPI);
         MenuPosition.y = ::MulDiv(
-            48,
+            ::ExcellentZipZoom::Scale(48),
             DpiValue,
             USER_DEFAULT_SCREEN_DPI);
         ::MapWindowPoints(

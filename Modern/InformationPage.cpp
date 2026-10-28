@@ -1,4 +1,5 @@
 ﻿#include "pch.h"
+#include "InterfaceZoom.h"
 #include "InformationPage.h"
 #if __has_include("InformationPage.g.cpp")
 #include "InformationPage.g.cpp"
@@ -27,6 +28,7 @@ namespace winrt::ExcellentZip::Modern::implementation
     void InformationPage::InitializeComponent()
     {
         InformationPageT::InitializeComponent();
+        ::ExcellentZipZoom::ApplyPage(this->get_strong().as<winrt::Windows::UI::Xaml::Controls::Page>(), 528, 496);
 
         ::SetWindowTextW(this->m_WindowHandle, this->m_Title.c_str());
         

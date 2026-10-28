@@ -10,6 +10,8 @@
 class CSettingsPage: public NWindows::NControl::CPropertyPage
 {
   NWindows::NControl::CComboBox _iconPackCombo;
+  NWindows::NControl::CComboBox _zoomCombo;
+  bool _zoomWasChanged = false;
   HICON _iconPackPreview[4] = {};
   int _iconPackPreviewPack = 4;
   bool _iconPackWasChanged = false;

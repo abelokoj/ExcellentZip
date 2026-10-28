@@ -9,6 +9,7 @@
  */
 
 #include "pch.h"
+#include "InterfaceZoom.h"
 
 #include "ExcellentZip.Modern.h"
 
@@ -266,8 +267,8 @@ namespace
 
         UINT DpiValue = ::GetDpiForWindow(WindowHandle);
 
-        int ScaledWidth = ::MulDiv(Width, DpiValue, USER_DEFAULT_SCREEN_DPI);
-        int ScaledHeight = ::MulDiv(Height, DpiValue, USER_DEFAULT_SCREEN_DPI);
+        int ScaledWidth = ::MulDiv(::ExcellentZipZoom::Scale(Width), DpiValue, USER_DEFAULT_SCREEN_DPI);
+        int ScaledHeight = ::MulDiv(::ExcellentZipZoom::Scale(Height), DpiValue, USER_DEFAULT_SCREEN_DPI);
 
         RECT ParentRect = {};
         if (ParentWindowHandle)
@@ -290,6 +291,13 @@ namespace
             }
         }
 
+        MONITORINFO MonitorInfo{sizeof(MonitorInfo)};
+        if (::ExcellentZipZoom::Percent() > 100 && ::GetMonitorInfoW(::MonitorFromWindow(WindowHandle, MONITOR_DEFAULTTONEAREST), &MonitorInfo))
+        {
+            ScaledWidth = (std::min)(ScaledWidth, static_cast<int>(MonitorInfo.rcWork.right - MonitorInfo.rcWork.left - 24));
+            ScaledHeight = (std::min)(ScaledHeight, static_cast<int>(MonitorInfo.rcWork.bottom - MonitorInfo.rcWork.top - 24));
+            ParentRect = MonitorInfo.rcWork;
+        }
         int ParentWidth = ParentRect.right - ParentRect.left;
         int ParentHeight = ParentRect.bottom - ParentRect.top;
 

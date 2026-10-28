@@ -1,4 +1,5 @@
-#include "pch.h"
+﻿#include "pch.h"
+#include "InterfaceZoom.h"
 #include "AboutPage.h"
 #if __has_include("AboutPage.g.cpp")
 #include "AboutPage.g.cpp"
@@ -24,6 +25,7 @@ namespace winrt::ExcellentZip::Modern::implementation
     void AboutPage::InitializeComponent()
     {
         AboutPageT::InitializeComponent();
+        ::ExcellentZipZoom::ApplyPage(this->get_strong().as<winrt::Windows::UI::Xaml::Controls::Page>(), 448, 256);
 
         winrt::hstring WindowTitle = winrt::hstring(
             ::K7ModernGetLegacyStringResource(2900));

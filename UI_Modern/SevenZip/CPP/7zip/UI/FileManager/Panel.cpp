@@ -41,6 +41,7 @@
 #include <winrt/Windows.UI.Xaml.Hosting.h>
 #include <winrt/Windows.UI.Xaml.Media.h>
 #include <winrt/Windows.UI.Xaml.Input.h>
+#include "../../../../../../Modern/InterfaceZoom.h"
 #include <vector>
 // Note: All HWND should belong to the same main window thread.
 extern std::vector<HWND> g_K7ControlList;
@@ -387,6 +388,7 @@ bool CPanel::OnCreate(CREATESTRUCT * /* createStruct */)
       *this, (HMENU)(UINT_PTR)(_baseID + 1), g_hInstance, NULL))
     return false;
 
+  ExcellentZipZoom::ApplyListFont(_listView);
   _listView.SetUnicodeFormat();
   _listView._panel = this;
   _listView.SetWindowProc();
@@ -432,7 +434,7 @@ bool CPanel::OnCreate(CREATESTRUCT * /* createStruct */)
       *this,
       nullptr,
       nullptr,
-      winrt::get_abi(_addressBarControl)
+      winrt::get_abi(ExcellentZipZoom::WrapXaml(_addressBarControl))
   );
 
   {
@@ -538,7 +540,7 @@ bool CPanel::OnCreate(CREATESTRUCT * /* createStruct */)
       *this,
       nullptr,
       nullptr,
-      winrt::get_abi(_statusBarControl)
+      winrt::get_abi(ExcellentZipZoom::WrapXaml(_statusBarControl))
   );
 
   {
@@ -770,11 +772,11 @@ void CPanel::ChangeWindowSize(int xSize, int ySize)
   // RECT rect;
 
   // kHeaderSize = RECT_SIZE_Y(rect);
-  kHeaderSize = MulDiv(AddressBarHeight, ::GetDpiForWindow(*this), USER_DEFAULT_SCREEN_DPI);
+  kHeaderSize = ExcellentZipZoom::DpiScale(AddressBarHeight, *this);
 
   // _statusBar.GetWindowRect(&rect);
   // kStatusBarSize = RECT_SIZE_Y(rect);
-  kStatusBarSize = MulDiv(StatusBarHeight, ::GetDpiForWindow(*this), USER_DEFAULT_SCREEN_DPI);
+  kStatusBarSize = ExcellentZipZoom::DpiScale(StatusBarHeight, *this);
 
   // _statusBar2.GetWindowRect(&rect);
   // kStatusBar2Size = RECT_SIZE_Y(rect);
@@ -801,6 +803,7 @@ void CPanel::ChangeWindowSize(int xSize, int ySize)
   }
   */
 
+  ExcellentZipZoom::ApplyListFont(_listView);
   _listView.Move(0, kHeaderSize, xSize, yListViewSize);
   if (_statusBarWindow)
   {
@@ -835,7 +838,7 @@ bool CPanel::OnSize(WPARAM /* wParam */, int xSize, int ySize)
           0,
           0,
           xSize,
-          ::MulDiv(AddressBarHeight, ControlDpi, USER_DEFAULT_SCREEN_DPI),
+          ::MulDiv(ExcellentZipZoom::Scale(AddressBarHeight), ControlDpi, USER_DEFAULT_SCREEN_DPI),
           SWP_SHOWWINDOW
       );
   }

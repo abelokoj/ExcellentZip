@@ -35,7 +35,7 @@ jobs:
           if ($LASTEXITCODE) { exit $LASTEXITCODE }
       - name: Build installer and portable ZIP
         run: ./scripts/Build-Release.ps1
-      - name: Check native icon consent and installation
+      - name: Check native icons, default file types and zoom
         run: cmd /d /c scripts\test_icon_runtime.cmd
       - name: Upload downloads
         uses: actions/upload-artifact@v4

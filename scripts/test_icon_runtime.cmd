@@ -29,3 +29,8 @@ if errorlevel 1 exit /b %errorlevel%
 cl /nologo /std:c++20 /EHsc /W4 /WX /DUNICODE /D_UNICODE /D_WIN32_WINNT=0x0A00 /I UI_Modern scripts\test_default_apps.cpp UI_Modern\ExcellentZip.Icons.cpp /FoOutput\IconTests\ /FeOutput\IconTests\test_default_apps.exe /link shell32.lib shlwapi.lib advapi32.lib user32.lib ole32.lib oleaut32.lib runtimeobject.lib
 if errorlevel 1 exit /b %errorlevel%
 Output\IconTests\test_default_apps.exe
+
+if errorlevel 1 exit /b %errorlevel%
+cl /nologo /std:c++20 /EHsc /W4 /WX /DUNICODE /D_UNICODE /D_WIN32_WINNT=0x0A00 /I UI_Modern scripts\test_interface_zoom.cpp /FoOutput\IconTests\ /FeOutput\IconTests\test_interface_zoom.exe /link advapi32.lib user32.lib gdi32.lib comctl32.lib ole32.lib
+if errorlevel 1 exit /b %errorlevel%
+Output\IconTests\test_interface_zoom.exe

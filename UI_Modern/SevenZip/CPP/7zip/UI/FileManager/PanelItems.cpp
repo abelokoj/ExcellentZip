@@ -1,6 +1,7 @@
 ﻿// PanelItems.cpp
 
 #include "StdAfx.h"
+#include "../../../../../ExcellentZip.Zoom.h"
 
 #include "../../../../C/Sort.h"
 
@@ -323,7 +324,7 @@ void CPanel::AddColumn(const CPropColumn &prop)
 
   LV_COLUMNW column;
   column.mask = LVCF_FMT | LVCF_WIDTH | LVCF_TEXT | LVCF_SUBITEM | LVCF_ORDER;
-  column.cx = prop.Width;
+  column.cx = ExcellentZipZoom::Scale(prop.Width);
   column.fmt = GetColumnAlign(prop.ID, prop.Type);
   column.iOrder = index; // must be <= _listView.ItemCount
   column.iSubItem = index; // must be <= _listView.ItemCount
@@ -1169,7 +1170,7 @@ void CPanel::SaveListViewInfo()
     if (!_listView.GetColumn(i, &winColumnInfo))
       throw 1;
     prop.Order = winColumnInfo.iOrder;
-    prop.Width = winColumnInfo.cx;
+    prop.Width = MulDiv(winColumnInfo.cx, 100, ExcellentZipZoom::Percent());
   }
 
   CListViewInfo viewInfo;

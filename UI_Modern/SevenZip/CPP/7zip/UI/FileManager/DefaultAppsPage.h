@@ -2,11 +2,14 @@
 #include "../../../Windows/Control/PropertyPage.h"
 #include <CommCtrl.h>
 #include <vector>
+#include <string>
 
 class CDefaultAppsPage: public NWindows::NControl::CPropertyPage
 {
   HIMAGELIST _images = nullptr;
   bool _updating = false;
+  bool _fromSetup = false;
+  bool SelectExtensions(const std::wstring& Text);
   int _imagePack = 0;
   std::vector<int> _pending;
   size_t _position = 0;

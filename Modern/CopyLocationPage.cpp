@@ -1,4 +1,5 @@
 ﻿#include "pch.h"
+#include "InterfaceZoom.h"
 #include "CopyLocationPage.h"
 #include "CopyLocationPage.g.cpp"
 
@@ -34,6 +35,7 @@ namespace winrt::ExcellentZip::Modern::implementation
     void CopyLocationPage::InitializeComponent()
     {
         CopyLocationPageT::InitializeComponent();
+        ::ExcellentZipZoom::ApplyPage(this->get_strong().as<winrt::Windows::UI::Xaml::Controls::Page>(), 568, 336);
 
         this->TitleTextBlock().Text(this->m_Title);
         this->SubtitleTextBlock().Text(this->m_Subtitle);

@@ -1,5 +1,16 @@
 # Changelog
 
+## 2026-10-28.1 — in development
+
+Recorded 2026-10-28T10:41:15-04:00 (recording time). Changes and local release artifacts are ready; publication is pending.
+
+- Adds installer choices for all supported file types or an entered list of extensions. Selected-type registration adds only those capabilities while preserving other existing registrations and Windows default choices.
+- Adds an extension-entry field to Tools → Options → File types and shares validated, catalog-only registration with the installer's in-app confirmation guide.
+- Adds interface zoom from 100% to 200%, including custom whole percentages and presets. The saved setting takes effect on the next launch and scales native dialog fonts/layout, file-list text, toolbar, address/status bars, and modern app dialogs. Windows-owned menus and prompts keep system sizing.
+- Keeps enlarged dialogs reachable with scrolling when they exceed the available desktop area and allows toolbar commands to move into overflow.
+
+Validation update 2026-10-28T11:37:53-04:00 (recording time): 13 packaging/version checks, eight asset checks, two source-layout checks, native icon/download/default-registration checks, and zoom parsing/persistence/template tests passed. Selected-only registration preserves existing default choices; custom percentages, invalid settings, and scrolling to off-screen dialog controls are covered. Windows app compilation and native installer/portable packaging passed. ZIP/encrypted-7Z archive operations, checksums, ZIP CRCs, default-only icons, and the shipped editable zoom/extension-entry dialog controls were verified. Windows requires confirmation for default-app changes; live confirmation and visual layout checks remain manual. Builds are unsigned. Release upload is pending.
+
 ## [2026-10-27.2](https://github.com/abelokoj/ExcellentZip/releases/tag/2026-10-27.2)
 
 Recorded 2026-10-27T03:24:49-04:00. Publication confirmed 2026-10-27T03:47:54-04:00 (recording time). Installer and portable downloads are available.

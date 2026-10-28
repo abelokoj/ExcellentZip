@@ -18,14 +18,26 @@ class PackagingTests(unittest.TestCase):
         setup = (release.ROOT / 'packaging/ExcellentZip.Setup.iss').read_text(encoding='utf-8')
         self.assertIn('ValueName: "FriendlyAppName"; ValueData: "ExcellentZip"', setup)
 
-    def test_installer_offers_windows_default_confirmation(self):
+    def test_installer_offers_all_or_entered_extensions(self):
         setup = (release.ROOT / 'packaging/ExcellentZip.Setup.iss').read_text(encoding='utf-8')
-        self.assertIn('Name: "fileassociations\\defaultapps"', setup)
-        self.assertIn('ms-settings:defaultapps?registeredAppUser=ExcellentZip', setup)
+        self.assertIn('all supported file types', setup)
+        self.assertIn('only these extensions', setup)
+        self.assertIn('ValidateExtensions', setup)
+        self.assertIn('--default-types {code:DefaultTypesArgument}', setup)
+        self.assertIn('Check: ConfigureDefaults', setup)
         self.assertNotIn('UserChoice', setup)
+        registration = release.associations({'extensions': ['zip', '7z']})
+        self.assertEqual(5, registration.count("Check: ShouldRegisterExtension('zip')"))
+        self.assertEqual(5, registration.count("Check: ShouldRegisterExtension('7z')"))
+        self.assertIn('#define SupportedExtensions "zip;7z"', registration)
 
     def test_default_version_comes_from_project_properties(self):
         self.assertRegex(release.current_version(), r'^\d{4}-\d{2}-\d{2}\.[1-9]\d*$')
+
+    def test_package_identity_matches_the_app_version(self):
+        import xml.etree.ElementTree as ET
+        package = ET.parse(release.ROOT / 'Package/Package.appxmanifest')
+        self.assertEqual(release.version_numbers(release.current_version()), package.find('.//{*}Identity').get('Version'))
 
     def test_app_and_windows_version_mapping(self):
         self.assertEqual('2026.10.26.1', release.version_numbers('2026-10-26.1'))

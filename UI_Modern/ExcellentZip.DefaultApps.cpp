@@ -6,6 +6,8 @@
 #include <ShlObj.h>
 #include <Shlwapi.h>
 #include <Shellapi.h>
+#include <algorithm>
+#include <cwctype>
 
 #pragma comment(lib, "Shell32.lib")
 #pragma comment(lib, "Shlwapi.lib")
@@ -87,9 +89,56 @@ namespace ExcellentZipDefaults
         return L"ms-settings:defaultapps?registeredAppUser=ExcellentZip";
     }
 
+    bool ParseExtensions(const std::wstring& Text, std::vector<const wchar_t*>& Extensions, std::wstring& Error)
+    {
+        Extensions.clear();
+        Error.clear();
+        if (Text.size() > 4096)
+        {
+            Error = L"The extension list is too long. Enter supported extensions such as zip, 7z, rar.";
+            return false;
+        }
+        size_t Start = 0;
+        while (Start < Text.size())
+        {
+            while (Start < Text.size() && (iswspace(Text[Start]) || Text[Start] == L',' || Text[Start] == L';')) ++Start;
+            if (Start == Text.size()) break;
+            size_t End = Start;
+            while (End < Text.size() && !iswspace(Text[End]) && Text[End] != L',' && Text[End] != L';') ++End;
+            const auto Token = Text.substr(Start, End - Start);
+            const auto* Known = KnownExtension(Token.c_str());
+            if (!Known)
+            {
+                Error = L"Unsupported extension: " + Token + L". Choose a file type from the list below.";
+                Extensions.clear();
+                return false;
+            }
+            if (std::find(Extensions.begin(), Extensions.end(), Known) == Extensions.end())
+                Extensions.push_back(Known);
+            Start = End;
+        }
+        if (Extensions.empty())
+        {
+            Error = L"Enter at least one supported extension, for example zip, 7z, rar.";
+            return false;
+        }
+        return true;
+    }
+
     bool Register(std::wstring& Error)
     {
+        return Register(std::vector<const wchar_t*>(std::begin(ExcellentZipIcons::kExtensions), std::end(ExcellentZipIcons::kExtensions)), Error);
+    }
+
+    bool Register(const std::vector<const wchar_t*>& Extensions, std::wstring& Error)
+    {
         Error.clear();
+        if (Extensions.empty() || std::any_of(Extensions.begin(), Extensions.end(),
+            [](const wchar_t* Extension) { return !KnownExtension(Extension); }))
+        {
+            Error = L"Choose at least one supported file type.";
+            return false;
+        }
         if (!ApplicationId().empty())
             return true; // Packaged apps already declare their associations in the manifest.
         const auto Directory = ExcellentZipIcons::AppDirectory();
@@ -113,8 +162,9 @@ namespace ExcellentZipDefaults
         Write(Capabilities, L"ApplicationDescription", L"Open, create and extract archives with ExcellentZip.");
         Write(Capabilities, L"ApplicationIcon", L"\"" + Executable + L"\",0");
         Write(L"Software\\Classes\\Applications\\ExcellentZip.exe", L"FriendlyAppName", L"ExcellentZip");
-        for (const auto* Extension : ExcellentZipIcons::kExtensions)
+        for (const auto* Requested : Extensions)
         {
+            const auto* Extension = KnownExtension(Requested);
             const auto Suffix = L"." + std::wstring(Extension);
             const auto ProgId = L"ExcellentZip.Archive." + std::wstring(Extension);
             const auto Class = L"Software\\Classes\\" + ProgId;
@@ -144,7 +194,7 @@ namespace ExcellentZipDefaults
             Error = L"Choose a supported file type.";
             return false;
         }
-        if (!Register(Error))
+        if (!(Extension ? Register({KnownExtension(Extension)}, Error) : Register(Error)))
             return false;
         SHELLEXECUTEINFOW Info{};
         Info.cbSize = sizeof(Info);

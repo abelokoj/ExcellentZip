@@ -36,14 +36,16 @@ def associations(catalog):
         progid = 'ExcellentZip.Archive.' + extension
         icon = '""{app}\\icons\\4-monogram-ez\\' + extension + '.ico"",0'
         command = '""{app}\\ExcellentZip.exe"" ""%1"" -open'
-        lines.extend([
+        records = [
             f'Root: HKCU; Subkey: "Software\\Classes\\{progid}"; ValueType: string; ValueData: "ExcellentZip {extension.upper()} archive"; Flags: uninsdeletekey; Tasks: fileassociations',
             f'Root: HKCU; Subkey: "Software\\Classes\\{progid}\\DefaultIcon"; ValueType: string; ValueData: "{icon}"; Tasks: fileassociations',
             f'Root: HKCU; Subkey: "Software\\Classes\\{progid}\\shell\\open\\command"; ValueType: string; ValueData: "{command}"; Tasks: fileassociations',
             f'Root: HKCU; Subkey: "Software\\Classes\\.{extension}\\OpenWithProgids"; ValueType: none; ValueName: "{progid}"; Flags: uninsdeletevalue; Tasks: fileassociations',
             f'Root: HKCU; Subkey: "Software\\ExcellentZip\\Capabilities\\FileAssociations"; ValueType: string; ValueName: ".{extension}"; ValueData: "{progid}"; Tasks: fileassociations',
-        ])
-    return '\n'.join(lines) + '\n'
+        ]
+        lines.extend(f"{line}; Check: ShouldRegisterExtension('{extension}')" for line in records)
+    supported = ';'.join(catalog['extensions'])
+    return '#define SupportedExtensions "' + supported + '"\n' + '\n'.join(lines) + '\n'
 
 def copy_runtime_payload(source, destination):
     catalog = json.loads((ROOT / 'icons/manifest.json').read_text(encoding='utf-8'))
@@ -87,7 +89,8 @@ def package(payload, compiler, version):
             'Settings are stored per Windows user. Moving the folder does not erase those preferences.\n'
             'Monogram EZ is included. Settings can download the six optional packs together with your consent.\n'
             'Downloaded packs are cached per Windows user. Selecting a pack does not change default apps.\n'
-            'Use the Setup download to register ExcellentZip file types in Windows Default apps.\n', encoding='utf-8')
+            'Tools > Options > File types can register all or selected extensions with Windows confirmation.\n'
+            'Tools > Options > Settings includes interface zoom from 100% to 200%; reopen the app to apply it.\n', encoding='utf-8')
         archive = dist / f'ExcellentZip-{version}-Portable-x64.zip'
         with zipfile.ZipFile(archive, 'w', zipfile.ZIP_DEFLATED, compresslevel=9) as output:
             for path in sorted(payload.rglob('*')):

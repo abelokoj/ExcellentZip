@@ -1,4 +1,4 @@
-// SettingsPage.cpp
+﻿// SettingsPage.cpp
 
 #include "StdAfx.h"
 
@@ -18,6 +18,7 @@
 #include "SettingsPageRes.h"
 #include "../../../../../ExcellentZip.Icons.h"
 #include "../../../../../ExcellentZip.IconCatalog.h"
+#include "../../../../../ExcellentZip.Zoom.h"
 
 using namespace NWindows;
 
@@ -103,6 +104,15 @@ int CSettingsPage::AddMemComboItem(UInt64 size, UInt64 percents, bool isDefault)
 
 bool CSettingsPage::OnInit()
 {
+  _zoomCombo.Attach(GetItem(IDC_EXCELLENTZIP_ZOOM));
+  for (int Percent : {100, 125, 150, 175, 200})
+  {
+    const auto Label = std::to_wstring(Percent) + L"%";
+    _zoomCombo.AddString(Label.c_str());
+  }
+  const auto SavedZoom = std::to_wstring(ExcellentZipZoom::ReadPercent()) + L"%";
+  ::SetWindowTextW(_zoomCombo, SavedZoom.c_str());
+  _zoomCombo.SendMsg(CB_LIMITTEXT, 8, 0);
   _iconPackCombo.Attach(GetItem(IDC_EXCELLENTZIP_ICON_PACK));
   for (int Pack = 0; Pack < ExcellentZipIcons::kPackCount; ++Pack)
     _iconPackCombo.AddString(ExcellentZipIcons::kPackNames[Pack]);
@@ -208,6 +218,25 @@ static void AddSize_MB(UString &s, UInt64 size)
 
 LONG CSettingsPage::OnApply()
 {
+  if (_zoomWasChanged)
+  {
+    std::wstring Error;
+    wchar_t Text[32]{};
+    ::GetWindowTextW(_zoomCombo, Text, ARRAYSIZE(Text));
+    int Percent = 0;
+    if (!ExcellentZipZoom::ParsePercent(Text, Percent))
+    {
+      ::MessageBoxW(*this, L"Enter a whole percentage from 100% to 200%.", L"ExcellentZip", MB_OK | MB_ICONERROR);
+      ::SetFocus(_zoomCombo);
+      return PSNRET_INVALID_NOCHANGEPAGE;
+    }
+    if (!ExcellentZipZoom::Save(Percent, Error))
+    {
+      ::MessageBoxW(*this, Error.c_str(), L"ExcellentZip", MB_OK | MB_ICONERROR);
+      return PSNRET_INVALID_NOCHANGEPAGE;
+    }
+    _zoomWasChanged = false;
+  }
   if (_iconPackWasChanged)
   {
     const int Pack = _iconPackCombo.GetCurSel() + 1;
@@ -391,6 +420,12 @@ void CSettingsPage::UpdateIconPackPreview()
 
 bool CSettingsPage::OnCommand(int code, int itemID, LPARAM param)
 {
+  if ((code == CBN_SELCHANGE || code == CBN_EDITCHANGE) && itemID == IDC_EXCELLENTZIP_ZOOM)
+  {
+    _zoomWasChanged = true;
+    Changed();
+    return true;
+  }
   if (code == CBN_SELCHANGE && itemID == IDC_EXCELLENTZIP_ICON_PACK)
   {
     const int Pack = _iconPackCombo.GetCurSel() + 1;

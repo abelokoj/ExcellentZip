@@ -13,17 +13,21 @@ BEGIN
 
   CONTROL  "Use &large memory pages", IDX_SETTINGS_LARGE_PAGES,        MY_CHECKBOX, m, 122, xc, 10
 
-  LTEXT "Default icon &pack:", IDT_EXCELLENTZIP_ICON_PACK, m, 143, xc, 10
-  COMBOBOX IDC_EXCELLENTZIP_ICON_PACK, m, 156, xc - 2*m, 100, CBS_DROPDOWNLIST | CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
-  ICON "", IDI_EXCELLENTZIP_PACK_APP, m, 178, 24, 24, SS_ICON | SS_REALSIZECONTROL
-  ICON "", IDI_EXCELLENTZIP_PACK_ZIP, m + 53, 178, 24, 24, SS_ICON | SS_REALSIZECONTROL
-  ICON "", IDI_EXCELLENTZIP_PACK_7Z, m + 106, 178, 24, 24, SS_ICON | SS_REALSIZECONTROL
-  ICON "", IDI_EXCELLENTZIP_PACK_RAR, m + 159, 178, 24, 24, SS_ICON | SS_REALSIZECONTROL
-  LTEXT "App", -1, m, 205, 40, 9
-  LTEXT "ZIP", -1, m + 53, 205, 40, 9
-  LTEXT "7Z", -1, m + 106, 205, 40, 9
-  LTEXT "RAR", -1, m + 159, 205, 40, 9
-  LTEXT "Every format has its own color. To choose which files use these icons, open the File types tab.", -1, m, 220, xc - 2*m, 25
+  LTEXT "Interface &zoom:", -1, m, 143, 134, 11
+  COMBOBOX IDC_EXCELLENTZIP_ZOOM, m+142, 140, 100, 92, CBS_DROPDOWN | CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+  LTEXT "Choose a preset or enter 100-200%. Reopen ExcellentZip to apply.", -1, m, 163, xc - 2*m, 20
+
+  LTEXT "Default icon &pack:", IDT_EXCELLENTZIP_ICON_PACK, m, 185, xc, 10
+  COMBOBOX IDC_EXCELLENTZIP_ICON_PACK, m, 198, xc - 2*m, 100, CBS_DROPDOWNLIST | CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+  ICON "", IDI_EXCELLENTZIP_PACK_APP, m, 220, 24, 24, SS_ICON | SS_REALSIZECONTROL
+  ICON "", IDI_EXCELLENTZIP_PACK_ZIP, m + 53, 220, 24, 24, SS_ICON | SS_REALSIZECONTROL
+  ICON "", IDI_EXCELLENTZIP_PACK_7Z, m + 106, 220, 24, 24, SS_ICON | SS_REALSIZECONTROL
+  ICON "", IDI_EXCELLENTZIP_PACK_RAR, m + 159, 220, 24, 24, SS_ICON | SS_REALSIZECONTROL
+  LTEXT "App", -1, m, 247, 40, 9
+  LTEXT "ZIP", -1, m + 53, 247, 40, 9
+  LTEXT "7Z", -1, m + 106, 247, 40, 9
+  LTEXT "RAR", -1, m + 159, 247, 40, 9
+  LTEXT "Every format has its own color. To choose which files use these icons, open the File types tab.", -1, m, 262, xc - 2*m, 25
 
   // LTEXT     "Memory usage for Compressing:", IDT_COMPRESS_MEMORY, m, 140, xc, 8
   // COMBOBOX  IDC_SETTINGS_MEM, m , 152, g1xs, yc - 152, MY_COMBO

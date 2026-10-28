@@ -17,6 +17,7 @@
 #include "SettingsPageRes.h"
 #include "DefaultAppsPage.h"
 #include "DefaultAppsPageRes.h"
+#include "../../../../../ExcellentZip.DefaultApps.h"
 
 #include "App.h"
 #include "LangUtils.h"
@@ -50,10 +51,12 @@ void OptionsDialog(HWND hwndOwner, HINSTANCE /* hInstance */)
 
   for (unsigned i = 0; i < ARRAY_SIZE(pageIDs); i++)
   {
+    const unsigned Index = !ExcellentZipDefaults::PendingSelection.empty()
+        ? (i == 0 ? 4 : i == 4 ? 0 : i) : i;
     NControl::CPageInfo &page = pages.AddNew();
-    page.ID = pageIDs[i];
+    page.ID = pageIDs[Index];
     LangString_OnlyFromLangFile(page.ID, page.Title);
-    page.Page = pagePointers[i];
+    page.Page = pagePointers[Index];
   }
 
   INT_PTR res = NControl::MyPropertySheet(pages, hwndOwner, LangString(IDS_OPTIONS));

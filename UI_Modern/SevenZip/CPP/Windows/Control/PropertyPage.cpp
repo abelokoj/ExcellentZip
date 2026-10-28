@@ -7,6 +7,7 @@
 #endif
 
 #include "PropertyPage.h"
+#include "../../../../ExcellentZip.Zoom.h"
 
 extern HINSTANCE g_hInstance;
 #ifndef _UNICODE
@@ -43,6 +44,22 @@ bool CPropertyPage::OnNotify(UINT /* controlID */, LPNMHDR lParam)
   return true;
 }
 
+static int CALLBACK ZoomSheetCallback(HWND Window, UINT Message, LPARAM Parameter)
+{
+  if (Message == PSCB_PRECREATE)
+  {
+    MEMORY_BASIC_INFORMATION Memory{};
+    const auto* Data = reinterpret_cast<const BYTE*>(Parameter);
+    if (VirtualQuery(Data, &Memory, sizeof(Memory)))
+    {
+      const size_t Bytes = Memory.RegionSize - (Data - static_cast<const BYTE*>(Memory.BaseAddress));
+      ExcellentZipZoom::ScaleDialogTemplate(reinterpret_cast<void*>(Parameter), Bytes, ExcellentZipZoom::Percent());
+    }
+  }
+  if (Message == PSCB_INITIALIZED) ExcellentZipZoom::WatchDialog(Window);
+  return 0;
+}
+
 INT_PTR MyPropertySheet(const CObjectVector<CPageInfo> &pagesInfo, HWND hwndParent, const UString &title)
 {
   #ifndef _UNICODE
@@ -52,6 +69,7 @@ INT_PTR MyPropertySheet(const CObjectVector<CPageInfo> &pagesInfo, HWND hwndPare
   CRecordVector<PROPSHEETPAGEA> pagesA;
   #endif
   CRecordVector<PROPSHEETPAGEW> pagesW;
+  std::vector<std::vector<BYTE>> Templates(pagesInfo.Size());
 
   unsigned i;
   #ifndef _UNICODE
@@ -89,7 +107,13 @@ INT_PTR MyPropertySheet(const CObjectVector<CPageInfo> &pagesInfo, HWND hwndPare
       page.dwSize = sizeof(page);
       page.dwFlags = 0;
       page.hInstance = g_hInstance;
-      page.pszTemplate = MAKEINTRESOURCEW(pageInfo.ID);
+      Templates[i] = ExcellentZipZoom::DialogTemplate(g_hInstance, MAKEINTRESOURCEW(pageInfo.ID));
+      if (!Templates[i].empty())
+      {
+        page.dwFlags |= PSP_DLGINDIRECT;
+        page.pResource = reinterpret_cast<LPCDLGTEMPLATE>(Templates[i].data());
+      }
+      else page.pszTemplate = MAKEINTRESOURCEW(pageInfo.ID);
       page.pszIcon = NULL;
       page.pfnDlgProc = NWindows::NControl::MyProperyPageProcedure;
 
@@ -111,7 +135,7 @@ INT_PTR MyPropertySheet(const CObjectVector<CPageInfo> &pagesInfo, HWND hwndPare
   {
     PROPSHEETHEADER sheet;
     sheet.dwSize = sizeof(sheet);
-    sheet.dwFlags = PSH_PROPSHEETPAGE | PSH_NOCONTEXTHELP;
+    sheet.dwFlags = PSH_PROPSHEETPAGE | PSH_NOCONTEXTHELP | PSH_USECALLBACK;
     sheet.hwndParent = hwndParent;
     sheet.hInstance = g_hInstance;
     AString titleA (GetSystemString(title));
@@ -119,7 +143,7 @@ INT_PTR MyPropertySheet(const CObjectVector<CPageInfo> &pagesInfo, HWND hwndPare
     sheet.nPages = pagesInfo.Size();
     sheet.nStartPage = 0;
     sheet.ppsp = &pagesA.Front();
-    sheet.pfnCallback = NULL;
+    sheet.pfnCallback = ZoomSheetCallback;
     return ::PropertySheetA(&sheet);
   }
   else
@@ -127,14 +151,14 @@ INT_PTR MyPropertySheet(const CObjectVector<CPageInfo> &pagesInfo, HWND hwndPare
   {
     PROPSHEETHEADERW sheet;
     sheet.dwSize = sizeof(sheet);
-    sheet.dwFlags = PSH_PROPSHEETPAGE | PSH_NOCONTEXTHELP;
+    sheet.dwFlags = PSH_PROPSHEETPAGE | PSH_NOCONTEXTHELP | PSH_USECALLBACK;
     sheet.hwndParent = hwndParent;
     sheet.hInstance = g_hInstance;
     sheet.pszCaption = title;
     sheet.nPages = pagesInfo.Size();
     sheet.nStartPage = 0;
     sheet.ppsp = &pagesW.Front();
-    sheet.pfnCallback = NULL;
+    sheet.pfnCallback = ZoomSheetCallback;
     return ::PropertySheetW(&sheet);
   }
 }

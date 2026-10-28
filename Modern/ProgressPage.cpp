@@ -1,4 +1,5 @@
 ﻿#include "pch.h"
+#include "InterfaceZoom.h"
 #include "ProgressPage.h"
 #include "ProgressPage.g.cpp"
 
@@ -160,6 +161,7 @@ namespace winrt::ExcellentZip::Modern::implementation
     void ProgressPage::InitializeComponent()
     {
         ProgressPageT::InitializeComponent();
+        ::ExcellentZipZoom::ApplyPage(this->get_strong().as<winrt::Windows::UI::Xaml::Controls::Page>(), 568, 296);
 
         HICON ApplicationIconHandle = reinterpret_cast<HICON>(::LoadImageW(
             ::GetModuleHandleW(nullptr),

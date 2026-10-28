@@ -1,6 +1,7 @@
 ﻿// App.cpp
 
 #include "StdAfx.h"
+#include "../../../../../ExcellentZip.Zoom.h"
 
 #include "resource.h"
 #include "OverwriteDialogRes.h"
@@ -177,7 +178,7 @@ HRESULT CApp::Create(HWND hwnd, const UString &mainPath, const UString &arcForma
   extern HMENU g_MoreMenu;
 
   UINT DpiValue = ::GetDpiForWindow(hwnd);
-  int ToolBarControlHeight = ::MulDiv(48, DpiValue, USER_DEFAULT_SCREEN_DPI);
+  int ToolBarControlHeight = ::MulDiv(ExcellentZipZoom::Scale(48), DpiValue, USER_DEFAULT_SCREEN_DPI);
 
   RECT ClientRect = {};
   ::GetClientRect(hwnd, &ClientRect);

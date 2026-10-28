@@ -5,6 +5,7 @@
 #include <cassert>
 #include <iostream>
 #include <string>
+#include <vector>
 
 static std::wstring OpenedUri;
 static bool LaunchSucceeds = true;
@@ -38,6 +39,14 @@ int wmain()
         assert(SettingsUri(Invalid).empty());
     }
     assert(SettingsUri().find(L"ms-settings:defaultapps?registeredApp") == 0);
+    std::vector<const wchar_t*> Chosen;
+    std::wstring ParseError;
+    assert(ParseExtensions(L".ZIP, 7z; rar zip", Chosen, ParseError));
+    assert(Chosen.size() == 3 && std::wstring(Chosen[0]) == L"zip" && std::wstring(Chosen[2]) == L"rar");
+    for (const auto* Bad : {L"", L" , ; ", L"zip,exe", L"../zip", L"zip&evil=1", L"*.zip"})
+        assert(!ParseExtensions(Bad, Chosen, ParseError) && Chosen.empty() && !ParseError.empty());
+    assert(ParseExtensions(L"zip,7z", Chosen, ParseError));
+
     GUID Id{};
     wchar_t Guid[40]{};
     assert(SUCCEEDED(::CoCreateGuid(&Id)));
@@ -54,10 +63,19 @@ int wmain()
         assert(SetString(Path, nullptr, L"OtherApp") == ERROR_SUCCESS);
     std::wstring Error;
     assert(!Open(nullptr, L"zip&evil=1", Error) && !Error.empty() && OpenedUri.empty());
+    assert(Register(Chosen, Error) && Error.empty());
+    for (const auto* Extension : {L"zip", L"7z"})
+        assert(Read(Root, L"Software\\ExcellentZip\\Capabilities\\FileAssociations",
+            (L"." + std::wstring(Extension)).c_str()) == L"ExcellentZip.Archive." + std::wstring(Extension));
+    HKEY Unselected = nullptr;
+    assert(::RegOpenKeyExW(Root, L"Software\\Classes\\ExcellentZip.Archive.rar", 0, KEY_READ, &Unselected) == ERROR_FILE_NOT_FOUND);
+    const std::vector<const wchar_t*> InvalidChoice = {L"zip", L"exe"};
+    assert(!Register(InvalidChoice, Error) && !Error.empty());
     assert(Open(nullptr, L".ZIP", Error) && Error.empty());
     assert(OpenedUri == L"ms-settings:defaultapps?fileExt=.zip");
     assert(Read(Root, L"Software\\RegisteredApplications", L"ExcellentZip") == L"Software\\ExcellentZip\\Capabilities");
     assert(Read(Root, L"Software\\Classes\\Applications\\ExcellentZip.exe", L"FriendlyAppName") == L"ExcellentZip");
+    assert(Open(nullptr, nullptr, Error));
     for (const auto* Extension : ExcellentZipIcons::kExtensions)
     {
         const auto Suffix = L"." + std::wstring(Extension);

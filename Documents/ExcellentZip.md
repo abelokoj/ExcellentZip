@@ -1,6 +1,6 @@
 # ExcellentZip development and release notes
 
-ExcellentZip uses the approved seven-family icon artwork. Monogram EZ (4) is the default and the only bundled pack. App versions use `YYYY-MM-DD.revision`; release 2026-10-27.2 maps to Windows numeric version 2026.10.27.2.
+ExcellentZip uses the approved seven-family icon artwork. Monogram EZ (4) is the default and the only bundled pack. App versions use `YYYY-MM-DD.revision`; release 2026-10-28.1 maps to Windows numeric version 2026.10.28.1.
 
 ## Icons
 
@@ -28,13 +28,13 @@ The repository retains all seven families in `icons/Packs/<folder>`. Runtime dis
 
 Use Visual Studio 2022+ with desktop and UWP C++ tools, DesktopBridge/MSIX packaging tools, Windows 11 SDK, and .NET SDK 9. `NuGet.Config` supplies the repository-local public package source. Root `ExcellentZip.slnx` and all project paths use the ExcellentZip name.
 
-Run `scripts/Build-Release.ps1 -Version 2026-10-27.2`. It builds Release/x64, and packages both a per-user Setup executable and portable ZIP plus checksums. Inno Setup 6.4.2 is the pinned installer compiler. The local compiler can live in ignored `.tools`; the build script can restore the pinned tool package on a clean checkout.
+Run `scripts/Build-Release.ps1 -Version 2026-10-28.1`. It builds Release/x64, and packages both a per-user Setup executable and portable ZIP plus checksums. Inno Setup 6.4.2 is the pinned installer compiler. The local compiler can live in ignored `.tools`; the build script can restore the pinned tool package on a clean checkout.
 
 The portable ZIP runs after extraction without installation; all DLLs, resources, and the `icons` folder must stay together. Preferences are stored per Windows user. Setup adds Start-menu access and optional file-type registration. File opener choices remain with Windows Default apps. Setup upgrades remove the obsolete app-owned `{app}\IconPacks` directory. Uninstall does not remove the per-user downloaded-pack cache.
 
 The package identity is ExcellentZip.Desktop, publisher CN=ExcellentZip.Dev. Local native installer/portable builds do not require trusting an MSIX certificate. A signed MSIX requires an appropriate trusted publisher certificate; none is installed automatically. Public binaries are unsigned unless the release explicitly says otherwise.
 
-Use `python scripts/publish_release.py --version 2026-10-27.2` only after validating the built downloads and pushing the source commit. It uploads all required artifacts into a draft release and publishes after every upload succeeds. It reads existing GitHub credentials in memory without printing them. Choose a new date/revision for each release; the published 2026-10-26.1 downloads must remain unchanged.
+Use `python scripts/publish_release.py --version 2026-10-28.1` only after validating the built downloads and pushing the source commit. It uploads all required artifacts into a draft release and publishes after every upload succeeds. It reads existing GitHub credentials in memory without printing them. Choose a new date/revision for each release; the published 2026-10-26.1 downloads must remain unchanged.
 
 All original source license terms and author credits are preserved in License.md and THIRD_PARTY_NOTICES.md. Original branding artwork, Store links, and sponsorship features are excluded from the product.
 

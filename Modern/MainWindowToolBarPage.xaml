@@ -21,10 +21,11 @@
       </Grid.ColumnDefinitions>
       <CommandBar
         Grid.Column="0"
-        HorizontalAlignment="Left"
+        HorizontalAlignment="Stretch"
+        Grid.ColumnSpan="3"
         Background="Transparent"
         DefaultLabelPosition="Collapsed"
-        IsDynamicOverflowEnabled="False"
+        IsDynamicOverflowEnabled="True"
         IsOpen="False">
         <AppBarButton
           x:Name="AddButton"
